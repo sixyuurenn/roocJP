@@ -37,7 +37,7 @@ export default function SearchPage() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="例: ASPD / 回復 / ソードマン"
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition focus:ring"
+          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition placeholder:text-slate-400 focus:border-base-accent focus:ring"
         />
       </label>
 
@@ -45,10 +45,10 @@ export default function SearchPage() {
 
       <div className="mt-3 space-y-2">
         {results.map((item) => (
-          <article key={`${item.type}-${item.title}`} className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+          <article key={`${item.type}-${item.title}`} className="rounded-xl border border-slate-200 bg-slate-50 p-3 sm:p-4">
             <p className="text-xs font-semibold text-base-accent">{item.type}</p>
-            <h3 className="mt-1 text-sm font-semibold text-slate-800">{item.title}</h3>
-            <p className="mt-1 text-sm text-slate-700">{item.text}</p>
+            <h3 className="mt-1 text-sm font-semibold leading-6 text-slate-800">{item.title}</h3>
+            <p className="mt-1 text-sm leading-7 text-slate-700">{item.text}</p>
           </article>
         ))}
       </div>

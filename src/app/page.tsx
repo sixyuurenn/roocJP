@@ -14,8 +14,8 @@ export default function HomePage() {
     <>
       <section className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm sm:p-8">
         <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Ragnarok Online Companion</p>
-        <h1 className="mt-2 text-2xl font-bold text-slate-800 sm:text-3xl">RO系コンパニオンサイト</h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+        <h1 className="mt-2 text-2xl font-bold leading-tight text-slate-800 sm:text-3xl">RO系コンパニオンサイト</h1>
+        <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
           この土台は、攻略情報や用語、更新差分を見やすくまとめるためのスタート地点です。現在はダミーデータで表示確認できる構成になっています。
         </p>
       </section>
@@ -26,10 +26,13 @@ export default function HomePage() {
             <Link
               key={section.href}
               href={section.href}
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-base-accent/60 hover:bg-white"
+              className="group flex min-h-28 flex-col justify-between rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-base-accent/60 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30"
             >
               <p className="text-sm font-semibold text-slate-800">{section.title}</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">{section.summary}</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">{section.summary}</p>
+              <p className="mt-3 text-xs font-medium text-base-accent transition group-hover:translate-x-0.5">
+                ページを見る
+              </p>
             </Link>
           ))}
         </div>

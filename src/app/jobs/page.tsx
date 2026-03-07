@@ -6,10 +6,10 @@ export default function JobsPage() {
     <PageCard title="職業一覧" description="主要職業の役割と特徴をダミーデータで表示しています。">
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {jobItems.map((job) => (
-          <article key={job.name} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-            <h3 className="text-sm font-semibold text-slate-800">{job.name}</h3>
+          <article key={job.name} className="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:min-h-36">
+            <h3 className="text-sm font-semibold leading-6 text-slate-800">{job.name}</h3>
             <p className="mt-1 text-xs text-base-accent">{job.role}</p>
-            <p className="mt-2 text-sm text-slate-700">{job.feature}</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700">{job.feature}</p>
           </article>
         ))}
       </div>
