@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useMemo, useState } from "react";
 import { PageCard } from "@/components/page-card";
@@ -6,11 +6,15 @@ import { faqItems } from "@/data/faq";
 import { glossaryItems } from "@/data/glossary";
 import { jobItems } from "@/data/jobs";
 
+type SearchCategory = "すべて" | "FAQ" | "用語" | "職業";
+
 type SearchItem = {
-  type: "FAQ" | "用語" | "職業";
+  type: Exclude<SearchCategory, "すべて">;
   title: string;
   text: string;
 };
+
+const categories: SearchCategory[] = ["すべて", "FAQ", "用語", "職業"];
 
 const sourceItems: SearchItem[] = [
   ...faqItems.map((item) => ({ type: "FAQ" as const, title: item.q, text: item.a })),
@@ -20,37 +24,113 @@ const sourceItems: SearchItem[] = [
 
 export default function SearchPage() {
   const [query, setQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<SearchCategory>("すべて");
 
-  const results = useMemo(() => {
+  const filteredItems = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    if (!normalized) {
-      return sourceItems;
-    }
-    return sourceItems.filter((item) => `${item.title} ${item.text}`.toLowerCase().includes(normalized));
-  }, [query]);
+
+    return sourceItems.filter((item) => {
+      const matchesCategory = selectedCategory === "すべて" || item.type === selectedCategory;
+      const matchesQuery =
+        normalized.length === 0 || `${item.title} ${item.text}`.toLowerCase().includes(normalized);
+
+      return matchesCategory && matchesQuery;
+    });
+  }, [query, selectedCategory]);
+
+  const groupedItems = useMemo(() => {
+    return {
+      FAQ: filteredItems.filter((item) => item.type === "FAQ"),
+      用語: filteredItems.filter((item) => item.type === "用語"),
+      職業: filteredItems.filter((item) => item.type === "職業"),
+    };
+  }, [filteredItems]);
+
+  const hasQuery = query.trim().length > 0;
+  const visibleCategories =
+    selectedCategory === "すべて" ? (["FAQ", "用語", "職業"] as const) : ([selectedCategory] as const);
 
   return (
-    <PageCard title="検索" description="FAQ・用語集・職業一覧を横断検索できます。">
-      <label className="block">
-        <span className="mb-2 block text-sm font-medium text-slate-700">キーワード</span>
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="例: ASPD / 回復 / ソードマン"
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition placeholder:text-slate-400 focus:border-base-accent focus:ring"
-        />
-      </label>
+    <PageCard title="検索" description="FAQ・用語集・職業一覧をカテゴリ別に確認できます。">
+      <div className="space-y-4">
+        <label className="block">
+          <span className="mb-2 block text-sm font-medium text-slate-700">キーワード</span>
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="例: ASPD / 回復 / ソードマン"
+            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition placeholder:text-slate-400 focus:border-base-accent focus:ring"
+          />
+        </label>
 
-      <p className="mt-3 text-xs text-slate-500">{results.length} 件ヒット</p>
+        <div>
+          <p className="mb-2 text-sm font-medium text-slate-700">カテゴリ</p>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => {
+              const isActive = selectedCategory === category;
 
-      <div className="mt-3 space-y-2">
-        {results.map((item) => (
-          <article key={`${item.type}-${item.title}`} className="rounded-xl border border-slate-200 bg-slate-50 p-3 sm:p-4">
-            <p className="text-xs font-semibold text-base-accent">{item.type}</p>
-            <h3 className="mt-1 text-sm font-semibold leading-6 text-slate-800">{item.title}</h3>
-            <p className="mt-1 text-sm leading-7 text-slate-700">{item.text}</p>
-          </article>
-        ))}
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  onClick={() => setSelectedCategory(category)}
+                  className={`rounded-full border px-3 py-1.5 text-sm transition ${
+                    isActive
+                      ? "border-base-accent bg-base-accent text-white"
+                      : "border-slate-300 bg-white text-slate-700 hover:border-base-accent hover:text-base-accent"
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <p className="text-xs text-slate-500">
+          {hasQuery ? `検索結果 ${filteredItems.length} 件` : `表示中 ${filteredItems.length} 件`}
+        </p>
+
+        {filteredItems.length === 0 ? (
+          <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-center">
+            <p className="text-sm font-medium text-slate-700">該当するデータはありません。</p>
+            <p className="mt-1 text-sm leading-6 text-slate-500">
+              キーワードやカテゴリを変更して、もう一度確認してください。
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-5">
+            {visibleCategories.map((category) => {
+              const items = groupedItems[category];
+
+              if (items.length === 0) {
+                return null;
+              }
+
+              return (
+                <section key={category} className="space-y-2">
+                  <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+                    <h3 className="text-sm font-semibold text-slate-800">{category}</h3>
+                    <p className="text-xs text-slate-500">{items.length} 件</p>
+                  </div>
+
+                  <div className="space-y-2">
+                    {items.map((item) => (
+                      <article
+                        key={`${item.type}-${item.title}`}
+                        className="rounded-xl border border-slate-200 bg-slate-50 p-3 sm:p-4"
+                      >
+                        <p className="text-xs font-semibold text-base-accent">{item.type}</p>
+                        <h4 className="mt-1 text-sm font-semibold leading-6 text-slate-800">{item.title}</h4>
+                        <p className="mt-1 text-sm leading-7 text-slate-700">{item.text}</p>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+        )}
       </div>
     </PageCard>
   );
