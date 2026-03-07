@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { PageCard } from "@/components/page-card";
 import { faqItems } from "@/data/faq";
@@ -12,6 +13,7 @@ type SearchItem = {
   type: Exclude<SearchCategory, "すべて">;
   title: string;
   text: string;
+  href?: string;
 };
 
 const categories: SearchCategory[] = ["すべて", "FAQ", "用語", "職業"];
@@ -19,7 +21,12 @@ const categories: SearchCategory[] = ["すべて", "FAQ", "用語", "職業"];
 const sourceItems: SearchItem[] = [
   ...faqItems.map((item) => ({ type: "FAQ" as const, title: item.q, text: item.a })),
   ...glossaryItems.map((item) => ({ type: "用語" as const, title: item.term, text: item.description })),
-  ...jobItems.map((item) => ({ type: "職業" as const, title: item.name, text: `${item.role} / ${item.feature}` })),
+  ...jobItems.map((item) => ({
+    type: "職業" as const,
+    title: item.name,
+    text: `${item.role} / ${item.feature}`,
+    href: `/jobs/${item.id}`,
+  })),
 ];
 
 export default function SearchPage() {
@@ -38,13 +45,14 @@ export default function SearchPage() {
     });
   }, [query, selectedCategory]);
 
-  const groupedItems = useMemo(() => {
-    return {
+  const groupedItems = useMemo(
+    () => ({
       FAQ: filteredItems.filter((item) => item.type === "FAQ"),
       用語: filteredItems.filter((item) => item.type === "用語"),
       職業: filteredItems.filter((item) => item.type === "職業"),
-    };
-  }, [filteredItems]);
+    }),
+    [filteredItems],
+  );
 
   const hasQuery = query.trim().length > 0;
   const visibleCategories =
@@ -58,7 +66,7 @@ export default function SearchPage() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="例: ASPD / 回復 / ソードマン"
+            placeholder="例: ASPD / 回復 / ロードナイト"
             className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition placeholder:text-slate-400 focus:border-base-accent focus:ring"
           />
         </label>
@@ -115,16 +123,39 @@ export default function SearchPage() {
                   </div>
 
                   <div className="space-y-2">
-                    {items.map((item) => (
-                      <article
-                        key={`${item.type}-${item.title}`}
-                        className="rounded-xl border border-slate-200 bg-slate-50 p-3 sm:p-4"
-                      >
-                        <p className="text-xs font-semibold text-base-accent">{item.type}</p>
-                        <h4 className="mt-1 text-sm font-semibold leading-6 text-slate-800">{item.title}</h4>
-                        <p className="mt-1 text-sm leading-7 text-slate-700">{item.text}</p>
-                      </article>
-                    ))}
+                    {items.map((item) => {
+                      const content = (
+                        <>
+                          <p className="text-xs font-semibold text-base-accent">{item.type}</p>
+                          <h4 className="mt-1 text-sm font-semibold leading-6 text-slate-800">{item.title}</h4>
+                          <p className="mt-1 text-sm leading-7 text-slate-700">{item.text}</p>
+                          {item.href ? (
+                            <p className="mt-3 text-xs font-medium text-base-accent">職業詳細を見る</p>
+                          ) : null}
+                        </>
+                      );
+
+                      if (item.href) {
+                        return (
+                          <Link
+                            key={`${item.type}-${item.title}`}
+                            href={item.href}
+                            className="block rounded-xl border border-slate-200 bg-slate-50 p-3 transition hover:border-base-accent/60 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30 sm:p-4"
+                          >
+                            {content}
+                          </Link>
+                        );
+                      }
+
+                      return (
+                        <article
+                          key={`${item.type}-${item.title}`}
+                          className="rounded-xl border border-slate-200 bg-slate-50 p-3 sm:p-4"
+                        >
+                          {content}
+                        </article>
+                      );
+                    })}
                   </div>
                 </section>
               );

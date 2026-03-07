@@ -3,8 +3,8 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "RO コンパニオンサイト",
-  description: "RO系情報を整理するためのコンパニオンサイト土台",
+  title: "ROOC 情報サイト",
+  description: "RO系情報を整理するための情報サイト土台",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

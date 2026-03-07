@@ -4,7 +4,7 @@ import { jobItems } from "@/data/jobs";
 
 export default function JobsPage() {
   return (
-    <PageCard title="職業一覧" description="主要職業の役割と特徴をダミーデータで表示しています。">
+    <PageCard title="職業一覧" description="主要職業の特徴と役割をダミーデータで表示しています。">
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {jobItems.map((job) => (
           <Link

@@ -61,7 +61,7 @@ export const skillItems: SkillItem[] = [
   },
   {
     id: "wild-boar-soul",
-    jobId: "high-summoner",
+    jobId: "summoner",
     name: "野ブタの魂",
     categoryTab: "advanced",
     maxLevel: 10,
@@ -75,7 +75,7 @@ export const skillItems: SkillItem[] = [
   },
   {
     id: "lunatic-carrot-beat",
-    jobId: "high-summoner",
+    jobId: "summoner",
     name: "ルナティックキャロット強攻撃",
     categoryTab: "advanced",
     maxLevel: 10,
@@ -86,7 +86,7 @@ export const skillItems: SkillItem[] = [
     cooldown: "7.0s",
     spCost: "14",
     globalDelay: "1.0s",
-    notes: "画像例ベースの仮データです。",
+    notes: "画像例をもとにした仮データです。",
   },
 ];
 
