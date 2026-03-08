@@ -1,9 +1,11 @@
-﻿import { PageCard } from "@/components/page-card";
-import { faqItems } from "@/data/faq";
+import { PageCard } from "@/components/page-card";
+import { getFaqItems } from "@/lib/faq";
 
-export default function FaqPage() {
+export default async function FaqPage() {
+  const faqItems = await getFaqItems();
+
   return (
-    <PageCard title="FAQ" description="よくある質問（ダミーデータ）">
+    <PageCard title="FAQ" description="よくある質問を一覧で確認できます。">
       <div className="space-y-3">
         {faqItems.map((item) => (
           <article key={item.q} className="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">

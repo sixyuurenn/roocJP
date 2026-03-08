@@ -4,6 +4,12 @@
 
 :root {
   color-scheme: light;
+  --color-page-base: #f4f1eb;
+  --color-surface: rgba(255, 255, 255, 0.92);
+  --color-surface-strong: rgba(255, 255, 255, 0.96);
+  --color-surface-muted: #f8f5ef;
+  --color-border-soft: #d9d4cb;
+  --color-text-base: #1f2937;
 }
 
 html {
@@ -12,8 +18,8 @@ html {
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top right, #ffffff, #f5f4f2 42%, #ece9e4 100%);
-  color: #1f2937;
+  background: var(--color-page-base);
+  color: var(--color-text-base);
   font-family: "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
   line-height: 1.6;
 }

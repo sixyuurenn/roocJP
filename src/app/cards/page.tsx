@@ -1,17 +1,12 @@
 import { PageCard } from "@/components/page-card";
 
-const cardGuide = [
-  "カード名",
-  "装着部位",
-  "効果",
-  "入手経路",
-];
+const cardGuide = ["カード名", "装着部位", "効果", "入手方法"];
 
 export default function CardsPage() {
   return (
-    <PageCard title="カード図鑑" description="カードの効果や用途を整理するための土台ページです。">
+    <PageCard title="カード図鑑" description="カード情報の整理に使う土台ページです。">
       <p className="text-sm leading-7 text-slate-700">
-        今後、カード情報を一覧化し、部位や効果で絞り込める形に整えていきます。現在はダミー構成のみ用意しています。
+        現在は公開前の静的プロトタイプとして、掲載項目の粒度と並び順を確認するための仮置きページです。
       </p>
       <div className="mt-4 grid gap-2 sm:grid-cols-2">
         {cardGuide.map((item) => (

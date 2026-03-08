@@ -1,5 +1,11 @@
-﻿import Link from "next/link";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { PageCard } from "@/components/page-card";
+
+export const metadata: Metadata = {
+  title: "トップ",
+  description: "ROOC 情報サイトの主要ページ一覧と導線を確認できます。",
+};
 
 const sections = [
   { href: "/search", title: "検索", summary: "FAQ・用語・職業を横断して検索できます。" },
@@ -14,7 +20,7 @@ const sections = [
 export default function HomePage() {
   return (
     <>
-      <section className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[var(--color-border-soft)] bg-[var(--color-surface)] p-6 shadow-sm sm:p-8">
         <p className="text-xs uppercase tracking-[0.2em] text-slate-500">ROOC Information Site</p>
         <h1 className="mt-2 text-2xl font-bold leading-tight text-slate-800 sm:text-3xl">ROOC 情報サイト</h1>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
@@ -28,7 +34,7 @@ export default function HomePage() {
             <Link
               key={section.href}
               href={section.href}
-              className="group flex min-h-28 flex-col justify-between rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-base-accent/60 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30"
+              className="group flex min-h-28 flex-col justify-between rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface-muted)] p-4 transition hover:border-base-accent/60 hover:bg-[var(--color-surface-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30"
             >
               <p className="text-sm font-semibold text-slate-800">{section.title}</p>
               <p className="mt-1 text-xs leading-6 text-slate-600">{section.summary}</p>

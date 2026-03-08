@@ -7,7 +7,7 @@ import { faqItems } from "@/data/faq";
 import { glossaryItems } from "@/data/glossary";
 import { jobItems } from "@/data/jobs";
 
-type SearchCategory = "すべて" | "FAQ" | "用語" | "職業";
+type SearchCategory = "すべて" | "FAQ" | "用語集" | "職業";
 
 type SearchItem = {
   type: Exclude<SearchCategory, "すべて">;
@@ -16,11 +16,15 @@ type SearchItem = {
   href?: string;
 };
 
-const categories: SearchCategory[] = ["すべて", "FAQ", "用語", "職業"];
+const categories: SearchCategory[] = ["すべて", "FAQ", "用語集", "職業"];
 
 const sourceItems: SearchItem[] = [
   ...faqItems.map((item) => ({ type: "FAQ" as const, title: item.q, text: item.a })),
-  ...glossaryItems.map((item) => ({ type: "用語" as const, title: item.term, text: item.description })),
+  ...glossaryItems.map((item) => ({
+    type: "用語集" as const,
+    title: item.term,
+    text: item.description,
+  })),
   ...jobItems.map((item) => ({
     type: "職業" as const,
     title: item.name,
@@ -48,7 +52,7 @@ export default function SearchPage() {
   const groupedItems = useMemo(
     () => ({
       FAQ: filteredItems.filter((item) => item.type === "FAQ"),
-      用語: filteredItems.filter((item) => item.type === "用語"),
+      用語集: filteredItems.filter((item) => item.type === "用語集"),
       職業: filteredItems.filter((item) => item.type === "職業"),
     }),
     [filteredItems],
@@ -56,10 +60,12 @@ export default function SearchPage() {
 
   const hasQuery = query.trim().length > 0;
   const visibleCategories =
-    selectedCategory === "すべて" ? (["FAQ", "用語", "職業"] as const) : ([selectedCategory] as const);
+    selectedCategory === "すべて"
+      ? (["FAQ", "用語集", "職業"] as const)
+      : ([selectedCategory] as const);
 
   return (
-    <PageCard title="検索" description="FAQ・用語集・職業一覧をカテゴリ別に確認できます。">
+    <PageCard title="検索" description="FAQ・用語集・職業一覧をカテゴリ別に検索できます。">
       <div className="space-y-4">
         <label className="block">
           <span className="mb-2 block text-sm font-medium text-slate-700">キーワード</span>
@@ -67,7 +73,7 @@ export default function SearchPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="例: ASPD / 回復 / ロードナイト"
-            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition placeholder:text-slate-400 focus:border-base-accent focus:ring"
+            className="w-full rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface-strong)] px-4 py-2.5 text-sm outline-none ring-base-accent/20 transition placeholder:text-slate-400 focus:border-base-accent focus:ring"
           />
         </label>
 
@@ -85,7 +91,7 @@ export default function SearchPage() {
                   className={`rounded-full border px-3 py-1.5 text-sm transition ${
                     isActive
                       ? "border-base-accent bg-base-accent text-white"
-                      : "border-slate-300 bg-white text-slate-700 hover:border-base-accent hover:text-base-accent"
+                      : "border-[var(--color-border-soft)] bg-[var(--color-surface-strong)] text-slate-700 hover:border-base-accent hover:text-base-accent"
                   }`}
                 >
                   {category}
@@ -100,10 +106,10 @@ export default function SearchPage() {
         </p>
 
         {filteredItems.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-center">
+          <div className="rounded-xl border border-dashed border-[var(--color-border-soft)] bg-[var(--color-surface-muted)] p-5 text-center">
             <p className="text-sm font-medium text-slate-700">該当するデータはありません。</p>
             <p className="mt-1 text-sm leading-6 text-slate-500">
-              キーワードやカテゴリを変更して、もう一度確認してください。
+              キーワードやカテゴリを変更して、もう一度検索してください。
             </p>
           </div>
         ) : (
@@ -140,7 +146,7 @@ export default function SearchPage() {
                           <Link
                             key={`${item.type}-${item.title}`}
                             href={item.href}
-                            className="block rounded-xl border border-slate-200 bg-slate-50 p-3 transition hover:border-base-accent/60 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30 sm:p-4"
+                            className="block rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface-muted)] p-3 transition hover:border-base-accent/60 hover:bg-[var(--color-surface-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30 sm:p-4"
                           >
                             {content}
                           </Link>
@@ -150,7 +156,7 @@ export default function SearchPage() {
                       return (
                         <article
                           key={`${item.type}-${item.title}`}
-                          className="rounded-xl border border-slate-200 bg-slate-50 p-3 sm:p-4"
+                          className="rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface-muted)] p-3 sm:p-4"
                         >
                           {content}
                         </article>
