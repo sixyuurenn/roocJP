@@ -169,9 +169,6 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900">{item.itemNameJpDisplay}</h3>
-                      {item.itemNameJpRaw && item.itemNameJpRaw !== item.itemNameJpDisplay ? (
-                        <p className="mt-1 text-sm text-slate-500">原文: {item.itemNameJpRaw}</p>
-                      ) : null}
                       <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-500">
                         <span className="rounded-full bg-slate-100 px-2.5 py-1">{item.equipSlot}</span>
                         <span className="rounded-full bg-sky-50 px-2.5 py-1 text-sky-700">{getGenreBucketLabel(item.genreBucket)}</span>
@@ -182,42 +179,44 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
                         {item.battlePower !== null ? (
                           <span className="rounded-full bg-slate-100 px-2.5 py-1">戦闘力 {item.battlePower}</span>
                         ) : null}
-                        {item.equipmentScore !== null ? (
+                        {item.equipmentScore !== null && item.equipmentScore > 0 ? (
                           <span className="rounded-full bg-slate-100 px-2.5 py-1">装備評価 {item.equipmentScore}</span>
                         ) : null}
                       </div>
                     </div>
 
-                    <div className="grid gap-4 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+                    <div className={`grid gap-4 ${item.genres.length > 0 ? "xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]" : ""}`}>
                       <section className="rounded-xl border border-slate-200 bg-white p-4">
                         <p className="text-xs font-semibold tracking-wide text-base-accent">装備ステータス</p>
                         <div className="mt-2 space-y-1">{renderLines(item.statusTextCore)}</div>
                       </section>
 
-                      <section className="rounded-xl border border-slate-200 bg-white p-4">
-                        <p className="text-xs font-semibold tracking-wide text-base-accent">ジャンル効果</p>
-                        {item.genres.length === 0 ? (
-                          <p className="mt-2 text-sm leading-7 text-slate-500">紐付けジャンルはまだありません。</p>
-                        ) : (
-                          <div className="mt-3 space-y-4">
-                            {item.genres.map((genre) => (
-                              <article key={`${item.id}-${genre.id}`} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                <h4 className="text-sm font-semibold text-slate-800">{genre.genreNameJp}</h4>
-                                <div className="mt-3 grid gap-3 md:grid-cols-2">
-                                  <div className="rounded-lg border border-slate-200 bg-white p-3">
-                                    <p className="text-xs font-semibold tracking-wide text-slate-500">ジャンル属性</p>
-                                    <div className="mt-2 space-y-1">{renderLines(genre.genreAttributeText)}</div>
+                      {item.genres.length > 0 ? (
+                        <section className="rounded-xl border border-slate-200 bg-white p-4">
+                          <details>
+                            <summary className="cursor-pointer list-none text-xs font-semibold tracking-wide text-base-accent marker:hidden">
+                              ジャンル効果を開く
+                            </summary>
+                            <div className="mt-3 space-y-4">
+                              {item.genres.map((genre) => (
+                                <article key={`${item.id}-${genre.id}`} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                  <h4 className="text-sm font-semibold text-slate-800">{genre.genreNameJp}</h4>
+                                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                                    <div className="rounded-lg border border-slate-200 bg-white p-3">
+                                      <p className="text-xs font-semibold tracking-wide text-slate-500">ジャンル属性</p>
+                                      <div className="mt-2 space-y-1">{renderLines(genre.genreAttributeText)}</div>
+                                    </div>
+                                    <div className="rounded-lg border border-slate-200 bg-white p-3">
+                                      <p className="text-xs font-semibold tracking-wide text-slate-500">セット効果</p>
+                                      <div className="mt-2 space-y-1">{renderLines(genre.genreSetEffectText)}</div>
+                                    </div>
                                   </div>
-                                  <div className="rounded-lg border border-slate-200 bg-white p-3">
-                                    <p className="text-xs font-semibold tracking-wide text-slate-500">セット効果</p>
-                                    <div className="mt-2 space-y-1">{renderLines(genre.genreSetEffectText)}</div>
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-                        )}
-                      </section>
+                                </article>
+                              ))}
+                            </div>
+                          </details>
+                        </section>
+                      ) : null}
                     </div>
 
                     <section className="space-y-2">
