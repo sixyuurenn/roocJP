@@ -20,8 +20,19 @@ export const EQUIPMENT_GENRE_BUCKET_ITEMS = [
   { value: "other", label: "その他" },
 ] as const;
 
+export const EQUIPMENT_JOB_TAG_ITEMS = [
+  { value: "job_swordsman", label: "ソードマン" },
+  { value: "job_mage", label: "マジシャン" },
+  { value: "job_archer", label: "アーチャー" },
+  { value: "job_acolyte", label: "アコライト" },
+  { value: "job_thief", label: "シーフ" },
+  { value: "job_merchant", label: "マーチャント" },
+  { value: "job_doram", label: "ドラム" },
+] as const;
+
 export type EquipmentEquipSlot = (typeof EQUIPMENT_EQUIP_SLOT_OPTIONS)[number];
 export type EquipmentGenreBucket = (typeof EQUIPMENT_GENRE_BUCKET_ITEMS)[number]["value"];
+export type EquipmentJobTag = (typeof EQUIPMENT_JOB_TAG_ITEMS)[number]["value"];
 export type EquipmentStatus = "published" | "draft" | "archived";
 
 export type EquipmentTagItem = {
@@ -73,6 +84,13 @@ export const equipmentTagItems: EquipmentTagItem[] = [
   { id: 6, tagKey: "physical_damage", tagLabel: "物理ダメージ増加", tagGroup: "effect", sortOrder: 60 },
   { id: 7, tagKey: "magic_damage", tagLabel: "魔法ダメージ増加", tagGroup: "effect", sortOrder: 70 },
   { id: 8, tagKey: "refine_conditional", tagLabel: "精錬条件", tagGroup: "condition", sortOrder: 80 },
+  { id: 9, tagKey: "job_swordsman", tagLabel: "ソードマン", tagGroup: "job", sortOrder: 110 },
+  { id: 10, tagKey: "job_mage", tagLabel: "マジシャン", tagGroup: "job", sortOrder: 120 },
+  { id: 11, tagKey: "job_archer", tagLabel: "アーチャー", tagGroup: "job", sortOrder: 130 },
+  { id: 12, tagKey: "job_acolyte", tagLabel: "アコライト", tagGroup: "job", sortOrder: 140 },
+  { id: 13, tagKey: "job_thief", tagLabel: "シーフ", tagGroup: "job", sortOrder: 150 },
+  { id: 14, tagKey: "job_merchant", tagLabel: "マーチャント", tagGroup: "job", sortOrder: 160 },
+  { id: 15, tagKey: "job_doram", tagLabel: "ドラム", tagGroup: "job", sortOrder: 170 },
 ];
 
 const tagByKey = Object.fromEntries(

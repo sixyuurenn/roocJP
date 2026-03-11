@@ -1,11 +1,13 @@
 import {
   EQUIPMENT_EQUIP_SLOT_OPTIONS,
   EQUIPMENT_GENRE_BUCKET_ITEMS,
+  EQUIPMENT_JOB_TAG_ITEMS,
   buildEquipmentGenreSearchText,
   buildEquipmentSearchText,
   fallbackEquipmentItems,
   type EquipmentEquipSlot,
   type EquipmentGenreBucket,
+  type EquipmentJobTag,
   type EquipmentGenreItem,
   type EquipmentItem,
   type EquipmentStatus,
@@ -68,6 +70,7 @@ export type EquipmentDirectoryFilters = {
   equipSlot: string;
   genreBucket: string;
   minLevel: string;
+  jobTag: string;
 };
 
 export type EquipmentDirectoryData = {
@@ -86,6 +89,10 @@ function isEquipmentGenreBucket(value: string | null): value is EquipmentGenreBu
 
 function isEquipmentStatus(value: string | null): value is EquipmentStatus {
   return value === "published" || value === "draft" || value === "archived";
+}
+
+function isEquipmentJobTag(value: string): value is EquipmentJobTag {
+  return EQUIPMENT_JOB_TAG_ITEMS.some((item) => item.value === value);
 }
 
 function normalizeId(value: IdValue) {
@@ -210,9 +217,18 @@ function normalizeMinLevel(value: string) {
   return Math.floor(parsed);
 }
 
+function normalizeJobTag(value: string) {
+  return isEquipmentJobTag(value) ? value : "";
+}
+
+function matchesJobTag(item: EquipmentItem, jobTag: string) {
+  return jobTag.length === 0 || item.tags.some((tag) => tag.tagKey === jobTag && tag.tagGroup === "job");
+}
+
 function filterFallbackItems(items: EquipmentItem[], filters: EquipmentDirectoryFilters) {
   const keyword = normalizeKeyword(filters.keyword);
   const minLevel = normalizeMinLevel(filters.minLevel);
+  const jobTag = normalizeJobTag(filters.jobTag);
 
   return items.filter((item) => {
     const matchesKeyword =
@@ -221,8 +237,16 @@ function filterFallbackItems(items: EquipmentItem[], filters: EquipmentDirectory
     const matchesEquipSlot = filters.equipSlot.length === 0 || item.equipSlot === filters.equipSlot;
     const matchesGenreBucket = filters.genreBucket.length === 0 || item.genreBucket === filters.genreBucket;
     const matchesMinLevel = minLevel === null || item.level >= minLevel;
+    const matchesSelectedJobTag = matchesJobTag(item, jobTag);
 
-    return matchesKeyword && matchesEquipSlot && matchesGenreBucket && matchesMinLevel && item.status === "published";
+    return (
+      matchesKeyword &&
+      matchesEquipSlot &&
+      matchesGenreBucket &&
+      matchesMinLevel &&
+      matchesSelectedJobTag &&
+      item.status === "published"
+    );
   });
 }
 
@@ -263,6 +287,7 @@ export async function getEquipmentDirectoryData(filters: EquipmentDirectoryFilte
   const tags = tagResponse.data
     .map((row) => toEquipmentTagItem(row as EquipmentTagRow))
     .filter((item): item is EquipmentTagItem => item !== null);
+  const jobTag = normalizeJobTag(filters.jobTag);
 
   const minLevel = normalizeMinLevel(filters.minLevel);
 
@@ -348,6 +373,7 @@ export async function getEquipmentDirectoryData(filters: EquipmentDirectoryFilte
   const items = itemRows
     .map((row) => toEquipmentItem(row as EquipmentItemRow, tagsByEquipmentId, genresByEquipmentId))
     .filter((item): item is EquipmentItem => item !== null)
+    .filter((item) => matchesJobTag(item, jobTag))
     .filter((item) => item.status === "published");
 
   return {

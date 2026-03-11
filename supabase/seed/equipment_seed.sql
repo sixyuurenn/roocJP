@@ -53,7 +53,14 @@ values
   ('max_hp', 'MaxHP', 'status', 50),
   ('physical_damage', '物理ダメージ増加', 'effect', 60),
   ('magic_damage', '魔法ダメージ増加', 'effect', 70),
-  ('refine_conditional', '精錬条件', 'condition', 80)
+  ('refine_conditional', '精錬条件', 'condition', 80),
+  ('job_swordsman', 'ソードマン', 'job', 110),
+  ('job_mage', 'マジシャン', 'job', 120),
+  ('job_archer', 'アーチャー', 'job', 130),
+  ('job_acolyte', 'アコライト', 'job', 140),
+  ('job_thief', 'シーフ', 'job', 150),
+  ('job_merchant', 'マーチャント', 'job', 160),
+  ('job_doram', 'ドラム', 'job', 170)
 on conflict (tag_key) do update set
   tag_label = excluded.tag_label,
   tag_group = excluded.tag_group,

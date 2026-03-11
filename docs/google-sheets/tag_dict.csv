@@ -1,0 +1,16 @@
+tag_key,tag_label,tag_group,sort_order,enabled
+physical_defense,物理防御,status,10,TRUE
+hp,HP,status,20,TRUE
+physical_attack,物理攻撃,status,30,TRUE
+agi,Agi,status,40,TRUE
+max_hp,MaxHP,status,50,TRUE
+physical_damage,物理ダメージ増加,effect,60,TRUE
+magic_damage,魔法ダメージ増加,effect,70,TRUE
+refine_conditional,精錬条件,condition,80,TRUE
+job_swordsman,ソードマン,job,110,TRUE
+job_mage,マジシャン,job,120,TRUE
+job_archer,アーチャー,job,130,TRUE
+job_acolyte,アコライト,job,140,TRUE
+job_thief,シーフ,job,150,TRUE
+job_merchant,マーチャント,job,160,TRUE
+job_doram,ドラム,job,170,TRUE

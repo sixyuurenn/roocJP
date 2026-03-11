@@ -1,0 +1,7 @@
+id,item_name_jp_display,item_name_jp_raw,item_name_en,equip_slot,genre_bucket,level,battle_power,equipment_score,card_slots,status_text_core,genre_names,job_tags,detail_tags,sort_order,status,notes
+aurora-mantle,曙光のマント,曙光のマント,,肩にかける物,armor_set,70,,0,,"物理防御+130～144
+HP+1020～1200","ゴヴニュセット|テュールの祝福|スプリントセット","ソードマン","物理防御|HP",10,published,
+brooch-2,ブローチ,ブローチ[2],,アクセサリー,accessory,85,3015,,2,"物理攻撃+51
+Agi+2
+Agi+10ポイント毎に、物理攻撃増加+1%
+精錬+5毎に、Agi+2","","ソードマン","物理攻撃|Agi|精錬条件",20,published,

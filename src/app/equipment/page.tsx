@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PageCard } from "@/components/page-card";
-import { EQUIPMENT_EQUIP_SLOT_OPTIONS, EQUIPMENT_GENRE_BUCKET_ITEMS } from "@/data/equipment";
+import {
+  EQUIPMENT_EQUIP_SLOT_OPTIONS,
+  EQUIPMENT_GENRE_BUCKET_ITEMS,
+  EQUIPMENT_JOB_TAG_ITEMS,
+  type EquipmentTagItem,
+} from "@/data/equipment";
 import { getEquipmentDirectoryData } from "@/lib/equipment";
 
 type EquipmentPageProps = {
@@ -10,6 +15,7 @@ type EquipmentPageProps = {
     equipSlot?: string | string[];
     genreBucket?: string | string[];
     minLevel?: string | string[];
+    jobTag?: string | string[];
   }>;
 };
 
@@ -23,6 +29,10 @@ function getEquipSlotFilter(value: string) {
 
 function getGenreBucketFilter(value: string) {
   return EQUIPMENT_GENRE_BUCKET_ITEMS.some((item) => item.value === value) ? value : "";
+}
+
+function getJobTagFilter(value: string) {
+  return EQUIPMENT_JOB_TAG_ITEMS.some((item) => item.value === value) ? value : "";
 }
 
 function renderLines(text: string | null) {
@@ -41,17 +51,27 @@ function getGenreBucketLabel(value: string) {
   return EQUIPMENT_GENRE_BUCKET_ITEMS.find((item) => item.value === value)?.label ?? value;
 }
 
+function getJobTags(tags: EquipmentTagItem[]) {
+  return tags.filter((tag) => tag.tagGroup === "job");
+}
+
+function getDetailTags(tags: EquipmentTagItem[]) {
+  return tags.filter((tag) => tag.tagGroup !== "job");
+}
+
 export default async function EquipmentPage({ searchParams }: EquipmentPageProps) {
   const params = (await searchParams) ?? {};
   const keyword = getSingleValue(params.q).trim();
   const equipSlot = getEquipSlotFilter(getSingleValue(params.equipSlot));
   const genreBucket = getGenreBucketFilter(getSingleValue(params.genreBucket));
   const minLevel = getSingleValue(params.minLevel);
+  const jobTag = getJobTagFilter(getSingleValue(params.jobTag));
   const { items, isFallback, source } = await getEquipmentDirectoryData({
     keyword,
     equipSlot,
     genreBucket,
     minLevel,
+    jobTag,
   });
 
   return (
@@ -63,7 +83,7 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
           </div>
         ) : null}
 
-        <form className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
+        <form className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_repeat(4,minmax(0,1fr))]">
           <label className="block">
             <span className="mb-2 block text-sm font-medium text-slate-700">装備名検索</span>
             <input
@@ -119,7 +139,23 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
             />
           </label>
 
-          <div className="flex flex-wrap items-center gap-3 lg:col-span-4">
+          <label className="block">
+            <span className="mb-2 block text-sm font-medium text-slate-700">対象職業</span>
+            <select
+              name="jobTag"
+              defaultValue={jobTag}
+              className="w-full rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface-strong)] px-4 py-2.5 text-sm text-slate-700 outline-none ring-base-accent/20 transition focus:border-base-accent focus:ring"
+            >
+              <option value="">すべて</option>
+              {EQUIPMENT_JOB_TAG_ITEMS.map((item) => (
+                <option key={item.value} value={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <div className="flex flex-wrap items-center gap-3 lg:col-span-5">
             <button
               type="submit"
               className="inline-flex rounded-xl bg-base-accent px-4 py-2.5 text-sm font-medium text-white transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30"
@@ -172,6 +208,11 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
                       <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-500">
                         <span className="rounded-full bg-slate-100 px-2.5 py-1">{item.equipSlot}</span>
                         <span className="rounded-full bg-sky-50 px-2.5 py-1 text-sky-700">{getGenreBucketLabel(item.genreBucket)}</span>
+                        {getJobTags(item.tags).map((tag) => (
+                          <span key={`${item.id}-${tag.id}`} className="rounded-full bg-emerald-50 px-2.5 py-1 text-emerald-700">
+                            {tag.tagLabel}
+                          </span>
+                        ))}
                         <span className="rounded-full bg-slate-100 px-2.5 py-1">Lv {item.level}</span>
                         {item.cardSlots !== null ? (
                           <span className="rounded-full bg-slate-100 px-2.5 py-1">カードスロット {item.cardSlots}</span>
@@ -222,7 +263,7 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
                     <section className="space-y-2">
                       <p className="text-xs font-semibold tracking-wide text-slate-500">検索タグ</p>
                       <div className="flex flex-wrap gap-2">
-                        {item.tags.map((tag) => (
+                        {getDetailTags(item.tags).map((tag) => (
                           <span
                             key={`${item.id}-${tag.id}`}
                             className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700"
