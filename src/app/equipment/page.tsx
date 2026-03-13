@@ -8,6 +8,7 @@ import {
   type EquipmentTagItem,
 } from "@/data/equipment";
 import { getEquipmentDirectoryData } from "@/lib/equipment";
+import { getSingleValue, renderLines } from "@/lib/page-utils";
 
 type EquipmentPageProps = {
   searchParams?: Promise<{
@@ -19,10 +20,6 @@ type EquipmentPageProps = {
   }>;
 };
 
-function getSingleValue(value: string | string[] | undefined) {
-  return Array.isArray(value) ? value[0] ?? "" : value ?? "";
-}
-
 function getEquipSlotFilter(value: string) {
   return EQUIPMENT_EQUIP_SLOT_OPTIONS.includes(value as (typeof EQUIPMENT_EQUIP_SLOT_OPTIONS)[number]) ? value : "";
 }
@@ -33,18 +30,6 @@ function getGenreBucketFilter(value: string) {
 
 function getJobTagFilter(value: string) {
   return EQUIPMENT_JOB_TAG_ITEMS.some((item) => item.value === value) ? value : "";
-}
-
-function renderLines(text: string | null) {
-  if (!text) {
-    return null;
-  }
-
-  return text.split("\n").map((line, index) => (
-    <p key={`${line}-${index}`} className="text-sm leading-7 text-slate-700">
-      {line}
-    </p>
-  ));
 }
 
 function getGenreBucketLabel(value: string) {
@@ -170,7 +155,7 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
             </Link>
             <p className="text-xs text-slate-500">
               {items.length} 件表示
-              {isFallback ? "・ローカルフォールバック表示中" : "・Supabase データ表示"}
+              {isFallback ? "・ローカルフォールバック表示中" : ""}
             </p>
           </div>
         </form>

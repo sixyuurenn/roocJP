@@ -350,7 +350,7 @@ export async function getCardDirectoryData(filters: CardDirectoryFilters): Promi
     }));
 
   return {
-    cards: cards.filter((card) => card.status === "published"),
+    cards,
     categories,
     isFallback: false,
     source: "supabase",

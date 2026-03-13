@@ -373,8 +373,7 @@ export async function getEquipmentDirectoryData(filters: EquipmentDirectoryFilte
   const items = itemRows
     .map((row) => toEquipmentItem(row as EquipmentItemRow, tagsByEquipmentId, genresByEquipmentId))
     .filter((item): item is EquipmentItem => item !== null)
-    .filter((item) => matchesJobTag(item, jobTag))
-    .filter((item) => item.status === "published");
+    .filter((item) => matchesJobTag(item, jobTag));
 
   return {
     items,

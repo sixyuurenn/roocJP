@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageCard } from "@/components/page-card";
 import { CARD_EQUIP_SLOT_OPTIONS, CARD_RARITY_OPTIONS } from "@/data/cards";
 import { getCardDirectoryData } from "@/lib/cards";
+import { getSingleValue, renderLines } from "@/lib/page-utils";
 
 type CardsPageProps = {
   searchParams?: Promise<{
@@ -13,28 +14,12 @@ type CardsPageProps = {
   }>;
 };
 
-function getSingleValue(value: string | string[] | undefined) {
-  return Array.isArray(value) ? value[0] ?? "" : value ?? "";
-}
-
 function getRarityFilter(value: string) {
   return CARD_RARITY_OPTIONS.includes(value as (typeof CARD_RARITY_OPTIONS)[number]) ? value : "";
 }
 
 function getEquipSlotFilter(value: string) {
   return CARD_EQUIP_SLOT_OPTIONS.includes(value as (typeof CARD_EQUIP_SLOT_OPTIONS)[number]) ? value : "";
-}
-
-function renderLines(text: string | null) {
-  if (!text) {
-    return null;
-  }
-
-  return text.split("\n").map((line, index) => (
-    <p key={`${line}-${index}`} className="text-sm leading-7 text-slate-700">
-      {line}
-    </p>
-  ));
 }
 
 export default async function CardsPage({ searchParams }: CardsPageProps) {
@@ -52,16 +37,12 @@ export default async function CardsPage({ searchParams }: CardsPageProps) {
 
   return (
     <>
-      <PageCard title="カード図鑑" description="カード一覧・キーワード検索・絞り込みが DB 基盤で動作する構成です。">
+      <PageCard title="カード図鑑" description="カード一覧・キーワード検索・絞り込みで確認できます。">
         {isFallback ? (
           <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
             Supabase 読み取りに失敗したため、ローカルフォールバックを表示しています。判定: <code>{source}</code>
           </div>
-        ) : (
-          <div className="mb-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-            Supabase 読み取り成功。判定: <code>{source}</code>
-          </div>
-        )}
+        ) : null}
 
         <form className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
           <label className="block">
@@ -138,7 +119,7 @@ export default async function CardsPage({ searchParams }: CardsPageProps) {
             </Link>
             <p className="text-xs text-slate-500">
               {cards.length} 件表示
-              {isFallback ? "・ローカルフォールバック表示中" : "・Supabase データ表示"}
+              {isFallback ? "・ローカルフォールバック表示中" : ""}
             </p>
           </div>
         </form>
@@ -206,14 +187,14 @@ export default async function CardsPage({ searchParams }: CardsPageProps) {
                         <p className="text-xs font-semibold tracking-wide text-slate-500">検索タグ</p>
                         <div className="flex flex-wrap gap-2">
                           {card.tags.map((tag) => (
-                          <span
-                            key={`${card.id}-${tag.id}`}
-                            className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700"
-                          >
-                            {tag.tagLabel}
-                          </span>
-                        ))}
-                      </div>
+                            <span
+                              key={`${card.id}-${tag.id}`}
+                              className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700"
+                            >
+                              {tag.tagLabel}
+                            </span>
+                          ))}
+                        </div>
                       </section>
 
                       <section className="space-y-2">
