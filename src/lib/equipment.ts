@@ -79,6 +79,12 @@ export type EquipmentDirectoryData = {
   source: "supabase" | "fallback:no-env" | "fallback:master-query-error" | "fallback:item-query-error" | "fallback:relation-query-error";
 };
 
+export type EquipmentDetailData = {
+  item: EquipmentItem | null;
+  isFallback: boolean;
+  source: EquipmentDirectoryData["source"];
+};
+
 function isEquipmentEquipSlot(value: string | null): value is EquipmentEquipSlot {
   return value !== null && EQUIPMENT_EQUIP_SLOT_OPTIONS.includes(value as EquipmentEquipSlot);
 }
@@ -261,6 +267,14 @@ function getFallbackDirectoryData(
   };
 }
 
+function getFallbackDetailData(id: string, source: EquipmentDetailData["source"]): EquipmentDetailData {
+  return {
+    item: fallbackEquipmentItems.find((item) => item.id === id && item.status === "published") ?? null,
+    isFallback: true,
+    source,
+  };
+}
+
 export async function getEquipmentDirectoryData(filters: EquipmentDirectoryFilters): Promise<EquipmentDirectoryData> {
   const supabase = createSupabaseServerClient();
 
@@ -377,6 +391,99 @@ export async function getEquipmentDirectoryData(filters: EquipmentDirectoryFilte
 
   return {
     items,
+    isFallback: false,
+    source: "supabase",
+  };
+}
+
+export async function getEquipmentDetailData(id: string): Promise<EquipmentDetailData> {
+  const supabase = createSupabaseServerClient();
+
+  if (!supabase) {
+    return getFallbackDetailData(id, "fallback:no-env");
+  }
+
+  const [genreResponse, tagResponse] = await Promise.all([
+    supabase
+      .from("equipment_genres")
+      .select("id, genre_name_jp, genre_bucket, genre_attribute_text, genre_set_effect_text, search_text, sort_order, status")
+      .eq("status", "published")
+      .order("sort_order", { ascending: true }),
+    supabase.from("equipment_tags").select("id, tag_key, tag_label, tag_group, sort_order").order("sort_order", { ascending: true }),
+  ]);
+
+  if (genreResponse.error || tagResponse.error || !genreResponse.data || !tagResponse.data) {
+    return getFallbackDetailData(id, "fallback:master-query-error");
+  }
+
+  const genres = genreResponse.data
+    .map((row) => toEquipmentGenreItem(row as EquipmentGenreRow))
+    .filter((item): item is EquipmentGenreItem => item !== null);
+  const tags = tagResponse.data.map((row) => toEquipmentTagItem(row as EquipmentTagRow)).filter((item): item is EquipmentTagItem => item !== null);
+
+  const { data: itemRows, error: itemError } = await supabase
+    .from("equipment_items")
+    .select(
+      "id, item_name_jp_display, item_name_jp_raw, item_name_en, equip_slot, genre_bucket, level, battle_power, equipment_score, card_slots, status_text_core, search_text, icon_url, artwork_url, sort_order, status",
+    )
+    .eq("id", id)
+    .eq("status", "published")
+    .limit(1);
+
+  if (itemError || !itemRows) {
+    return getFallbackDetailData(id, "fallback:item-query-error");
+  }
+
+  const row = itemRows[0] as EquipmentItemRow | undefined;
+
+  if (!row) {
+    return {
+      item: null,
+      isFallback: false,
+      source: "supabase",
+    };
+  }
+
+  const [memberResponse, itemTagResponse] = await Promise.all([
+    supabase.from("equipment_genre_members").select("equipment_id, genre_id").eq("equipment_id", row.id),
+    supabase.from("equipment_item_tags").select("equipment_id, tag_id").eq("equipment_id", row.id),
+  ]);
+
+  if (memberResponse.error || itemTagResponse.error || !memberResponse.data || !itemTagResponse.data) {
+    return getFallbackDetailData(id, "fallback:relation-query-error");
+  }
+
+  const genreMap = new Map(genres.map((genre) => [genre.id, genre]));
+  const tagMap = new Map(tags.map((tag) => [tag.id, tag]));
+  const genresByEquipmentId = new Map<string, EquipmentGenreItem[]>();
+  const tagsByEquipmentId = new Map<string, EquipmentTagItem[]>();
+
+  for (const genreMember of memberResponse.data as EquipmentGenreMemberRow[]) {
+    const genre = genreMap.get(normalizeId(genreMember.genre_id));
+
+    if (!genre) {
+      continue;
+    }
+
+    const current = genresByEquipmentId.get(genreMember.equipment_id) ?? [];
+    current.push(genre);
+    genresByEquipmentId.set(genreMember.equipment_id, current);
+  }
+
+  for (const itemTag of itemTagResponse.data as EquipmentItemTagRow[]) {
+    const tag = tagMap.get(normalizeId(itemTag.tag_id));
+
+    if (!tag) {
+      continue;
+    }
+
+    const current = tagsByEquipmentId.get(itemTag.equipment_id) ?? [];
+    current.push(tag);
+    tagsByEquipmentId.set(itemTag.equipment_id, current);
+  }
+
+  return {
+    item: toEquipmentItem(row, tagsByEquipmentId, genresByEquipmentId),
     isFallback: false,
     source: "supabase",
   };
