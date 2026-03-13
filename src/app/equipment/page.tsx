@@ -189,7 +189,11 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
 
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900">{item.itemNameJpDisplay}</h3>
+                      <h3 className="text-lg font-semibold text-slate-900">
+                        <Link href={`/equipment/${item.id}`} className="hover:text-base-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-accent/30">
+                          {item.itemNameJpDisplay}
+                        </Link>
+                      </h3>
                       <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-500">
                         <span className="rounded-full bg-slate-100 px-2.5 py-1">{item.equipSlot}</span>
                         <span className="rounded-full bg-sky-50 px-2.5 py-1 text-sky-700">{getGenreBucketLabel(item.genreBucket)}</span>
@@ -258,6 +262,15 @@ export default async function EquipmentPage({ searchParams }: EquipmentPageProps
                         ))}
                       </div>
                     </section>
+
+                    <div>
+                      <Link
+                        href={`/equipment/${item.id}`}
+                        className="inline-flex rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:border-base-accent hover:text-base-accent"
+                      >
+                        詳細を見る
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </article>
