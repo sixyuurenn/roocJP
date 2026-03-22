@@ -1,5 +1,7 @@
 import type { JobTier, SkillDiffItem, SkillItem } from "@/data/skills";
+import { getAssassinCrossSkillItemsFromTsv } from "@/lib/assassin-cross-skill-tsv";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getSummonerSkillItemsFromTsv } from "@/lib/summoner-skill-tsv";
 
 type SkillTagRow = {
   tag: string | null;
@@ -56,7 +58,6 @@ function toSkillItem(row: SkillRow): SkillItem | null {
     !row.job_id ||
     !isJobTier(row.job_tier) ||
     !row.name ||
-    row.max_level === null ||
     row.body_lv1 === null ||
     row.body_lvmax === null ||
     row.cast_time_lv1 === null ||
@@ -113,6 +114,20 @@ function toSkillItem(row: SkillRow): SkillItem | null {
 }
 
 export async function getSkillsByJobId(jobId: string): Promise<SkillItem[]> {
+  if (jobId === "summoner") {
+    // Summoner detail is sourced only from the repo-managed TSV snapshot.
+    // Existing DB/static data must not be mixed into this page.
+    const summonerSkills = await getSummonerSkillItemsFromTsv();
+    return summonerSkills ?? [];
+  }
+
+  if (jobId === "assassin-cross") {
+    // Assassin Cross detail is sourced only from the repo-managed TSV snapshot.
+    // Existing DB/static data must not be mixed into this page.
+    const assassinCrossSkills = await getAssassinCrossSkillItemsFromTsv();
+    return assassinCrossSkills ?? [];
+  }
+
   const supabase = createSupabaseServerClient();
 
   if (!supabase) {

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JobSkillList } from "@/components/job-skill-list";
 import { PageCard } from "@/components/page-card";
-import { getJobById, jobItems } from "@/data/jobs";
+import { getJobById } from "@/data/jobs";
 import { getSkillsByJobId } from "@/lib/skills";
 
 type JobDetailPageProps = {
@@ -11,9 +11,7 @@ type JobDetailPageProps = {
   }>;
 };
 
-export function generateStaticParams() {
-  return jobItems.map((job) => ({ id: job.id }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function JobDetailPage({ params }: JobDetailPageProps) {
   const { id } = await params;

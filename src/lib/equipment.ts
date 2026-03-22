@@ -1,490 +1,406 @@
-import {
-  EQUIPMENT_EQUIP_SLOT_OPTIONS,
-  EQUIPMENT_GENRE_BUCKET_ITEMS,
-  EQUIPMENT_JOB_TAG_ITEMS,
-  buildEquipmentGenreSearchText,
-  buildEquipmentSearchText,
-  fallbackEquipmentItems,
-  type EquipmentEquipSlot,
-  type EquipmentGenreBucket,
-  type EquipmentJobTag,
-  type EquipmentGenreItem,
-  type EquipmentItem,
-  type EquipmentStatus,
-  type EquipmentTagItem,
-} from "@/data/equipment";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { readFile } from "node:fs/promises";
+import { cache } from "react";
 
-type IdValue = number | string;
+const EQUIPMENT_ITEMS_CSV_PATH = "src/data/equipment-csv/PATH_TO_EQUIPMENT_ITEMS_final.csv";
+const EQUIPMENT_EFFECTS_CSV_PATH = "src/data/equipment-csv/PATH_TO_EQUIPMENT_EFFECTS_final.csv";
 
-type EquipmentItemRow = {
+const EQUIPMENT_PLACEHOLDER_IMAGE = "/images/equipment/placeholder.svg";
+const ACCESSORY_IMAGE_BASE_PATH = "/images/equipment/akuse";
+const EQUIPMENT_IMAGE_BASE_PATH = "/images/equipment/soubi";
+
+type EquipmentItemGroup = "equipment" | "accessory";
+type EquipmentEffectType = "style" | "set";
+
+type EquipmentCsvItemRow = {
+  item_id: string;
+  sort_order: string;
+  status: string;
+  item_group: string;
+  name_jp: string;
+  name_en: string;
+  name_zh: string;
+  type_jp: string;
+  type_en: string;
+  type_zh: string;
+  level: string;
+  image_path: string;
+  equipment_attributes_jp: string;
+  equipment_attributes_en: string;
+  equipment_attributes_zh: string;
+};
+
+type EquipmentCsvEffectRow = {
+  effect_id: string;
+  item_id: string;
+  effect_type: string;
+  effect_order: string;
+  effect_name_jp: string;
+  effect_name_en: string;
+  effect_name_zh: string;
+  partner_item_ids: string;
+  activation_condition_jp: string;
+  activation_condition_en: string;
+  activation_condition_zh: string;
+  effect_text_jp: string;
+  effect_text_en: string;
+  effect_text_zh: string;
+};
+
+type TwoHeaderCsvTable<T extends Record<string, string>> = {
+  displayHeaders: string[];
+  keyHeaders: string[];
+  records: T[];
+};
+
+export type EquipmentEffect = {
   id: string;
-  item_name_jp_display: string | null;
-  item_name_jp_raw: string | null;
-  item_name_en: string | null;
-  equip_slot: string | null;
-  genre_bucket: string | null;
-  level: number | null;
-  battle_power: number | null;
-  equipment_score: number | null;
-  card_slots: number | null;
-  status_text_core: string | null;
-  search_text: string | null;
-  icon_url: string | null;
-  artwork_url: string | null;
-  sort_order: number | null;
+  itemId: string;
+  effectType: EquipmentEffectType;
+  effectOrder: number;
+  effectNameJp: string;
+  effectNameAssistText: string | null;
+  effectNameEn: string | null;
+  effectNameZh: string | null;
+  activationConditionJp: string | null;
+  activationConditionEn: string | null;
+  activationConditionZh: string | null;
+  effectTextJp: string;
+  effectTextEn: string | null;
+  effectTextZh: string | null;
+  partnerItemIds: string[];
+};
+
+export type EquipmentItem = {
+  id: string;
+  itemGroup: EquipmentItemGroup;
+  nameJp: string;
+  nameAssistText: string | null;
+  nameEn: string | null;
+  nameZh: string | null;
+  typeJp: string;
+  typeEn: string | null;
+  typeZh: string | null;
+  level: number;
+  imagePath: string | null;
+  imageSrc: string;
+  equipmentAttributesJp: string;
+  equipmentAttributesEn: string | null;
+  equipmentAttributesZh: string | null;
+  sortOrder: number;
   status: string | null;
-};
-
-type EquipmentGenreRow = {
-  id: IdValue;
-  genre_name_jp: string | null;
-  genre_bucket: string | null;
-  genre_attribute_text: string | null;
-  genre_set_effect_text: string | null;
-  search_text: string | null;
-  sort_order: number | null;
-  status: string | null;
-};
-
-type EquipmentTagRow = {
-  id: IdValue;
-  tag_key: string | null;
-  tag_label: string | null;
-  tag_group: string | null;
-  sort_order: number | null;
-};
-
-type EquipmentGenreMemberRow = {
-  equipment_id: string;
-  genre_id: IdValue;
-};
-
-type EquipmentItemTagRow = {
-  equipment_id: string;
-  tag_id: IdValue;
-};
-
-export type EquipmentDirectoryFilters = {
-  keyword: string;
-  equipSlot: string;
-  genreBucket: string;
-  minLevel: string;
-  jobTag: string;
+  effects: EquipmentEffect[];
+  visibleEffects: EquipmentEffect[];
+  effectSectionTitle: "流派効果" | "セット属性" | null;
 };
 
 export type EquipmentDirectoryData = {
   items: EquipmentItem[];
-  isFallback: boolean;
-  source: "supabase" | "fallback:no-env" | "fallback:master-query-error" | "fallback:item-query-error" | "fallback:relation-query-error";
+  equipmentItems: EquipmentItem[];
+  accessoryItems: EquipmentItem[];
+  source: "csv";
 };
 
-export type EquipmentDetailData = {
-  item: EquipmentItem | null;
-  isFallback: boolean;
-  source: EquipmentDirectoryData["source"];
-};
+function parseCsv(text: string) {
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let field = "";
+  let inQuotes = false;
 
-function isEquipmentEquipSlot(value: string | null): value is EquipmentEquipSlot {
-  return value !== null && EQUIPMENT_EQUIP_SLOT_OPTIONS.includes(value as EquipmentEquipSlot);
-}
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
 
-function isEquipmentGenreBucket(value: string | null): value is EquipmentGenreBucket {
-  return value !== null && EQUIPMENT_GENRE_BUCKET_ITEMS.some((item) => item.value === value);
-}
+    if (inQuotes) {
+      if (char === "\"") {
+        if (text[index + 1] === "\"") {
+          field += "\"";
+          index += 1;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        field += char;
+      }
 
-function isEquipmentStatus(value: string | null): value is EquipmentStatus {
-  return value === "published" || value === "draft" || value === "archived";
-}
+      continue;
+    }
 
-function isEquipmentJobTag(value: string): value is EquipmentJobTag {
-  return EQUIPMENT_JOB_TAG_ITEMS.some((item) => item.value === value);
-}
+    if (char === "\"") {
+      inQuotes = true;
+      continue;
+    }
 
-function normalizeId(value: IdValue) {
-  return typeof value === "number" ? value : Number(value);
-}
+    if (char === ",") {
+      row.push(field);
+      field = "";
+      continue;
+    }
 
-function toEquipmentGenreItem(row: EquipmentGenreRow): EquipmentGenreItem | null {
-  if (
-    !row.genre_name_jp ||
-    !isEquipmentGenreBucket(row.genre_bucket) ||
-    row.genre_attribute_text === null ||
-    row.genre_set_effect_text === null ||
-    !isEquipmentStatus(row.status)
-  ) {
-    return null;
+    if (char === "\n") {
+      row.push(field);
+      rows.push(row);
+      row = [];
+      field = "";
+      continue;
+    }
+
+    if (char === "\r") {
+      continue;
+    }
+
+    field += char;
   }
 
-  return {
-    id: normalizeId(row.id),
-    genreNameJp: row.genre_name_jp,
-    genreBucket: row.genre_bucket,
-    genreAttributeText: row.genre_attribute_text,
-    genreSetEffectText: row.genre_set_effect_text,
-    searchText:
-      row.search_text && row.search_text.trim().length > 0
-        ? row.search_text
-        : buildEquipmentGenreSearchText({
-            genreNameJp: row.genre_name_jp,
-            genreBucket: row.genre_bucket,
-            genreAttributeText: row.genre_attribute_text,
-            genreSetEffectText: row.genre_set_effect_text,
-          }),
-    sortOrder: row.sort_order ?? 0,
-    status: row.status,
-  };
-}
-
-function toEquipmentTagItem(row: EquipmentTagRow): EquipmentTagItem | null {
-  if (!row.tag_key || !row.tag_label || !row.tag_group) {
-    return null;
+  if (field.length > 0 || row.length > 0) {
+    row.push(field);
+    rows.push(row);
   }
 
-  return {
-    id: normalizeId(row.id),
-    tagKey: row.tag_key,
-    tagLabel: row.tag_label,
-    tagGroup: row.tag_group,
-    sortOrder: row.sort_order ?? 0,
-  };
-}
-
-function toEquipmentItem(
-  row: EquipmentItemRow,
-  tagsByEquipmentId: Map<string, EquipmentTagItem[]>,
-  genresByEquipmentId: Map<string, EquipmentGenreItem[]>,
-): EquipmentItem | null {
-  if (
-    !row.id ||
-    !row.item_name_jp_display ||
-    !isEquipmentEquipSlot(row.equip_slot) ||
-    !isEquipmentGenreBucket(row.genre_bucket) ||
-    row.level === null ||
-    row.status_text_core === null ||
-    row.search_text === null ||
-    !isEquipmentStatus(row.status)
-  ) {
-    return null;
+  if (rows.length > 0 && rows[0]?.[0]?.charCodeAt(0) === 0xfeff) {
+    rows[0][0] = rows[0][0].slice(1);
   }
 
-  const tags = (tagsByEquipmentId.get(row.id) ?? []).slice().sort((a, b) => a.sortOrder - b.sortOrder);
-  const genres = (genresByEquipmentId.get(row.id) ?? []).slice().sort((a, b) => a.sortOrder - b.sortOrder);
-
-  return {
-    id: row.id,
-    itemNameJpDisplay: row.item_name_jp_display,
-    itemNameJpRaw: row.item_name_jp_raw,
-    itemNameEn: row.item_name_en,
-    equipSlot: row.equip_slot,
-    genreBucket: row.genre_bucket,
-    level: row.level,
-    battlePower: row.battle_power,
-    equipmentScore: row.equipment_score,
-    cardSlots: row.card_slots,
-    statusTextCore: row.status_text_core,
-    searchText:
-      row.search_text.trim().length > 0
-        ? row.search_text
-        : buildEquipmentSearchText({
-            itemNameJpDisplay: row.item_name_jp_display,
-            itemNameJpRaw: row.item_name_jp_raw,
-            itemNameEn: row.item_name_en,
-            equipSlot: row.equip_slot,
-            genreBucket: row.genre_bucket,
-            level: row.level,
-            battlePower: row.battle_power,
-            equipmentScore: row.equipment_score,
-            cardSlots: row.card_slots,
-            statusTextCore: row.status_text_core,
-            tags,
-            genres,
-          }),
-    iconUrl: row.icon_url,
-    artworkUrl: row.artwork_url,
-    sortOrder: row.sort_order ?? 0,
-    status: row.status,
-    tags,
-    genres,
-  };
+  return rows;
 }
 
-function normalizeKeyword(value: string) {
-  return value.trim().toLowerCase();
-}
+function toTwoHeaderRecords<T extends Record<string, string>>(text: string): TwoHeaderCsvTable<T> {
+  const rows = parseCsv(text);
 
-function normalizeMinLevel(value: string) {
-  const parsed = Number(value);
-
-  if (!Number.isFinite(parsed) || parsed <= 0) {
-    return null;
-  }
-
-  return Math.floor(parsed);
-}
-
-function normalizeJobTag(value: string) {
-  return isEquipmentJobTag(value) ? value : "";
-}
-
-function matchesJobTag(item: EquipmentItem, jobTag: string) {
-  return jobTag.length === 0 || item.tags.some((tag) => tag.tagKey === jobTag && tag.tagGroup === "job");
-}
-
-function filterFallbackItems(items: EquipmentItem[], filters: EquipmentDirectoryFilters) {
-  const keyword = normalizeKeyword(filters.keyword);
-  const minLevel = normalizeMinLevel(filters.minLevel);
-  const jobTag = normalizeJobTag(filters.jobTag);
-
-  return items.filter((item) => {
-    const matchesKeyword =
-      keyword.length === 0 ||
-      `${item.itemNameJpDisplay} ${item.itemNameJpRaw ?? ""} ${item.searchText}`.toLowerCase().includes(keyword);
-    const matchesEquipSlot = filters.equipSlot.length === 0 || item.equipSlot === filters.equipSlot;
-    const matchesGenreBucket = filters.genreBucket.length === 0 || item.genreBucket === filters.genreBucket;
-    const matchesMinLevel = minLevel === null || item.level >= minLevel;
-    const matchesSelectedJobTag = matchesJobTag(item, jobTag);
-
-    return (
-      matchesKeyword &&
-      matchesEquipSlot &&
-      matchesGenreBucket &&
-      matchesMinLevel &&
-      matchesSelectedJobTag &&
-      item.status === "published"
-    );
-  });
-}
-
-function getFallbackDirectoryData(
-  filters: EquipmentDirectoryFilters,
-  source: EquipmentDirectoryData["source"],
-): EquipmentDirectoryData {
-  return {
-    items: filterFallbackItems(fallbackEquipmentItems, filters),
-    isFallback: true,
-    source,
-  };
-}
-
-function getFallbackDetailData(id: string, source: EquipmentDetailData["source"]): EquipmentDetailData {
-  return {
-    item: fallbackEquipmentItems.find((item) => item.id === id && item.status === "published") ?? null,
-    isFallback: true,
-    source,
-  };
-}
-
-export async function getEquipmentDirectoryData(filters: EquipmentDirectoryFilters): Promise<EquipmentDirectoryData> {
-  const supabase = createSupabaseServerClient();
-
-  if (!supabase) {
-    return getFallbackDirectoryData(filters, "fallback:no-env");
-  }
-
-  const [genreResponse, tagResponse] = await Promise.all([
-    supabase
-      .from("equipment_genres")
-      .select("id, genre_name_jp, genre_bucket, genre_attribute_text, genre_set_effect_text, search_text, sort_order, status")
-      .eq("status", "published")
-      .order("sort_order", { ascending: true }),
-    supabase.from("equipment_tags").select("id, tag_key, tag_label, tag_group, sort_order").order("sort_order", { ascending: true }),
-  ]);
-
-  if (genreResponse.error || tagResponse.error || !genreResponse.data || !tagResponse.data) {
-    return getFallbackDirectoryData(filters, "fallback:master-query-error");
-  }
-
-  const genres = genreResponse.data
-    .map((row) => toEquipmentGenreItem(row as EquipmentGenreRow))
-    .filter((item): item is EquipmentGenreItem => item !== null);
-  const tags = tagResponse.data
-    .map((row) => toEquipmentTagItem(row as EquipmentTagRow))
-    .filter((item): item is EquipmentTagItem => item !== null);
-  const jobTag = normalizeJobTag(filters.jobTag);
-
-  const minLevel = normalizeMinLevel(filters.minLevel);
-
-  let itemQuery = supabase
-    .from("equipment_items")
-    .select(
-      "id, item_name_jp_display, item_name_jp_raw, item_name_en, equip_slot, genre_bucket, level, battle_power, equipment_score, card_slots, status_text_core, search_text, icon_url, artwork_url, sort_order, status",
-    )
-    .eq("status", "published")
-    .order("sort_order", { ascending: true })
-    .order("level", { ascending: true });
-
-  if (filters.equipSlot.length > 0) {
-    itemQuery = itemQuery.eq("equip_slot", filters.equipSlot);
-  }
-
-  if (filters.genreBucket.length > 0) {
-    itemQuery = itemQuery.eq("genre_bucket", filters.genreBucket);
-  }
-
-  if (minLevel !== null) {
-    itemQuery = itemQuery.gte("level", minLevel);
-  }
-
-  if (filters.keyword.trim().length > 0) {
-    itemQuery = itemQuery.ilike("search_text", `%${filters.keyword.trim()}%`);
-  }
-
-  const { data: itemRows, error: itemError } = await itemQuery;
-
-  if (itemError || !itemRows) {
-    return getFallbackDirectoryData(filters, "fallback:item-query-error");
-  }
-
-  const equipmentIds = itemRows.map((row) => (row as EquipmentItemRow).id);
-
-  if (equipmentIds.length === 0) {
+  if (rows.length < 2) {
     return {
-      items: [],
-      isFallback: false,
-      source: "supabase",
+      displayHeaders: [],
+      keyHeaders: [],
+      records: [],
     };
   }
 
-  const [memberResponse, itemTagResponse] = await Promise.all([
-    supabase.from("equipment_genre_members").select("equipment_id, genre_id").in("equipment_id", equipmentIds),
-    supabase.from("equipment_item_tags").select("equipment_id, tag_id").in("equipment_id", equipmentIds),
+  const displayHeaders = rows[0];
+  const keyHeaders = rows[1];
+  const records: T[] = [];
+
+  for (let rowIndex = 2; rowIndex < rows.length; rowIndex += 1) {
+    const row = rows[rowIndex];
+
+    if (!row || row.every((value) => value.trim().length === 0)) {
+      continue;
+    }
+
+    const record = {} as T;
+
+    for (let columnIndex = 0; columnIndex < keyHeaders.length; columnIndex += 1) {
+      const key = keyHeaders[columnIndex];
+
+      if (!key) {
+        continue;
+      }
+
+      record[key as keyof T] = (row[columnIndex] ?? "") as T[keyof T];
+    }
+
+    records.push(record);
+  }
+
+  return {
+    displayHeaders,
+    keyHeaders,
+    records,
+  };
+}
+
+function parseOptionalNumber(value: string, fallbackValue: number) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : fallbackValue;
+}
+
+function normalizeNewlines(value: string) {
+  return value.replace(/\r\n/g, "\n").replace(/\\n/g, "\n").trim();
+}
+
+function normalizeOptionalText(value: string) {
+  const normalized = normalizeNewlines(value);
+  return normalized.length > 0 ? normalized : null;
+}
+
+function normalizeTitleAssistText(value: string) {
+  const normalized = normalizeOptionalText(value);
+
+  if (!normalized) {
+    return null;
+  }
+
+  const singleLine = normalized.replace(/\s+/g, " ").trim();
+
+  if (singleLine.length === 0) {
+    return null;
+  }
+
+  if (/^\[?不明\]?$/u.test(singleLine) || /^nil$/i.test(singleLine)) {
+    return null;
+  }
+
+  return singleLine;
+}
+
+function buildTitleAssistText(...values: Array<string | null>) {
+  const visibleValues = values.filter((value): value is string => value !== null);
+  return visibleValues.length > 0 ? visibleValues.join(" / ") : null;
+}
+
+function normalizeItemGroup(value: string): EquipmentItemGroup {
+  return value === "accessory" ? "accessory" : "equipment";
+}
+
+function normalizeEffectType(value: string): EquipmentEffectType {
+  return value === "set" ? "set" : "style";
+}
+
+function normalizeImagePath(value: string) {
+  const normalized = normalizeOptionalText(value);
+
+  if (!normalized) {
+    return null;
+  }
+
+  return normalized;
+}
+
+function resolveImageSrc(itemGroup: EquipmentItemGroup, imagePath: string | null) {
+  if (!imagePath) {
+    return EQUIPMENT_PLACEHOLDER_IMAGE;
+  }
+
+  if (imagePath.startsWith("/")) {
+    return imagePath;
+  }
+
+  const imageId = Number(imagePath);
+
+  if (!Number.isInteger(imageId) || imageId <= 0) {
+    return EQUIPMENT_PLACEHOLDER_IMAGE;
+  }
+
+  if (itemGroup === "accessory") {
+    return `${ACCESSORY_IMAGE_BASE_PATH}/${imageId}_purple_icon_crops.png`;
+  }
+
+  return `${EQUIPMENT_IMAGE_BASE_PATH}/${imageId}_soubi_crops.png`;
+}
+
+function buildEffectRecord(row: EquipmentCsvEffectRow): EquipmentEffect {
+  const effectNameEn = normalizeTitleAssistText(row.effect_name_en);
+  const effectNameZh = normalizeTitleAssistText(row.effect_name_zh);
+
+  return {
+    id: row.effect_id,
+    itemId: row.item_id,
+    effectType: normalizeEffectType(row.effect_type),
+    effectOrder: parseOptionalNumber(row.effect_order, 0),
+    effectNameJp: normalizeNewlines(row.effect_name_jp),
+    effectNameAssistText: buildTitleAssistText(effectNameEn, effectNameZh),
+    effectNameEn,
+    effectNameZh,
+    activationConditionJp: normalizeOptionalText(row.activation_condition_jp),
+    activationConditionEn: normalizeOptionalText(row.activation_condition_en),
+    activationConditionZh: normalizeOptionalText(row.activation_condition_zh),
+    effectTextJp: normalizeNewlines(row.effect_text_jp),
+    effectTextEn: normalizeOptionalText(row.effect_text_en),
+    effectTextZh: normalizeOptionalText(row.effect_text_zh),
+    partnerItemIds: row.partner_item_ids
+      .split("|")
+      .map((itemId) => itemId.trim())
+      .filter((itemId) => itemId.length > 0),
+  };
+}
+
+function getVisibleEffects(itemGroup: EquipmentItemGroup, effects: EquipmentEffect[]) {
+  const effectType = itemGroup === "accessory" ? "set" : "style";
+
+  return effects
+    .filter((effect) => effect.effectType === effectType)
+    .slice()
+    .sort((left, right) => left.effectOrder - right.effectOrder || left.id.localeCompare(right.id));
+}
+
+function getEffectSectionTitle(itemGroup: EquipmentItemGroup, effects: EquipmentEffect[]) {
+  if (effects.length === 0) {
+    return null;
+  }
+
+  return itemGroup === "accessory" ? "セット属性" : "流派効果";
+}
+
+const loadEquipmentDataset = cache(async (): Promise<EquipmentDirectoryData> => {
+  const [itemsText, effectsText] = await Promise.all([
+    readFile(EQUIPMENT_ITEMS_CSV_PATH, "utf8"),
+    readFile(EQUIPMENT_EFFECTS_CSV_PATH, "utf8"),
   ]);
+  const itemRows = toTwoHeaderRecords<EquipmentCsvItemRow>(itemsText).records;
+  const effectRows = toTwoHeaderRecords<EquipmentCsvEffectRow>(effectsText).records;
+  const effectsByItemId = new Map<string, EquipmentEffect[]>();
 
-  if (memberResponse.error || itemTagResponse.error || !memberResponse.data || !itemTagResponse.data) {
-    return getFallbackDirectoryData(filters, "fallback:relation-query-error");
-  }
-
-  const genreMap = new Map(genres.map((genre) => [genre.id, genre]));
-  const tagMap = new Map(tags.map((tag) => [tag.id, tag]));
-  const genresByEquipmentId = new Map<string, EquipmentGenreItem[]>();
-  const tagsByEquipmentId = new Map<string, EquipmentTagItem[]>();
-
-  for (const row of memberResponse.data as EquipmentGenreMemberRow[]) {
-    const genre = genreMap.get(normalizeId(row.genre_id));
-
-    if (!genre) {
+  for (const row of effectRows) {
+    if (!row.effect_id || !row.item_id || !row.effect_text_jp) {
       continue;
     }
 
-    const current = genresByEquipmentId.get(row.equipment_id) ?? [];
-    current.push(genre);
-    genresByEquipmentId.set(row.equipment_id, current);
-  }
-
-  for (const row of itemTagResponse.data as EquipmentItemTagRow[]) {
-    const tag = tagMap.get(normalizeId(row.tag_id));
-
-    if (!tag) {
-      continue;
-    }
-
-    const current = tagsByEquipmentId.get(row.equipment_id) ?? [];
-    current.push(tag);
-    tagsByEquipmentId.set(row.equipment_id, current);
+    const current = effectsByItemId.get(row.item_id) ?? [];
+    current.push(buildEffectRecord(row));
+    effectsByItemId.set(row.item_id, current);
   }
 
   const items = itemRows
-    .map((row) => toEquipmentItem(row as EquipmentItemRow, tagsByEquipmentId, genresByEquipmentId))
+    .map((row, index) => {
+      if (!row.item_id || !row.name_jp || !row.type_jp || !row.level || !row.equipment_attributes_jp) {
+        return null;
+      }
+
+      const itemGroup = normalizeItemGroup(row.item_group);
+      const effects = (effectsByItemId.get(row.item_id) ?? [])
+        .slice()
+        .sort((left, right) => left.effectOrder - right.effectOrder || left.id.localeCompare(right.id));
+      const visibleEffects = getVisibleEffects(itemGroup, effects);
+      const imagePath = normalizeImagePath(row.image_path);
+      const nameEn = normalizeTitleAssistText(row.name_en);
+      const nameZh = normalizeTitleAssistText(row.name_zh);
+
+      return {
+        id: row.item_id,
+        itemGroup,
+        nameJp: normalizeNewlines(row.name_jp),
+        nameAssistText: buildTitleAssistText(nameEn, nameZh),
+        nameEn,
+        nameZh,
+        typeJp: normalizeNewlines(row.type_jp),
+        typeEn: normalizeOptionalText(row.type_en),
+        typeZh: normalizeOptionalText(row.type_zh),
+        level: parseOptionalNumber(row.level, 0),
+        imagePath,
+        imageSrc: resolveImageSrc(itemGroup, imagePath),
+        equipmentAttributesJp: normalizeNewlines(row.equipment_attributes_jp),
+        equipmentAttributesEn: normalizeOptionalText(row.equipment_attributes_en),
+        equipmentAttributesZh: normalizeOptionalText(row.equipment_attributes_zh),
+        sortOrder: parseOptionalNumber(row.sort_order, index),
+        status: normalizeOptionalText(row.status),
+        effects,
+        visibleEffects,
+        effectSectionTitle: getEffectSectionTitle(itemGroup, visibleEffects),
+      } satisfies EquipmentItem;
+    })
     .filter((item): item is EquipmentItem => item !== null)
-    .filter((item) => matchesJobTag(item, jobTag));
+    .sort((left, right) => left.sortOrder - right.sortOrder || left.level - right.level || left.nameJp.localeCompare(right.nameJp));
 
   return {
     items,
-    isFallback: false,
-    source: "supabase",
+    equipmentItems: items.filter((item) => item.itemGroup === "equipment"),
+    accessoryItems: items.filter((item) => item.itemGroup === "accessory"),
+    source: "csv",
   };
+});
+
+export async function getEquipmentDirectoryData() {
+  return loadEquipmentDataset();
 }
 
-export async function getEquipmentDetailData(id: string): Promise<EquipmentDetailData> {
-  const supabase = createSupabaseServerClient();
-
-  if (!supabase) {
-    return getFallbackDetailData(id, "fallback:no-env");
-  }
-
-  const [genreResponse, tagResponse] = await Promise.all([
-    supabase
-      .from("equipment_genres")
-      .select("id, genre_name_jp, genre_bucket, genre_attribute_text, genre_set_effect_text, search_text, sort_order, status")
-      .eq("status", "published")
-      .order("sort_order", { ascending: true }),
-    supabase.from("equipment_tags").select("id, tag_key, tag_label, tag_group, sort_order").order("sort_order", { ascending: true }),
-  ]);
-
-  if (genreResponse.error || tagResponse.error || !genreResponse.data || !tagResponse.data) {
-    return getFallbackDetailData(id, "fallback:master-query-error");
-  }
-
-  const genres = genreResponse.data
-    .map((row) => toEquipmentGenreItem(row as EquipmentGenreRow))
-    .filter((item): item is EquipmentGenreItem => item !== null);
-  const tags = tagResponse.data.map((row) => toEquipmentTagItem(row as EquipmentTagRow)).filter((item): item is EquipmentTagItem => item !== null);
-
-  const { data: itemRows, error: itemError } = await supabase
-    .from("equipment_items")
-    .select(
-      "id, item_name_jp_display, item_name_jp_raw, item_name_en, equip_slot, genre_bucket, level, battle_power, equipment_score, card_slots, status_text_core, search_text, icon_url, artwork_url, sort_order, status",
-    )
-    .eq("id", id)
-    .eq("status", "published")
-    .limit(1);
-
-  if (itemError || !itemRows) {
-    return getFallbackDetailData(id, "fallback:item-query-error");
-  }
-
-  const row = itemRows[0] as EquipmentItemRow | undefined;
-
-  if (!row) {
-    return {
-      item: null,
-      isFallback: false,
-      source: "supabase",
-    };
-  }
-
-  const [memberResponse, itemTagResponse] = await Promise.all([
-    supabase.from("equipment_genre_members").select("equipment_id, genre_id").eq("equipment_id", row.id),
-    supabase.from("equipment_item_tags").select("equipment_id, tag_id").eq("equipment_id", row.id),
-  ]);
-
-  if (memberResponse.error || itemTagResponse.error || !memberResponse.data || !itemTagResponse.data) {
-    return getFallbackDetailData(id, "fallback:relation-query-error");
-  }
-
-  const genreMap = new Map(genres.map((genre) => [genre.id, genre]));
-  const tagMap = new Map(tags.map((tag) => [tag.id, tag]));
-  const genresByEquipmentId = new Map<string, EquipmentGenreItem[]>();
-  const tagsByEquipmentId = new Map<string, EquipmentTagItem[]>();
-
-  for (const genreMember of memberResponse.data as EquipmentGenreMemberRow[]) {
-    const genre = genreMap.get(normalizeId(genreMember.genre_id));
-
-    if (!genre) {
-      continue;
-    }
-
-    const current = genresByEquipmentId.get(genreMember.equipment_id) ?? [];
-    current.push(genre);
-    genresByEquipmentId.set(genreMember.equipment_id, current);
-  }
-
-  for (const itemTag of itemTagResponse.data as EquipmentItemTagRow[]) {
-    const tag = tagMap.get(normalizeId(itemTag.tag_id));
-
-    if (!tag) {
-      continue;
-    }
-
-    const current = tagsByEquipmentId.get(itemTag.equipment_id) ?? [];
-    current.push(tag);
-    tagsByEquipmentId.set(itemTag.equipment_id, current);
-  }
-
-  return {
-    item: toEquipmentItem(row, tagsByEquipmentId, genresByEquipmentId),
-    isFallback: false,
-    source: "supabase",
-  };
+export async function getEquipmentItemById(id: string) {
+  const { items } = await loadEquipmentDataset();
+  return items.find((item) => item.id === id) ?? null;
 }

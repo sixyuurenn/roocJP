@@ -1,0 +1,136 @@
+query,lang,expected_concept_id,query_type,notes
++100 MATK,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+10% chance to Parry MDMG,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
++10% chance to Parry PDMG,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
++10 MATK per +1 Refine,en,effect_phrase_int_1,alias_exact,Alias lookup should resolve to core concept.
+"+2,000 cart weight",en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
++-5% ASPD per +3 Refine,en,cond_refine_ge_3,alias_exact,Alias lookup should resolve to core concept.
+additional damage increases to 30%,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+additional damage increases to 40%,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+additionally increase the target's PDMG Reduction and MDMG Reduction by 10%,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+Auto-cast [Vanguard Force] damage +50%,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+[Axe Boomerang] Skill DMG +20%,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+[Bash] has a 30% chance to auto-cast [Vanguard Force],en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+[Bunch of Shrimp] effect doubled,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+Cart skills deal +25% damage.,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+Cart skills deal +(cart weight *60%) damage.,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+CRIT +10,en,effect_phrase_crit_10,alias_exact,Alias lookup should resolve to core concept.
+Debuff Potency of [Berserk] -3%,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+[DMG Reduction +7%] for 3 sec while [Song of Lutie] is actice.,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+"During the duration, Sacrifice no longer has a limit on the number of attack counts",en,cond_refine_ge_12,alias_exact,Alias lookup should resolve to core concept.
+[Electrifying Shot] DMG Multiplier +150%,en,effect_phrase_volt_attack_multiplier_150,alias_exact,Alias lookup should resolve to core concept.
+"For every 10 VIT of the target, additionally increases Acid Bomb and Acid Terror damage by 1.2%",en,effect_phrase_patk_12,alias_exact,Alias lookup should resolve to core concept.
+For every Refine +5,en,cond_refine_ge_5,alias_exact,Alias lookup should resolve to core concept.
+Global CD for Soul Breaker -0.3s (unique),en,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,alias_exact,Alias lookup should resolve to core concept.
+grants [MATK +12%],en,effect_phrase_matk_12,alias_exact,Alias lookup should resolve to core concept.
+Holy Skill DMG +12%,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+MATK +11%,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+Max HP +8%,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+PDMG Bonus +20%,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+Sacrifice counts +2,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+[Song of Lutie] Healing Effect +30%,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+[Song of Lutie] Healing Effect +40%,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+successful blocks will trigger the maximum level of Lion Roar (CD 2.5 sec),en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+Targets affected by the [Scream] have their MSPD additionally reduced by 15%,en,cond_refine_ge_12,alias_exact,Alias lookup should resolve to core concept.
+Targets damaged by [Hell's Plant] have their PDEF and MDEF reduced by 15% for 2 seconds,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+"the effect of each stack of Pact of Reaper is increased to: CRIT +5, ASPD +2%",en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+The HP cost of Sacrifice on self is further reduced by 30%,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+Upon dealing PDMG,en,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias_exact,Alias lookup should resolve to core concept.
+Using [Grooming] grants the target a shield equal to 10% of Max HP for 15 seconds,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+[Vanguard Force] skill damage +20%,en,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+"When [Berserk] is activated, ASPD +10%.",en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+When you deal PDMG,en,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias_exact,Alias lookup should resolve to core concept.
+When you take damage,en,cond_when_attacked,alias_exact,Alias lookup should resolve to core concept.
+you have a 30% chance to gain [Will of Kings: PDEF/MDEF +10%] for 5 sec.,en,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,alias_exact,Alias lookup should resolve to core concept.
+you have a 50% chance to obtain the Pact of Reaper instead,en,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+you obtain the effect of Reaper Whisper for 5 sec: Your every 5th Physical attack deals 400% Shadow PDMG,en,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+30%の確率で「君王の意志」を獲得：物理防御、魔法防御+10%、持続時間5秒,ja,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,alias_exact,Alias lookup should resolve to core concept.
+3点セット効果,ja,set_three_piece,alias_exact,Alias lookup should resolve to core concept.
+Agi15ポイントごとに,ja,cond_for_every_15_agi,alias_exact,Alias lookup should resolve to core concept.
+BaseLv+8毎に,ja,cond_based_on_your_base_level,alias_exact,Alias lookup should resolve to core concept.
+MaxHP+200,ja,effect_phrase_max_hp_200,alias_exact,Alias lookup should resolve to core concept.
+MaxSP+5%,ja,effect_phrase_max_sp_5,alias_exact,Alias lookup should resolve to core concept.
+MaxSP+8%,ja,effect_phrase_wind_fire_water_earth_reduction_5,alias_exact,Alias lookup should resolve to core concept.
+Str1ポイントごとに,ja,cond_each_point_of_str,alias_exact,Alias lookup should resolve to core concept.
+Vit+1,ja,effect_phrase_vit_1,alias_exact,Alias lookup should resolve to core concept.
+エデンのリンゴの回復効果+30%,ja,effect_phrase_gain_patk_matk_taken_5,alias_exact,Alias lookup should resolve to core concept.
+マインドショックの共通クールダウンを0.3秒短縮（唯一効果）,ja,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,alias_exact,Alias lookup should resolve to core concept.
+力+1,ja,effect_phrase_str_1,alias_exact,Alias lookup should resolve to core concept.
+受ける治療効果+5%,ja,effect_phrase_healing_taken_5,alias_exact,Alias lookup should resolve to core concept.
+受ける物理ダメージ軽減+3%,ja,effect_phrase_pdmg_reduction_3,alias_exact,Alias lookup should resolve to core concept.
+器用さ+1,ja,effect_phrase_dex_1,alias_exact,Alias lookup should resolve to core concept.
+回復効果+7%,ja,effect_phrase_healing_done_7,alias_exact,Alias lookup should resolve to core concept.
+対象のVit10ポイントごとに、強酸火煙瓶、強酸攻撃のダメージがさらに1.2%増加,ja,effect_phrase_pdmg_15,alias_exact,Alias lookup should resolve to core concept.
+攻撃力+1,ja,effect_phrase_grants_1_point_of_atk,alias_exact,Alias lookup should resolve to core concept.
+敏捷+1,ja,effect_phrase_agi_1,alias_exact,Alias lookup should resolve to core concept.
+最大5%まで増加する,ja,effect_phrase_mdmg_1,alias_exact,Alias lookup should resolve to core concept.
+武器または防具が破壊されたユニットに追加10%ダメージを与える,ja,effect_phrase_patk_12,alias_exact,Alias lookup should resolve to core concept.
+死神の契約1層ごとの効果がクリティカル+5、攻撃速度+2%になる,ja,effect_phrase_aspd_2,alias_exact,Alias lookup should resolve to core concept.
+物理攻撃+477〜530,ja,effect_phrase_patk_477_530,alias_exact,Alias lookup should resolve to core concept.
+知力+1,ja,effect_phrase_int_1,alias_exact,Alias lookup should resolve to core concept.
+精錬+10で,ja,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+精錬+10時,ja,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+精錬+12で,ja,cond_refine_ge_12,alias_exact,Alias lookup should resolve to core concept.
+精錬+12時,ja,cond_refine_ge_12,alias_exact,Alias lookup should resolve to core concept.
+精錬+15で,ja,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+精錬+15以上の時,ja,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+精錬+3ごとに,ja,cond_refine_ge_3,alias_exact,Alias lookup should resolve to core concept.
+精錬+6で,ja,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+精錬+6以上の時,ja,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+魔法攻撃力+60,ja,effect_phrase_matk_60,alias_exact,Alias lookup should resolve to core concept.
+伊登的蘋果治療效果+30%,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+伊登的蘋果治療效果+40%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+伊登的蘋果生效時，會額外提升7%傷害減免，持續3秒,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+使用舔毛會對目標增加最大生命值10%的護盾，持續15秒,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+先鋒追擊技能傷害提升+20%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+受到攻擊時30%機率獲得君王的意志：物理防禦、魔法防禦+10%,zh,cond_when_attacked,alias_exact,Alias lookup should resolve to core concept.
+受到物理傷害減免+3%,zh,effect_phrase_pdmg_reduction_3,alias_exact,Alias lookup should resolve to core concept.
+受地獄植物傷害的目標降低15%物理防禦和魔法防禦，持續2秒,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+受尖叫效果影響的目標額外降低15%移動速度,zh,cond_refine_ge_12,alias_exact,Alias lookup should resolve to core concept.
+君王的威嚴效果提升至：物理攻擊、魔法攻擊+15%（翻倍效果為物理攻擊、魔法攻擊+30%）,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+對其他所有種族魔物傷害+10%,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+手推車負重上限提升2000,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+手推車負重額外傷害提升至負重*60%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+持續時間內，捨命攻擊不再有攻擊次數限制,zh,cond_refine_ge_12,alias_exact,Alias lookup should resolve to core concept.
+捨命攻擊扣除的自身生命值再減30%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+捨命攻擊次數+2,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+攻擊速度+10%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+攻擊速度+15%,zh,effect_phrase_aspd_15,alias_exact,Alias lookup should resolve to core concept.
+攻擊速度-5%,zh,cond_refine_ge_3,alias_exact,Alias lookup should resolve to core concept.
+攻速+6%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+暴擊率等同於人物暴擊的75%,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+最多增加10%,zh,effect_phrase_mdmg_1,alias_exact,Alias lookup should resolve to core concept.
+最多疊加2層,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+每點力量額外加1點物理攻擊,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+治療術效果不降低，範圍治療效果提升至治療術的70%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+治療術會對目標周圍3米內角色造成30%治療術的效果,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+物理傷害+1.2%,zh,cond_refine_ge_3,alias_exact,Alias lookup should resolve to core concept.
+物理攻擊+25,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+物理攻擊+ 477~530,zh,effect_phrase_patk_477_530,alias_exact,Alias lookup should resolve to core concept.
+物理攻擊時,zh,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias_exact,Alias lookup should resolve to core concept.
+狂擊有30%機率自動念咒先鋒追擊,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+生命上限+200,zh,effect_phrase_max_hp_200,alias_exact,Alias lookup should resolve to core concept.
+生命值上限+8%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+目標每10點體質，額外提升強酸火煙瓶，強酸攻擊1.2%傷害,zh,effect_phrase_patk_12,alias_exact,Alias lookup should resolve to core concept.
+範圍治療效果提升至治療術的60%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+精煉+10,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+精煉+10時每層死神契約的效果提升至：暴擊+5,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+精煉+10時螺旋擊刺技能產生額外的氣旋爆炸,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+精煉+15,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+精煉+6,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+精煉每+1,zh,effect_phrase_int_1,alias_exact,Alias lookup should resolve to core concept.
+聖屬性技能傷害+10%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+自動念咒先鋒追擊傷害增加50%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+蝦群效果翻倍,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+觸發魔攻增加效果提升至40%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+造成190%無屬性物理傷害並標記目標，自身對目標造成的傷害增加6%，持續6秒,zh,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias_exact,Alias lookup should resolve to core concept.
+連刺攻擊、凝神刺擊技能倍率提升50%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+長矛刺擊傷害提升100%,zh,cond_refine_ge_10,alias_exact,Alias lookup should resolve to core concept.
+長矛刺擊造成的易傷效果額外提升10%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+附帶傷害提升至力量*物理攻擊/150,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+音速投擲技能傷害倍率+100%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.
+額外提升目標10%物理傷害減免和魔法傷害減免,zh,cond_refine_ge_6,alias_exact,Alias lookup should resolve to core concept.
+魔法上限+8%,zh,effect_phrase_wind_fire_water_earth_reduction_5,alias_exact,Alias lookup should resolve to core concept.
+魔法值上限+5%,zh,effect_phrase_max_sp_5,alias_exact,Alias lookup should resolve to core concept.
+魔法攻擊+1%,zh,effect_phrase_matk_1,alias_exact,Alias lookup should resolve to core concept.
+魔法攻擊+11%,zh,cond_refine_ge_15,alias_exact,Alias lookup should resolve to core concept.

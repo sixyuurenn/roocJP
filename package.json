@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "node --test",
+    "verify:lookup": "node scripts/verify-concept-lookup.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

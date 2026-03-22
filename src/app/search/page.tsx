@@ -14,22 +14,34 @@ type SearchItem = {
   title: string;
   text: string;
   href?: string;
+  searchText: string;
 };
 
 const categories: SearchCategory[] = ["すべて", "FAQ", "用語集", "職業"];
 
+function normalizeSearchText(value: string) {
+  return value.normalize("NFKC").toLowerCase().trim().replace(/\s+/g, " ");
+}
+
 const sourceItems: SearchItem[] = [
-  ...faqItems.map((item) => ({ type: "FAQ" as const, title: item.q, text: item.a })),
+  ...faqItems.map((item) => ({
+    type: "FAQ" as const,
+    title: item.q,
+    text: item.a,
+    searchText: normalizeSearchText(`${item.q} ${item.a}`),
+  })),
   ...glossaryItems.map((item) => ({
     type: "用語集" as const,
     title: item.term,
     text: item.description,
+    searchText: normalizeSearchText(`${item.term} ${item.description}`),
   })),
   ...jobItems.map((item) => ({
     type: "職業" as const,
     title: item.name,
     text: `${item.role} / ${item.feature}`,
     href: `/jobs/${item.id}`,
+    searchText: normalizeSearchText(`${item.name} ${item.role} ${item.feature} ${item.description}`),
   })),
 ];
 
@@ -38,12 +50,11 @@ export default function SearchPage() {
   const [selectedCategory, setSelectedCategory] = useState<SearchCategory>("すべて");
 
   const filteredItems = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
+    const normalized = normalizeSearchText(query);
 
     return sourceItems.filter((item) => {
       const matchesCategory = selectedCategory === "すべて" || item.type === selectedCategory;
-      const matchesQuery =
-        normalized.length === 0 || `${item.title} ${item.text}`.toLowerCase().includes(normalized);
+      const matchesQuery = normalized.length === 0 || item.searchText.includes(normalized);
 
       return matchesCategory && matchesQuery;
     });

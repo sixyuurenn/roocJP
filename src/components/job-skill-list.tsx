@@ -131,9 +131,13 @@ export function JobSkillList({ skills }: { skills: SkillItem[] }) {
             const currentLevel = skill.levelVariants[selectedLevel];
             const lv1 = skill.levelVariants.lv1;
             const lvMax = skill.levelVariants.lvMax;
+            const maxLevelLabel = skill.maxLevel === null ? "-" : skill.maxLevel;
 
             return (
-              <article key={skill.id} className="rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-5">
+              <article
+                key={`${skill.id}:${skill.jobTier}:${skill.sortOrder}:${skill.name}`}
+                className="rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-5"
+              >
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="relative aspect-square h-14 w-14 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-white sm:h-16 sm:w-16">
                     {skill.icon ? (
@@ -148,7 +152,7 @@ export function JobSkillList({ skills }: { skills: SkillItem[] }) {
                       <div>
                         <h3 className="text-base font-semibold leading-6 text-slate-800">{skill.name}</h3>
                         <p className="mt-1 text-xs font-medium text-base-accent">
-                          表示中 {selectedLevel === "lv1" ? "Lv1" : "LvMAX"} / 最大 Lv.{skill.maxLevel}
+                          表示中 {selectedLevel === "lv1" ? "Lv1" : "LvMAX"} / 最大 Lv.{maxLevelLabel}
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-1.5">

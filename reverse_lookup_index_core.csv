@@ -1,0 +1,1274 @@
+﻿lookup_key,lang,concept_id,match_type,priority,normalized_key
+"+0.5 ASPD per Refine +3, up to 5%",en,effect_phrase_0_5_aspd_per_refine_3_up_to_5,canonical,100,05aspdperrefine3upto5
++100 MATK,en,cond_refine_ge_15,alias,80,100matk
+10% chance to Parry MDMG,en,cond_refine_ge_15,alias,80,10chancetoparrymdmg
++10% chance to Parry PDMG,en,cond_refine_ge_10,alias,80,10chancetoparrypdmg
++10 MATK per +1 Refine,en,effect_phrase_int_1,alias,80,10matkper1refine
++12% [Pierce] Damage,en,effect_phrase_12_pierce_damage,canonical,100,12piercedamage
++15% [Pierce] Damage,en,effect_phrase_15_pierce_damage,canonical,100,15piercedamage
+"+1% ASPD per Refine +3, up to 10%.",en,effect_phrase_1_aspd_per_refine_3_up_to_10,canonical,100,1aspdperrefine3upto10
+"+2,000 cart weight",en,cond_refine_ge_6,alias,80,2000cartweight
+2-piece Set Effect,en,set_two_piece,canonical,100,2pieceseteffect
+3-piece Set Effect,en,set_three_piece,canonical,100,3pieceseteffect
++-5% ASPD per +3 Refine,en,cond_refine_ge_3,alias,80,5aspdper3refine
++5% [Pierce] Damage,en,effect_phrase_5_pierce_damage,canonical,100,5piercedamage
++7% [Pierce] Damage,en,effect_phrase_7_pierce_damage,canonical,100,7piercedamage
+Abnormal,en,effect_abnormal,canonical,100,abnormal
+Accessory,en,item_type_accessory,canonical,100,accessory
+additional damage increases to 30%,en,cond_refine_ge_6,alias,80,additionaldamageincreasesto30
+additional damage increases to 40%,en,cond_refine_ge_10,alias,80,additionaldamageincreasesto40
+additionally increase the target's PDMG Reduction and MDMG Reduction by 10%,en,cond_refine_ge_6,alias,80,additionallyincreasethetargetspdmgreductionandmdmgreductionby10
+AGI +1,en,effect_phrase_agi_1,canonical,100,agi1
+AGI +2,en,effect_phrase_agi_2,canonical,100,agi2
+AGI +3,en,effect_phrase_agi_3,canonical,100,agi3
+Ancient Magic,en,effect_ancient_magic,canonical,100,ancientmagic
+Angelic Ring [2],en,item_angelic_ring_2,canonical,100,angelicring2
+Archwizard,en,effect_archwizard,canonical,100,archwizard
+Armor,en,item_type_armor,canonical,100,armor
+ASPD +15%,en,effect_phrase_aspd_15,canonical,100,aspd15
+ASPD +2%,en,effect_phrase_aspd_2,canonical,100,aspd2
+ASPD +20%,en,effect_phrase_aspd_20,canonical,100,aspd20
+ASPD +3%,en,effect_phrase_aspd_3,canonical,100,aspd3
+ASPD +8%,en,effect_phrase_aspd_8,canonical,100,aspd8
+Auto-cast [Vanguard Force] damage +50%,en,cond_refine_ge_10,alias,80,autocastvanguardforcedamage50
+[Axe Boomerang] Skill DMG +20%,en,cond_refine_ge_10,alias,80,axeboomerangskilldmg20
+[Backstab] and [Surprise Attack] are now always considered used from behind the target.,en,effect_phrase_backstab_and_surprise_attack_are_now_always_considered_used_from_behind_the_target,canonical,100,backstabandsurpriseattackarenowalwaysconsideredusedfrombehindthetarget
+[Backstab] DMG +15%,en,effect_phrase_backstab_dmg_15,canonical,100,backstabdmg15
+"Bad omen lingers, causing the stats being unstable. Activate the Divine Attributes to unleash the true power of Divine Armament",en,effect_phrase_bad_omen_lingers_causing_the_stats_being_unstable_activate_the_divine_attributes_to_unleash_the_true_power_of_divine_armament,canonical,100,badomenlingerscausingthestatsbeingunstableactivatethedivineattributestounleashthetruepowerofdivinearmament
+"Bad omen lingers, causing the stats being unstable. Activate the Divine Traits to unleash the true power of Divine Armament.",en,effect_phrase_bad_omen_lingers_causing_the_stats_being_unstable_activate_the_divine_traits_to_unleash_the_true_power_of_divine_armament,canonical,100,badomenlingerscausingthestatsbeingunstableactivatethedivinetraitstounleashthetruepowerofdivinearmament
+Based on the total Refinement levels of the set,en,cond_based_on_the_total_refinement_levels_of_the_set,canonical,100,basedonthetotalrefinementlevelsoftheset
+Based on the total Refine of the set,en,cond_based_on_the_total_refine_of_the_set,canonical,100,basedonthetotalrefineoftheset
+Based on your Base level,en,cond_based_on_your_base_level,canonical,100,basedonyourbaselevel
+[Bash] has a 30% chance to auto-cast [Vanguard Force],en,cond_refine_ge_6,alias,80,bashhasa30chancetoautocastvanguardforce
+Blade of Vasu Aryadeva,en,effect_blade_of_vasu_aryadeva,canonical,100,bladeofvasuaryadeva
+Brooch [2],en,item_brooch_2,canonical,100,brooch2
+[Bunch of Shrimp] effect doubled,en,cond_refine_ge_10,alias,80,bunchofshrimpeffectdoubled
+Burglar Ring [1],en,item_burglar_ring_1,canonical,100,burglarring1
+Calder,en,effect_calder,canonical,100,calder
+Cart skills deal +25% damage.,en,cond_refine_ge_15,alias,80,cartskillsdeal25damage
+Cart skills deal +(cart weight *60%) damage.,en,cond_refine_ge_10,alias,80,cartskillsdealcartweight60damage
+CD of Clashing Spiral -1s,en,effect_phrase_cd_of_clashing_spiral_1s,canonical,100,cdofclashingspiral1s
+Celebrant's Mitten [2],en,item_celebrants_mitten_2,canonical,100,celebrantsmitten2
+Clashing Spiral generates an additional cyclone explosion that deals 200% PDMG,en,effect_phrase_clashing_spiral_generates_an_additional_cyclone_explosion_that_deals_200_pdmg,canonical,100,clashingspiralgeneratesanadditionalcycloneexplosionthatdeals200pdmg
+"Clashing Spiral no longer requires casting, and SP consumes -60%",en,effect_phrase_clashing_spiral_no_longer_requires_casting_and_sp_consumes_60,canonical,100,clashingspiralnolongerrequirescastingandspconsumes60
+Cloak,en,item_type_cloak,canonical,100,cloak
+Colorful Feather,en,effect_colorful_feather,canonical,100,colorfulfeather
+Corrosion,en,effect_corrosion,canonical,100,corrosion
+Crescent Scythe,en,effect_crescent_scythe,canonical,100,crescentscythe
+CRIT+10,en,effect_phrase_crit_10,canonical,100,crit10
+CRIT +15,en,effect_phrase_crit_15,canonical,100,crit15
+CRIT +3,en,effect_phrase_crit_3,canonical,100,crit3
+CRIT +5,en,effect_phrase_crit_5,canonical,100,crit5
+CRIT +6,en,effect_phrase_crit_6,canonical,100,crit6
+CRIT +8,en,effect_phrase_crit_8,canonical,100,crit8
+CRIT DMG +1%,en,effect_phrase_crit_dmg_1,canonical,100,critdmg1
+CRIT DMG +2%,en,effect_phrase_crit_dmg_2,canonical,100,critdmg2
+CRIT DMG +3%,en,effect_phrase_crit_dmg_3,canonical,100,critdmg3
+CRIT DMG +5%,en,effect_phrase_crit_dmg_5,canonical,100,critdmg5
+CRIT DMG +6%,en,effect_phrase_crit_dmg_6,canonical,100,critdmg6
+CRIT DMG RES +6%,en,effect_phrase_crit_dmg_res_6,canonical,100,critdmgres6
+Critical Ring [2],en,item_critical_ring_2,canonical,100,criticalring2
+CRIT RES +5,en,effect_phrase_crit_res_5,canonical,100,critres5
+CRIT RES +6,en,effect_phrase_crit_res_6,canonical,100,critres6
+"CRIT RES +8, CRIT DMG RES +8%",en,effect_phrase_crit_res_8_crit_dmg_res_8,canonical,100,critres8critdmgres8
+Cross Shield,en,effect_cross_shield,canonical,100,crossshield
+Curse,en,effect_curse,canonical,100,curse
+Cyclone Glaive,en,effect_cyclone_glaive,canonical,100,cycloneglaive
+Damage of Cyclone Explosion +100%,en,effect_phrase_damage_of_cyclone_explosion_100,canonical,100,damageofcycloneexplosion100
+Damage to Poisoned Enemies +6%,en,effect_phrase_damage_to_poisoned_enemies_6,canonical,100,damagetopoisonedenemies6
+Damage to Undead +5%,en,effect_phrase_damage_to_undead_5,canonical,100,damagetoundead5
+Dark Knight Gloves [1],en,item_dark_knight_gloves_1,canonical,100,darkknightgloves1
+Dawn Armor,en,item_dawn_armor,canonical,100,dawnarmor
+Dawn Axe,en,item_dawn_axe,canonical,100,dawnaxe
+Dawn Blade,en,item_dawn_blade,canonical,100,dawnblade
+Dawn Book,en,item_dawn_book,canonical,100,dawnbook
+Dawn Boots,en,item_dawn_boots,canonical,100,dawnboots
+Dawn Bow,en,item_dawn_bow,canonical,100,dawnbow
+Dawn Claymore,en,item_dawn_claymore,canonical,100,dawnclaymore
+Dawn Crossbow Blade,en,item_dawn_crossbow_blade,canonical,100,dawncrossbowblade
+Dawn Fist,en,item_dawn_fist,canonical,100,dawnfist
+Dawn Foxtail Grass,en,item_dawn_foxtail_grass,canonical,100,dawnfoxtailgrass
+Dawn Guitar,en,item_dawn_guitar,canonical,100,dawnguitar
+Dawn Hammer,en,item_dawn_hammer,canonical,100,dawnhammer
+Dawn Hatchet,en,item_dawn_hatchet,canonical,100,dawnhatchet
+Dawn Katar,en,item_dawn_katar,canonical,100,dawnkatar
+Dawn Mantle,en,item_dawn_mantle,canonical,100,dawnmantle
+Dawn Scepter,en,item_dawn_scepter,canonical,100,dawnscepter
+Dawn Scythe,en,item_dawn_scythe,canonical,100,dawnscythe
+Dawn Shield,en,item_dawn_shield,canonical,100,dawnshield
+Dawn Spear,en,item_dawn_spear,canonical,100,dawnspear
+Dawn Staff,en,item_dawn_staff,canonical,100,dawnstaff
+Dawn Sword,en,item_dawn_sword,canonical,100,dawnsword
+Dawn Whip,en,item_dawn_whip,canonical,100,dawnwhip
+Dea Staff,en,effect_dea_staff,canonical,100,deastaff
+Debuff Potency of [Berserk] -3%,en,cond_refine_ge_6,alias,80,debuffpotencyofberserk3
+[Defending Aura] has a 30% chance to reduce the incoming MDMG by 30%.,en,effect_phrase_defending_aura_has_a_30_chance_to_reduce_the_incoming_mdmg_by_30,canonical,100,defendingaurahasa30chancetoreducetheincomingmdmgby30
+[Defending Aura] no longer applies MSPD reduction.,en,effect_phrase_defending_aura_no_longer_applies_mspd_reduction,canonical,100,defendingauranolongerappliesmspdreduction
+DEX +1,en,effect_phrase_dex_1,canonical,100,dex1
+DEX +2,en,effect_phrase_dex_2,canonical,100,dex2
+DEX +3,en,effect_phrase_dex_3,canonical,100,dex3
+DEX +4,en,effect_phrase_dex_4,canonical,100,dex4
+DEX -5,en,effect_phrase_dex_5,canonical,100,dex5
+DEX +6,en,effect_phrase_dex_6,canonical,100,dex6
+DEX +7,en,effect_phrase_dex_7,canonical,100,dex7
+Divine Queen Bracelet [1],en,item_divine_queen_bracelet_1,canonical,100,divinequeenbracelet1
+[DMG Reduction +7%] for 3 sec while [Gypsy's Kiss] is actice.,en,effect_phrase_dmg_reduction_7_for_3_sec_while_gypsys_kiss_is_actice,canonical,100,dmgreduction7for3secwhilegypsyskissisactice
+[DMG Reduction +7%] for 3 sec while [Song of Lutie] is actice.,en,cond_refine_ge_15,alias,80,dmgreduction7for3secwhilesongoflutieisactice
+DMG Reduction vs Fire +10%,en,effect_phrase_dmg_reduction_vs_fire_10,canonical,100,dmgreductionvsfire10
+DMG Reduction vs Shadow +10%,en,effect_phrase_dmg_reduction_vs_shadow_10,canonical,100,dmgreductionvsshadow10
+DMG Reduction vs Shadow +5%,en,effect_phrase_dmg_reduction_vs_shadow_5,canonical,100,dmgreductionvsshadow5
+DMG Reduction vs Undead +10%,en,effect_phrase_dmg_reduction_vs_undead_10,canonical,100,dmgreductionvsundead10
+DMG Reduction vs Undead +5%,en,effect_phrase_dmg_reduction_vs_undead_5,canonical,100,dmgreductionvsundead5
+DMG Reduction vs Water +10%,en,effect_phrase_dmg_reduction_vs_water_10,canonical,100,dmgreductionvswater10
+double the effect of [Will of Kings].,en,effect_phrase_double_the_effect_of_will_of_kings,canonical,100,doubletheeffectofwillofkings
+"During [Melt Down], grants PDMG/MDMG Reduction +30%.",en,effect_phrase_during_melt_down_grants_pdmg_mdmg_reduction_30,canonical,100,duringmeltdowngrantspdmgmdmgreduction30
+"During the duration, Sacrifice no longer has a limit on the number of attack counts",en,cond_refine_ge_12,alias,80,duringthedurationsacrificenolongerhasalimitonthenumberofattackcounts
+Each point of STR,en,cond_each_point_of_str,canonical,100,eachpointofstr
+Earring [2],en,item_earring_2,canonical,100,earring2
+Electric Guitar,en,effect_electric_guitar,canonical,100,electricguitar
+[Electrifying Shot] DMG Multiplier +150%,en,effect_phrase_volt_attack_multiplier_150,alias,80,electrifyingshotdmgmultiplier150
+[Electrifying Shot] gains a 30% chance to attack 3 times.,en,effect_phrase_electrifying_shot_gains_a_30_chance_to_attack_3_times,canonical,100,electrifyingshotgainsa30chancetoattack3times
+Elemental DMG +20%,en,effect_phrase_elemental_dmg_20,canonical,100,elementaldmg20
+Elemental Domain Cooldown -5 sec,en,effect_phrase_elemental_domain_cooldown_5_sec,canonical,100,elementaldomaincooldown5sec
+Element Fountain Magic Book,en,effect_element_fountain_magic_book,canonical,100,elementfountainmagicbook
+Elf,en,effect_elf,canonical,100,elf
+Every 1 points of INT additionally increases Max SP by 14,en,effect_phrase_every_1_points_of_int_additionally_increases_max_sp_by_14,canonical,100,every1pointsofintadditionallyincreasesmaxspby14
+"Every 200 points of Max SP increases MDMG by 1% (calculated up to a maximum of 55,000 Max SP)",en,effect_phrase_every_200_points_of_max_sp_increases_mdmg_by_1_calculated_up_to_a_maximum_of_55_000_max_sp,canonical,100,every200pointsofmaxspincreasesmdmgby1calculateduptoamaximumof55000maxsp
+Every 20 points of AGI,en,cond_every_20_points_of_agi,canonical,100,every20pointsofagi
+Excalibur,en,effect_excalibur,canonical,100,excalibur
+Expert Ring [2],en,item_expert_ring_2,canonical,100,expertring2
+Fire,en,effect_fire,canonical,100,fire
+Fireblend,en,effect_fireblend,canonical,100,fireblend
+"Fire Bolt, Lightning Bolt, Cold Bolt, and Earth Spike deal 5% more damage.",en,effect_phrase_fire_bolt_lightning_bolt_cold_bolt_and_earth_spike_deal_5_more_damage,canonical,100,fireboltlightningboltcoldboltandearthspikedeal5moredamage
+Fire Skill DMG +14%,en,effect_phrase_fire_skill_dmg_14,canonical,100,fireskilldmg14
+"for every 1000 points of Max SP, up to 10%",en,cond_for_every_1000_points_of_max_sp_up_to_10,canonical,100,forevery1000pointsofmaxspupto10
+"for every 1000 points of Max SP, up to 5%",en,cond_for_every_1000_points_of_max_sp_up_to_5,canonical,100,forevery1000pointsofmaxspupto5
+"for every 10 levels, your healing effect +1%",en,effect_phrase_for_every_10_levels_your_healing_effect_1,canonical,100,forevery10levelsyourhealingeffect1
+for every 10 points of AGI,en,cond_for_every_10_points_of_agi,canonical,100,forevery10pointsofagi
+for every 10 points of DEX,en,cond_for_every_10_points_of_dex,canonical,100,forevery10pointsofdex
+for every 10 points of INT,en,cond_for_every_10_points_of_int,canonical,100,forevery10pointsofint
+for every 10 points of LUK,en,cond_for_every_10_points_of_luk,canonical,100,forevery10pointsofluk
+for every 10 points of STR,en,cond_for_every_10_points_of_str,canonical,100,forevery10pointsofstr
+for every 10 points of VIT,en,cond_for_every_10_points_of_vit,canonical,100,forevery10pointsofvit
+"For every 10 VIT of the target, additionally increases Acid Bomb and Acid Terror damage by 1.2%",en,effect_phrase_patk_12,alias,80,forevery10vitofthetargetadditionallyincreasesacidbombandacidterrordamageby12
+For every 15 AGI,en,cond_for_every_15_agi,canonical,100,forevery15agi
+"for every Refine +3: PDMG +0.25%, up to 2.5%",en,effect_phrase_for_every_refine_3_pdmg_0_25_up_to_2_5,canonical,100,foreveryrefine3pdmg025upto25
+"for every Refine +3: PDMG +0.5%, up to 5%",en,effect_phrase_for_every_refine_3_pdmg_0_5_up_to_5,canonical,100,foreveryrefine3pdmg05upto5
+For every Refine +5,en,cond_refine_ge_5,alias,80,foreveryrefine5
+Fortitude of Dark Knight,en,effect_fortitude_of_dark_knight,canonical,100,fortitudeofdarkknight
+Fortitude of Dark Knight I,en,effect_fortitude_of_dark_knight_i,canonical,100,fortitudeofdarkknighti
+"gain 1 stack of Spirit Witch for 1 sec, up to 2 stacks. When Spirit Witch is at 2 stacks, gain Almighty. Spirit Witch: MATK +10%, ASPD +5%; Almighty: Your attacks deal MATK*400% additional DMG.",en,effect_phrase_gain_1_stack_of_spirit_witch_for_1_sec_up_to_2_stacks_when_spirit_witch_is_at_2_stacks_gain_almighty_spirit_witch_matk_10_aspd_5_almighty_your_attacks_deal_matk_400_additional_dmg,canonical,100,gain1stackofspiritwitchfor1secupto2stackswhenspiritwitchisat2stacksgainalmightyspiritwitchmatk10aspd5almightyyourattacksdealmatk400additionaldmg
+gain [PATK/MATK Taken -5%].,en,effect_phrase_gain_patk_matk_taken_5,canonical,100,gainpatkmatktaken5
+Global CD -10%,en,effect_phrase_global_cd_10,canonical,100,globalcd10
+Global CD -12%,en,effect_phrase_global_cd_12,canonical,100,globalcd12
+Global CD -14%,en,effect_phrase_global_cd_14,canonical,100,globalcd14
+Global CD -2%,en,effect_phrase_global_cd_2,canonical,100,globalcd2
+Global CD -5%,en,effect_phrase_global_cd_5,canonical,100,globalcd5
+Global CD for Soul Breaker -0.3s (unique),en,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,alias,80,globalcdforsoulbreaker03sunique
+Glove [2],en,item_glove_2,canonical,100,glove2
+Goibne's Set,en,effect_goibnes_set,canonical,100,goibnesset
+Golden Foot Ring [2],en,item_golden_foot_ring_2,canonical,100,goldenfootring2
+Grand Cross,en,effect_grand_cross,canonical,100,grandcross
+grants 1 point of ATK,en,effect_phrase_grants_1_point_of_atk,canonical,100,grants1pointofatk
+grants [MATK +12%],en,effect_phrase_matk_12,alias,80,grantsmatk12
+Grimtooth,en,effect_grimtooth,canonical,100,grimtooth
+Gungnir,en,effect_gungnir,canonical,100,gungnir
+[Gypsy's Kiss] Healing Effect +30%,en,effect_phrase_gypsys_kiss_healing_effect_30,canonical,100,gypsyskisshealingeffect30
+[Gypsy's Kiss] Healing Effect +40%,en,effect_phrase_gypsys_kiss_healing_effect_40,canonical,100,gypsyskisshealingeffect40
+Healing Done +2%,en,effect_phrase_healing_done_2,canonical,100,healingdone2
+Healing Done +3%,en,effect_phrase_healing_done_3,canonical,100,healingdone3
+Healing Done +5%,en,effect_phrase_healing_done_5,canonical,100,healingdone5
+Healing Done +7%,en,effect_phrase_healing_done_7,canonical,100,healingdone7
+Healing Taken +12%,en,effect_phrase_healing_taken_12,canonical,100,healingtaken12
+Healing Taken +5%,en,effect_phrase_healing_taken_5,canonical,100,healingtaken5
+Healing Taken +7%,en,effect_phrase_healing_taken_7,canonical,100,healingtaken7
+Heavy,en,effect_heavy,canonical,100,heavy
+Hera,en,effect_hera,canonical,100,hera
+Holy,en,effect_holy,canonical,100,holy
+Holy Guard,en,effect_holy_guard,canonical,100,holyguard
+Holy Skill DMG +12%,en,cond_refine_ge_15,alias,80,holyskilldmg12
+"HP +1,020~1,200",en,effect_phrase_hp_1_020_1_200,canonical,100,hp10201200
+"HP +1,530~1,800",en,effect_phrase_hp_1_530_1_800,canonical,100,hp15301800
+"HP +2,040~2,400",en,effect_phrase_hp_2_040_2_400,canonical,100,hp20402400
+HP Recovery +10%,en,effect_phrase_hp_recovery_10,canonical,100,hprecovery10
+If equipped together with Imperial Lance,en,cond_if_equipped_together_with_imperial_lance,canonical,100,ifequippedtogetherwithimperiallance
+Ignore PDEF +3%,en,effect_phrase_ignore_pdef_3,canonical,100,ignorepdef3
+Immune Shield,en,effect_immune_shield,canonical,100,immuneshield
+Imperial,en,effect_imperial,canonical,100,imperial
+increases ASPD by +1%,en,effect_phrase_increases_aspd_by_1,canonical,100,increasesaspdby1
+Increases the additional DMG by MATK*300%.,en,effect_phrase_increases_the_additional_dmg_by_matk_300,canonical,100,increasestheadditionaldmgbymatk300
+Increases the effect of [Will of Kings] to [PDEF/MDEF +15%].,en,effect_phrase_increases_the_effect_of_will_of_kings_to_pdef_mdef_15,canonical,100,increasestheeffectofwillofkingstopdefmdef15
+Increases the INT-based damage of Soul Breaker by 20% (unique),en,effect_phrase_increases_the_int_based_damage_of_soul_breaker_by_20_unique,canonical,100,increasestheintbaseddamageofsoulbreakerby20unique
+Increases the INT-based damage of Soul Breaker to 40% (Unique),en,effect_phrase_increases_the_int_based_damage_of_soul_breaker_to_40_unique,canonical,100,increasestheintbaseddamageofsoulbreakerto40unique
+Inductive,en,effect_inductive,canonical,100,inductive
+INT +1,en,effect_phrase_int_1,canonical,100,int1
+INT +2,en,effect_phrase_int_2,canonical,100,int2
+INT +3,en,effect_phrase_int_3,canonical,100,int3
+INT +4,en,effect_phrase_int_4,canonical,100,int4
+INT +6,en,effect_phrase_int_6,canonical,100,int6
+INT +8,en,effect_phrase_int_8,canonical,100,int8
+Intellect Tablet,en,effect_intellect_tablet,canonical,100,intellecttablet
+Ivory Lance,en,effect_ivory_lance,canonical,100,ivorylance
+Krasnaya,en,effect_krasnaya,canonical,100,krasnaya
+Kronos,en,effect_kronos,canonical,100,kronos
+Lament of Fensalir,en,effect_lament_of_fensalir,canonical,100,lamentoffensalir
+Lament of Fensalir I,en,effect_lament_of_fensalir_i,canonical,100,lamentoffensaliri
+Legacy of Dragon,en,effect_legacy_of_dragon,canonical,100,legacyofdragon
+Legendary,en,effect_legendary,canonical,100,legendary
+Loki,en,effect_loki,canonical,100,loki
+LUK +2,en,effect_phrase_luk_2,canonical,100,luk2
+LUK +3,en,effect_phrase_luk_3,canonical,100,luk3
+LUK +7,en,effect_phrase_luk_7,canonical,100,luk7
+Lunar Dagger,en,effect_lunar_dagger,canonical,100,lunardagger
+Marlin,en,effect_marlin,canonical,100,marlin
+MATK +1%,en,effect_phrase_matk_1,canonical,100,matk1
+MATK +11%,en,cond_refine_ge_15,alias,80,matk11
+MATK +12%,en,effect_phrase_matk_12,canonical,100,matk12
+MATK +120,en,effect_phrase_matk_120,canonical,100,matk120
+MATK +15,en,effect_phrase_matk_15,canonical,100,matk15
+MATK +2%,en,effect_phrase_matk_2,canonical,100,matk2
+MATK +250~278,en,effect_phrase_matk_250_278,canonical,100,matk250278
+MATK + 283-315,en,effect_phrase_matk_283_315,canonical,100,matk283315
+MATK +30,en,effect_phrase_matk_30,canonical,100,matk30
+MATK + 300-333,en,effect_phrase_matk_300_333,canonical,100,matk300333
+MATK +30 (Unique),en,effect_phrase_matk_30_unique,canonical,100,matk30unique
+MATK +39,en,effect_phrase_matk_39,canonical,100,matk39
+MATK +45,en,effect_phrase_matk_45,canonical,100,matk45
+MATK +50,en,effect_phrase_matk_50,canonical,100,matk50
+MATK +51,en,effect_phrase_matk_51,canonical,100,matk51
+MATK +57,en,effect_phrase_matk_57,canonical,100,matk57
+MATK +60,en,effect_phrase_matk_60,canonical,100,matk60
+Matyr's Leash [2],en,item_matyrs_leash_2,canonical,100,matyrsleash2
+Max HP +10%,en,effect_phrase_max_hp_10,canonical,100,maxhp10
+Max HP +12%,en,effect_phrase_max_hp_12,canonical,100,maxhp12
+Max HP +15%,en,effect_phrase_max_hp_15,canonical,100,maxhp15
+Max HP +150,en,effect_phrase_max_hp_150,canonical,100,maxhp150
+"Max HP +15%, CRIT DMG RES +10%.",en,effect_phrase_max_hp_15_crit_dmg_res_10,canonical,100,maxhp15critdmgres10
+"Max HP +15%, MSPD +5%",en,effect_phrase_max_hp_15_mspd_5,canonical,100,maxhp15mspd5
+Max HP +2%,en,effect_phrase_max_hp_2,canonical,100,maxhp2
+Max HP +200,en,effect_phrase_max_hp_200,canonical,100,maxhp200
+Max HP +300,en,effect_phrase_max_hp_300,canonical,100,maxhp300
+Max HP +4%,en,effect_phrase_max_hp_4,canonical,100,maxhp4
+Max HP +50,en,effect_phrase_max_hp_50,canonical,100,maxhp50
+Max HP +7%,en,effect_phrase_max_hp_7,canonical,100,maxhp7
+Max HP +8%,en,cond_refine_ge_15,alias,80,maxhp8
+Max HP +800,en,effect_phrase_max_hp_800,canonical,100,maxhp800
+Max SP +150,en,effect_phrase_max_sp_150,canonical,100,maxsp150
+Max SP +5%,en,effect_phrase_max_sp_5,canonical,100,maxsp5
+Max SP +50,en,effect_phrase_max_sp_50,canonical,100,maxsp50
+Max SP +8%,en,effect_phrase_max_sp_8,canonical,100,maxsp8
+MDEF +12,en,effect_phrase_mdef_12,canonical,100,mdef12
+MDEF +2,en,effect_phrase_mdef_2,canonical,100,mdef2
+MDMG +1%,en,effect_phrase_mdmg_1,canonical,100,mdmg1
+MDMG +2%,en,effect_phrase_mdmg_2,canonical,100,mdmg2
+MDMG +8%,en,effect_phrase_mdmg_8,canonical,100,mdmg8
+MDMG Reduction +10%,en,effect_phrase_mdmg_reduction_10,canonical,100,mdmgreduction10
+MDMG Reduction +3%,en,effect_phrase_mdmg_reduction_3,canonical,100,mdmgreduction3
+MDMG Reduction +4%,en,effect_phrase_mdmg_reduction_4,canonical,100,mdmgreduction4
+Mighty Staff,en,effect_mighty_staff,canonical,100,mightystaff
+Moonlight Dagger,en,effect_moonlight_dagger,canonical,100,moonlightdagger
+Muramasa,en,effect_muramasa,canonical,100,muramasa
+Mushroom Stick,en,effect_mushroom_stick,canonical,100,mushroomstick
+Naga Scale Shield,en,effect_naga_scale_shield,canonical,100,nagascaleshield
+Necklace [2],en,item_necklace_2,canonical,100,necklace2
+Netherforce,en,effect_netherforce,canonical,100,netherforce
+Nile Rose [2],en,item_nile_rose_2,canonical,100,nilerose2
+Off-Hand,en,item_type_off_hand,canonical,100,offhand
+Orleans' Glove [2],en,item_orleans_glove_2,canonical,100,orleansglove2
+Paranoid of Dark Knight,en,effect_paranoid_of_dark_knight,canonical,100,paranoidofdarkknight
+Paranoid of Dark Knight I,en,effect_paranoid_of_dark_knight_i,canonical,100,paranoidofdarkknighti
+Passion,en,effect_passion,canonical,100,passion
+PATK +10%,en,effect_phrase_patk_10,canonical,100,patk10
+PATK +12%,en,effect_phrase_patk_12,canonical,100,patk12
+PATK +15,en,effect_phrase_patk_15,canonical,100,patk15
+PATK +2%,en,effect_phrase_patk_2,canonical,100,patk2
+PATK +20,en,effect_phrase_patk_20,canonical,100,patk20
+PATK +293~326,en,effect_phrase_patk_293_326,canonical,100,patk293326
+PATK +30,en,effect_phrase_patk_30,canonical,100,patk30
+PATK + 311-346,en,effect_phrase_patk_311_346,canonical,100,patk311346
+PATK + 330~367,en,effect_phrase_patk_330_367,canonical,100,patk330367
+PATK +348~387,en,effect_phrase_patk_348_387,canonical,100,patk348387
+PATK +367~408,en,effect_phrase_patk_367_408,canonical,100,patk367408
+PATK +39,en,effect_phrase_patk_39,canonical,100,patk39
+PATK +392~435,en,effect_phrase_patk_392_435,canonical,100,patk392435
+PATK +4,en,effect_phrase_patk_4,canonical,100,patk4
+PATK +440~489,en,effect_phrase_patk_440_489,canonical,100,patk440489
+PATK +45,en,effect_phrase_patk_45,canonical,100,patk45
+PATK + 477-530,en,effect_phrase_patk_477_530,canonical,100,patk477530
+PATK +51,en,effect_phrase_patk_51,canonical,100,patk51
+PATK +57,en,effect_phrase_patk_57,canonical,100,patk57
+PDEF +130~144,en,effect_phrase_pdef_130_144,canonical,100,pdef130144
+PDEF +389~432,en,effect_phrase_pdef_389_432,canonical,100,pdef389432
+PDEF +4%,en,effect_phrase_pdef_4,canonical,100,pdef4
+PDMG +15%,en,effect_phrase_pdmg_15,canonical,100,pdmg15
+PDMG +2%,en,effect_phrase_pdmg_2,canonical,100,pdmg2
+PDMG +8%,en,effect_phrase_pdmg_8,canonical,100,pdmg8
+PDMG Bonus +20%,en,cond_refine_ge_15,alias,80,pdmgbonus20
+PDMG & MDMG Reduction +10%,en,effect_phrase_pdmg_and_mdmg_reduction_10,canonical,100,pdmgmdmgreduction10
+PDMG Reduction +2%,en,effect_phrase_pdmg_reduction_2,canonical,100,pdmgreduction2
+PDMG Reduction +3%,en,effect_phrase_pdmg_reduction_3,canonical,100,pdmgreduction3
+PDMG Reduction +4%,en,effect_phrase_pdmg_reduction_4,canonical,100,pdmgreduction4
+PDMG Reduction +7%,en,effect_phrase_pdmg_reduction_7,canonical,100,pdmgreduction7
+Pierce,en,effect_pierce,canonical,100,pierce
+Pierced Moon Shadow,en,effect_pierced_moon_shadow,canonical,100,piercedmoonshadow
+Pierced Moon Shadow I,en,effect_pierced_moon_shadow_i,canonical,100,piercedmoonshadowi
+Plant,en,effect_plant,canonical,100,plant
+Poison Damage +3%,en,effect_phrase_poison_damage_3,canonical,100,poisondamage3
+Poison's Elemental Effectiveness +12%,en,effect_phrase_poisons_elemental_effectiveness_12,canonical,100,poisonselementaleffectiveness12
+Power Cutting Axe,en,effect_power_cutting_axe,canonical,100,powercuttingaxe
+P.T.D Mechanical Core,en,effect_p_t_d_mechanical_core,canonical,100,ptdmechanicalcore
+[Raiding Strike] / [Raiding Shot] DMG Multiplier +80%,en,effect_phrase_raiding_strike_raiding_shot_dmg_multiplier_80,canonical,100,raidingstrikeraidingshotdmgmultiplier80
+Ranged PDMG +2%,en,effect_phrase_ranged_pdmg_2,canonical,100,rangedpdmg2
+Recovery,en,effect_recovery,canonical,100,recovery
+Red Cut additionally ignores 10% PDEF,en,effect_phrase_red_cut_additionally_ignores_10_pdef,canonical,100,redcutadditionallyignores10pdef
+Red Cut Skill DMG +5%,en,effect_phrase_red_cut_skill_dmg_5,canonical,100,redcutskilldmg5
+Refine +12,en,cond_refine_ge_12,canonical,100,refine12
+Refine +3,en,cond_refine_ge_3,canonical,100,refine3
+Refine +5,en,cond_refine_ge_5,canonical,100,refine5
+Refine +6,en,cond_refine_ge_6,canonical,100,refine6
+Refined Dagger,en,effect_refined_dagger,canonical,100,refineddagger
+Renown Archer's Gloves [2],en,item_renown_archers_gloves_2,canonical,100,renownarchersgloves2
+Ring [2],en,item_ring_2,canonical,100,ring2
+Rosary [2],en,item_rosary_2,canonical,100,rosary2
+Ruptured Moon Shadow,en,effect_ruptured_moon_shadow,canonical,100,rupturedmoonshadow
+Ruptured Moon Shadow I,en,effect_ruptured_moon_shadow_i,canonical,100,rupturedmoonshadowi
+Sacred Incense [2],en,item_sacred_incense_2,canonical,100,sacredincense2
+Sacrifice counts +2,en,cond_refine_ge_6,alias,80,sacrificecounts2
+Sarah's Incense Bag [2],en,item_sarahs_incense_bag_2,canonical,100,sarahsincensebag2
+Scallion,en,effect_scallion,canonical,100,scallion
+Set Effect:,en,set_effect_header,canonical,100,seteffect
+Shadow Claws,en,effect_shadow_claws,canonical,100,shadowclaws
+"[Shadowtooth]'s max stacks +2, and [Grimtooth]'s casting range +1",en,effect_phrase_shadowtooth_s_max_stacks_2_and_grimtooth_s_casting_range_1,canonical,100,shadowtoothsmaxstacks2andgrimtoothscastingrange1
+"[Shadowtooth]'s max stacks +2, CRIT DMG +5%.",en,effect_phrase_shadowtooth_s_max_stacks_2_crit_dmg_5,canonical,100,shadowtoothsmaxstacks2critdmg5
+[Shield Reflect] deals (1.5% of your Max HP) additional damage.,en,effect_phrase_shield_reflect_deals_1_5_of_your_max_hp_additional_damage,canonical,100,shieldreflectdeals15ofyourmaxhpadditionaldamage
+[Shield Reflect] DMG +12%,en,effect_phrase_shield_reflect_dmg_12,canonical,100,shieldreflectdmg12
+Shoes,en,item_type_shoes,canonical,100,shoes
+Sif,en,effect_sif,canonical,100,sif
+[Smite]/[Rapid Smiting]/[Shield Boomerang] Skill DMG +15% (Shield weight is counted as 200),en,effect_phrase_smite_rapid_smiting_shield_boomerang_skill_dmg_15_shield_weight_is_counted_as_200,canonical,100,smiterapidsmitingshieldboomerangskilldmg15shieldweightiscountedas200
+[Snatcher] increases the chance for your normal attacks to trigger [Raiding Strike] / [Raiding Shot] by 5%.,en,effect_phrase_snatcher_increases_the_chance_for_your_normal_attacks_to_trigger_raiding_strike_raiding_shot_by_5,canonical,100,snatcherincreasesthechanceforyournormalattackstotriggerraidingstrikeraidingshotby5
+[Song of Lutie] Healing Effect +30%,en,cond_refine_ge_6,alias,80,songoflutiehealingeffect30
+[Song of Lutie] Healing Effect +40%,en,cond_refine_ge_10,alias,80,songoflutiehealingeffect40
+[Soul Breaker] global CD is reduced by 0.3s (unique),en,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,canonical,100,soulbreakerglobalcdisreducedby03sunique
+SP Consumption +10%,en,effect_phrase_sp_consumption_10,canonical,100,spconsumption10
+Spiral Clashing Spiral skill damage -10%,en,effect_phrase_spiral_clashing_spiral_skill_damage_10,canonical,100,spiralclashingspiralskilldamage10
+Spiritual Ring [2],en,item_spiritual_ring_2,canonical,100,spiritualring2
+Spirit Witch stacks +1,en,effect_phrase_spirit_witch_stacks_1,canonical,100,spiritwitchstacks1
+Spirit Witch stacks +2,en,effect_phrase_spirit_witch_stacks_2,canonical,100,spiritwitchstacks2
+Sprint Set,en,effect_sprint_set,canonical,100,sprintset
+STR +1,en,effect_phrase_str_1,canonical,100,str1
+STR +12,en,effect_phrase_str_12,canonical,100,str12
+STR +2,en,effect_phrase_str_2,canonical,100,str2
+STR +3,en,effect_phrase_str_3,canonical,100,str3
+STR +4,en,effect_phrase_str_4,canonical,100,str4
+STR +5,en,effect_phrase_str_5,canonical,100,str5
+Strategy,en,effect_strategy,canonical,100,strategy
+successful blocks will trigger the maximum level of Lion Roar (CD 2.5 sec),en,cond_refine_ge_6,alias,80,successfulblockswilltriggerthemaximumleveloflionroarcd25sec
+Targets affected by the [Scream] have their MSPD additionally reduced by 15%,en,cond_refine_ge_12,alias,80,targetsaffectedbythescreamhavetheirmspdadditionallyreducedby15
+Targets damaged by [Hell's Plant] have their PDEF and MDEF reduced by 15% for 2 seconds,en,cond_refine_ge_10,alias,80,targetsdamagedbyhellsplanthavetheirpdefandmdefreducedby15for2seconds
+Tears of Fensalir,en,effect_tears_of_fensalir,canonical,100,tearsoffensalir
+"the effect of each stack of Pact of Reaper is increased to: CRIT +5, ASPD +2%",en,cond_refine_ge_15,alias,80,theeffectofeachstackofpactofreaperisincreasedtocrit5aspd2
+The HP cost of Sacrifice on self is further reduced by 30%,en,cond_refine_ge_15,alias,80,thehpcostofsacrificeonselfisfurtherreducedby30
+there is a 10% chance to auto cast Firebolt Lv.6,en,effect_phrase_there_is_a_10_chance_to_auto_cast_firebolt_lv_6,canonical,100,thereisa10chancetoautocastfireboltlv6
+Tirfing,en,effect_tirfing,canonical,100,tirfing
+Trembling,en,effect_trembling,canonical,100,trembling
+Tyr's Blessing,en,effect_tyrs_blessing,canonical,100,tyrsblessing
+"Upon casing [Throw Arrow] or [Arrow Vulcan], you also unleash [Electrifying Shot], dealing 600% (PvE) or 200% (PvP) Wind PDMG to the target. (Cooldown: 1 sec)",en,effect_phrase_upon_casing_throw_arrow_or_arrow_vulcan_you_also_unleash_electrifying_shot_dealing_600_pve_or_200_pvp_wind_pdmg_to_the_target_cooldown_1_sec,canonical,100,uponcasingthrowarroworarrowvulcanyoualsounleashelectrifyingshotdealing600pveor200pvpwindpdmgtothetargetcooldown1sec
+Upon dealing PDMG,en,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias,80,upondealingpdmg
+"Upon defeating an enemy with [Grimtooth], you gain [Shadowtooth] effect for 5 sec. Each stack of [Shadowtooth] increases [Ignore DEF] by 2%, up to 2 stacks.",en,effect_phrase_upon_defeating_an_enemy_with_grimtooth_you_gain_shadowtooth_effect_for_5_sec_each_stack_of_shadowtooth_increases_ignore_def_by_2_up_to_2_stacks,canonical,100,upondefeatinganenemywithgrimtoothyougainshadowtootheffectfor5seceachstackofshadowtoothincreasesignoredefby2upto2stacks
+Using [Grooming] grants the target a shield equal to 10% of Max HP for 15 seconds,en,cond_refine_ge_6,alias,80,usinggroominggrantsthetargetashieldequalto10ofmaxhpfor15seconds
+Valkyrja's Shield,en,effect_valkyrjas_shield,canonical,100,valkyrjasshield
+[Vanguard Force] skill damage +20%,en,cond_refine_ge_15,alias,80,vanguardforceskilldamage20
+Variable CT -4%.,en,effect_phrase_variable_ct_4,canonical,100,variablect4
+Vecer Axe,en,effect_vecer_axe,canonical,100,veceraxe
+Venom Sting,en,effect_venom_sting,canonical,100,venomsting
+VIT +1,en,effect_phrase_vit_1,canonical,100,vit1
+VIT +10,en,effect_phrase_vit_10,canonical,100,vit10
+VIT +2,en,effect_phrase_vit_2,canonical,100,vit2
+VIT +3,en,effect_phrase_vit_3,canonical,100,vit3
+VIT +4,en,effect_phrase_vit_4,canonical,100,vit4
+VIT +6,en,effect_phrase_vit_6,canonical,100,vit6
+[Void Bolt] and [Weaken Mind] base damage increased by 14%,en,effect_phrase_void_bolt_and_weaken_mind_base_damage_increased_by_14,canonical,100,voidboltandweakenmindbasedamageincreasedby14
+[Volt Attack] multiplier +150%,en,effect_phrase_volt_attack_multiplier_150,canonical,100,voltattackmultiplier150
+Weapon·1H Axe,en,item_type_weapon_1h_axe,canonical,100,weapon1haxe
+Weapon·1H Spear,en,item_type_weapon_1h_spear,canonical,100,weapon1hspear
+Weapon·1H Sword,en,item_type_weapon_1h_sword,canonical,100,weapon1hsword
+Weapon·2H Axe,en,item_type_weapon_2h_axe,canonical,100,weapon2haxe
+Weapon·2H Spear,en,item_type_weapon_2h_spear,canonical,100,weapon2hspear
+Weapon·2H Sword,en,item_type_weapon_2h_sword,canonical,100,weapon2hsword
+Weapon-Book,en,item_type_weapon_book,canonical,100,weaponbook
+Weapon-Bow,en,item_type_weapon_bow,canonical,100,weaponbow
+Weapon·Crossbow Blade,en,item_type_weapon_crossbow_blade,canonical,100,weaponcrossbowblade
+Weapon·Dagger,en,item_type_weapon_dagger,canonical,100,weapondagger
+Weapon Fire Stat,en,effect_phrase_weapon_fire_stat,canonical,100,weaponfirestat
+Weapon·Foxtail Grass,en,item_type_weapon_foxtail_grass,canonical,100,weaponfoxtailgrass
+Weapon-Katar,en,item_type_weapon_katar,canonical,100,weaponkatar
+Weapon-Knuckles,en,item_type_weapon_knuckles,canonical,100,weaponknuckles
+Weapon·Mace,en,item_type_weapon_mace,canonical,100,weaponmace
+Weapon·Musical Instrument,en,item_type_weapon_musical_instrument,canonical,100,weaponmusicalinstrument
+Weapon·Staff,en,item_type_weapon_staff,canonical,100,weaponstaff
+Weapon·Wand,en,item_type_weapon_wand,canonical,100,weaponwand
+Weapon·Whip,en,item_type_weapon_whip,canonical,100,weaponwhip
+When attacked,en,cond_when_attacked,canonical,100,whenattacked
+"When [Berserk] is activated, ASPD +10%.",en,cond_refine_ge_10,alias,80,whenberserkisactivatedaspd10
+When performing Solo/Duo Performance,en,cond_when_performing_solo_duo_performance,canonical,100,whenperformingsoloduoperformance
+"When receiving healing, Max HP increases by 6% for 10s",en,effect_phrase_when_receiving_healing_max_hp_increases_by_6_for_10s,canonical,100,whenreceivinghealingmaxhpincreasesby6for10s
+"When you are healed, gain a shield for 5 sec, absorbing damage up to 5% of your Max HP. (Global CD: 5 sec)",en,effect_phrase_when_you_are_healed_gain_a_shield_for_5_sec_absorbing_damage_up_to_5_of_your_max_hp_global_cd_5_sec,canonical,100,whenyouarehealedgainashieldfor5secabsorbingdamageupto5ofyourmaxhpglobalcd5sec
+When you deal PDMG,en,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias,80,whenyoudealpdmg
+When you take damage,en,cond_when_attacked,alias,80,whenyoutakedamage
+When you use a skill,en,cond_when_you_use_a_skill,canonical,100,whenyouuseaskill
+"While remaining within the radius of a friendly Elemental Domain, you gain [MATK +7%] per sec, stacking up to 3 times.",en,effect_phrase_while_remaining_within_the_radius_of_a_friendly_elemental_domain_you_gain_matk_7_per_sec_stacking_up_to_3_times,canonical,100,whileremainingwithintheradiusofafriendlyelementaldomainyougainmatk7persecstackingupto3times
+"While remaining within the radius of a friendly Elemental Domain, your [Fire Bolt], [Cold Bolt], and [Lightning Bolt] inflict 200% additional damage.",en,effect_phrase_while_remaining_within_the_radius_of_a_friendly_elemental_domain_your_fire_bolt_cold_bolt_and_lightning_bolt_inflict_200_additional_damage,canonical,100,whileremainingwithintheradiusofafriendlyelementaldomainyourfireboltcoldboltandlightningboltinflict200additionaldamage
+White Wing Set,en,effect_white_wing_set,canonical,100,whitewingset
+Wind/Fire/Water/Earth Reduction +5%,en,effect_phrase_wind_fire_water_earth_reduction_5,canonical,100,windfirewaterearthreduction5
+Wind Skill DMG +17%,en,effect_phrase_wind_skill_dmg_17,canonical,100,windskilldmg17
+you gain ASPD +1%,en,effect_phrase_you_gain_aspd_1,canonical,100,yougainaspd1
+you have a 20% chance to auto cast Spear Stab Lv.3,en,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,canonical,100,youhavea20chancetoautocastspearstablv3
+you have a 30% chance to gain [Will of Kings: PDEF/MDEF +10%] for 5 sec.,en,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,alias,80,youhavea30chancetogainwillofkingspdefmdef10for5sec
+you have a 30% chance to grant 1 stack of Pact of Reaper for 5 sec,en,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,canonical,100,youhavea30chancetogrant1stackofpactofreaperfor5sec
+you have a 50% chance to obtain the Pact of Reaper instead,en,cond_refine_ge_10,alias,80,youhavea50chancetoobtainthepactofreaperinstead
+you have a 5% chance to auto cast Lv.5 [Angelus].,en,effect_phrase_you_have_a_5_chance_to_auto_cast_lv_5_angelus,canonical,100,youhavea5chancetoautocastlv5angelus
+you obtain the effect of Reaper Whisper for 5 sec: Your every 5th Physical attack deals 400% Shadow PDMG,en,cond_refine_ge_6,alias,80,youobtaintheeffectofreaperwhisperfor5secyourevery5thphysicalattackdeals400shadowpdmg
+Your [Faith] bonuses are increased by 30%.,en,effect_phrase_your_faith_bonuses_are_increased_by_30,canonical,100,yourfaithbonusesareincreasedby30
+10%の確率でファイアーボルトLv.6を自動詠唱する,ja,effect_phrase_there_is_a_10_chance_to_auto_cast_firebolt_lv_6,canonical,100,10の確率でファイアーボルトlv6を自動詠唱する
+1ポイントの力ごとに,ja,cond_each_point_of_str,canonical,100,1ポイントの力ごとに
+2組のセット効果,ja,set_two_piece,canonical,100,2組のセット効果
+30%の確率で「君王の意志」を獲得：物理防御、魔法防御+10%、持続時間5秒,ja,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,alias,80,30の確率で君王の意志を獲得物理防御魔法防御10持続時間5秒
+30%の確率で死神の契約を1層獲得、5秒持続,ja,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,canonical,100,30の確率で死神の契約を1層獲得5秒持続
+3点セット効果,ja,set_three_piece,alias,80,3点セット効果
+3組のセット効果,ja,set_three_piece,canonical,100,3組のセット効果
+5%の確率で自動的に天使の障壁Lv.5を発動,ja,effect_phrase_you_have_a_5_chance_to_auto_cast_lv_5_angelus,canonical,100,5の確率で自動的に天使の障壁lv5を発動
+Agi+1,ja,effect_phrase_agi_1,canonical,100,agi1
+Agi15ポイントごとに,ja,cond_for_every_15_agi,alias,80,agi15ポイントごとに
+Agi+2,ja,effect_phrase_agi_2,canonical,100,agi2
+Agi+3,ja,effect_phrase_agi_3,canonical,100,agi3
+Agiが10ポイント毎に,ja,cond_for_every_10_points_of_agi,canonical,100,agiが10ポイント毎に
+Agiが20ポイント毎に,ja,cond_every_20_points_of_agi,canonical,100,agiが20ポイント毎に
+BaseLv+8毎に,ja,cond_based_on_your_base_level,alias,80,baselv8毎に
+Dex+1,ja,effect_phrase_dex_1,canonical,100,dex1
+Dex+2,ja,effect_phrase_dex_2,canonical,100,dex2
+Dex+3,ja,effect_phrase_dex_3,canonical,100,dex3
+Dex+4,ja,effect_phrase_dex_4,canonical,100,dex4
+Dex-5,ja,effect_phrase_dex_5,canonical,100,dex5
+Dex+6,ja,effect_phrase_dex_6,canonical,100,dex6
+Dex+7,ja,effect_phrase_dex_7,canonical,100,dex7
+Dexが10ポイント毎に,ja,cond_for_every_10_points_of_dex,canonical,100,dexが10ポイント毎に
+[Gypsy's Kiss]の回復効果+30%,ja,effect_phrase_gypsys_kiss_healing_effect_30,canonical,100,gypsyskissの回復効果30
+[Gypsy's Kiss]の回復効果+40%,ja,effect_phrase_gypsys_kiss_healing_effect_40,canonical,100,gypsyskissの回復効果40
+[Gypsy's Kiss]発動時、追加で7%のダメージ軽減効果を3秒間付与,ja,effect_phrase_dmg_reduction_7_for_3_sec_while_gypsys_kiss_is_actice,canonical,100,gypsyskiss発動時追加で7のダメージ軽減効果を3秒間付与
+HP+1020〜1200,ja,effect_phrase_hp_1_020_1_200,canonical,100,hp10201200
+HP+1530〜1800,ja,effect_phrase_hp_1_530_1_800,canonical,100,hp15301800
+HP+2040〜2400,ja,effect_phrase_hp_2_040_2_400,canonical,100,hp20402400
+HP回復+10%,ja,effect_phrase_hp_recovery_10,canonical,100,hp回復10
+Int+1,ja,effect_phrase_int_1,canonical,100,int1
+Int+2,ja,effect_phrase_int_2,canonical,100,int2
+Int+3,ja,effect_phrase_int_3,canonical,100,int3
+Int+4,ja,effect_phrase_int_4,canonical,100,int4
+Int+6,ja,effect_phrase_int_6,canonical,100,int6
+Int+8,ja,effect_phrase_int_8,canonical,100,int8
+Intが10ポイント毎に,ja,cond_for_every_10_points_of_int,canonical,100,intが10ポイント毎に
+Luk+2,ja,effect_phrase_luk_2,canonical,100,luk2
+Luk+3,ja,effect_phrase_luk_3,canonical,100,luk3
+Luk+7,ja,effect_phrase_luk_7,canonical,100,luk7
+Lukが10ポイント毎に,ja,cond_for_every_10_points_of_luk,canonical,100,lukが10ポイント毎に
+MaxHP+10%,ja,effect_phrase_max_hp_10,canonical,100,maxhp10
+MaxHP+150,ja,effect_phrase_max_hp_150,canonical,100,maxhp150
+MaxHP+15%、クリティカルダメージ防御+10%,ja,effect_phrase_max_hp_15_crit_dmg_res_10,canonical,100,maxhp15クリティカルダメージ防御10
+MaxHP+2%,ja,effect_phrase_max_hp_2,canonical,100,maxhp2
+MaxHP+200,ja,effect_phrase_max_hp_200,alias,80,maxhp200
+MaxHP+300,ja,effect_phrase_max_hp_300,canonical,100,maxhp300
+MaxHP+50,ja,effect_phrase_max_hp_50,canonical,100,maxhp50
+MaxHP+800,ja,effect_phrase_max_hp_800,canonical,100,maxhp800
+MaxSP+150,ja,effect_phrase_max_sp_150,canonical,100,maxsp150
+"MaxSP200ごとに魔法ダメージ+1%（最大55,000MaxSPで計算）",ja,effect_phrase_every_200_points_of_max_sp_increases_mdmg_by_1_calculated_up_to_a_maximum_of_55_000_max_sp,canonical,100,maxsp200ごとに魔法ダメージ1最大55000maxspで計算
+MaxSP+5%,ja,effect_phrase_max_sp_5,alias,80,maxsp5
+MaxSP+50,ja,effect_phrase_max_sp_50,canonical,100,maxsp50
+MaxSP+8%,ja,effect_phrase_wind_fire_water_earth_reduction_5,alias,80,maxsp8
+P.T.Dメカニカルコア,ja,effect_p_t_d_mechanical_core,canonical,100,ptdメカニカルコア
+SP消費+10%,ja,effect_phrase_sp_consumption_10,canonical,100,sp消費10
+Str+1,ja,effect_phrase_str_1,canonical,100,str1
+Str+12,ja,effect_phrase_str_12,canonical,100,str12
+Str1ポイントごとに,ja,cond_each_point_of_str,alias,80,str1ポイントごとに
+Str+2,ja,effect_phrase_str_2,canonical,100,str2
+Str+3,ja,effect_phrase_str_3,canonical,100,str3
+Str+4,ja,effect_phrase_str_4,canonical,100,str4
+Str+5,ja,effect_phrase_str_5,canonical,100,str5
+Strが10ポイント毎に,ja,cond_for_every_10_points_of_str,canonical,100,strが10ポイント毎に
+Vit+1,ja,effect_phrase_vit_1,alias,80,vit1
+Vit+10,ja,effect_phrase_vit_10,canonical,100,vit10
+Vit+2,ja,effect_phrase_vit_2,canonical,100,vit2
+Vit+3,ja,effect_phrase_vit_3,canonical,100,vit3
+Vit+4,ja,effect_phrase_vit_4,canonical,100,vit4
+Vit+6,ja,effect_phrase_vit_6,canonical,100,vit6
+Vitが10ポイント毎に,ja,cond_for_every_10_points_of_vit,canonical,100,vitが10ポイント毎に
+ゆらめく月影,ja,effect_pierced_moon_shadow,canonical,100,ゆらめく月影
+ゆらめく月影 I,ja,effect_pierced_moon_shadow_i,canonical,100,ゆらめく月影i
+アクセサリー,ja,item_type_accessory,canonical,100,アクセサリー
+イミューンシールド,ja,effect_immune_shield,canonical,100,イミューンシールド
+イヤリング[2],ja,item_earring_2,canonical,100,イヤリング2
+インテレクトタブレット,ja,effect_intellect_tablet,canonical,100,インテレクトタブレット
+インペリアル,ja,effect_imperial,canonical,100,インペリアル
+エキスパートリング[2],ja,item_expert_ring_2,canonical,100,エキスパートリング2
+エクスキャリバー,ja,effect_excalibur,canonical,100,エクスキャリバー
+エデンのリンゴの回復効果+30%,ja,effect_phrase_gain_patk_matk_taken_5,alias,80,エデンのリンゴの回復効果30
+エレメントファウンテン魔導書,ja,effect_element_fountain_magic_book,canonical,100,エレメントファウンテン魔導書
+エンジェリックリング[2],ja,item_angelic_ring_2,canonical,100,エンジェリックリング2
+オルレアンの手袋[2],ja,item_orleans_glove_2,canonical,100,オルレアンの手袋2
+カルダー,ja,effect_calder,canonical,100,カルダー
+クラスナヤ,ja,effect_krasnaya,canonical,100,クラスナヤ
+クリティカル+10,ja,effect_phrase_crit_10,canonical,100,クリティカル10
+クリティカル+15,ja,effect_phrase_crit_15,canonical,100,クリティカル15
+クリティカル+3,ja,effect_phrase_crit_3,canonical,100,クリティカル3
+クリティカル+5,ja,effect_phrase_crit_5,canonical,100,クリティカル5
+クリティカル+6,ja,effect_phrase_crit_6,canonical,100,クリティカル6
+クリティカル+8,ja,effect_phrase_crit_8,canonical,100,クリティカル8
+クリティカルダメージ+1%,ja,effect_phrase_crit_dmg_1,canonical,100,クリティカルダメージ1
+クリティカルダメージ+2%,ja,effect_phrase_crit_dmg_2,canonical,100,クリティカルダメージ2
+クリティカルダメージ+3%,ja,effect_phrase_crit_dmg_3,canonical,100,クリティカルダメージ3
+クリティカルダメージ+5%,ja,effect_phrase_crit_dmg_5,canonical,100,クリティカルダメージ5
+クリティカルダメージ+6%,ja,effect_phrase_crit_dmg_6,canonical,100,クリティカルダメージ6
+クリティカルダメージ防御+6%,ja,effect_phrase_crit_dmg_res_6,canonical,100,クリティカルダメージ防御6
+クリティカルリング[2],ja,item_critical_ring_2,canonical,100,クリティカルリング2
+クリティカル防御+5,ja,effect_phrase_crit_res_5,canonical,100,クリティカル防御5
+クリティカル防御+6,ja,effect_phrase_crit_res_6,canonical,100,クリティカル防御6
+クリティカル防御+8、クリティカルダメージ防御+8%,ja,effect_phrase_crit_res_8_crit_dmg_res_8,canonical,100,クリティカル防御8クリティカルダメージ防御8
+クレセントサイス,ja,effect_crescent_scythe,canonical,100,クレセントサイス
+クロスシールド,ja,effect_cross_shield,canonical,100,クロスシールド
+クロノス,ja,effect_kronos,canonical,100,クロノス
+グローブ[2],ja,item_glove_2,canonical,100,グローブ2
+グングニル,ja,effect_gungnir,canonical,100,グングニル
+ゴヴニュセット,ja,effect_goibnes_set,canonical,100,ゴヴニュセット
+サイクロングレイブ,ja,effect_cyclone_glaive,canonical,100,サイクロングレイブ
+サイクロンブラストのダメージ+100%,ja,effect_phrase_damage_of_cyclone_explosion_100,canonical,100,サイクロンブラストのダメージ100
+サブウェポン,ja,item_type_off_hand,canonical,100,サブウェポン
+サラの香袋[2],ja,item_sarahs_incense_bag_2,canonical,100,サラの香袋2
+シフ,ja,effect_sif,canonical,100,シフ
+シャドークロー,ja,effect_shadow_claws,canonical,100,シャドークロー
+スキル発動ごとに霊巫効果を1層獲得。各層で魔法攻撃ボーナス+10%,ja,cond_when_you_use_a_skill,canonical,100,スキル発動ごとに霊巫効果を1層獲得各層で魔法攻撃ボーナス10
+スナッチャー習得後、通常攻撃で奇襲攻撃/奇襲射撃が発動する確率+5%,ja,effect_phrase_snatcher_increases_the_chance_for_your_normal_attacks_to_trigger_raiding_strike_raiding_shot_by_5,canonical,100,スナッチャー習得後通常攻撃で奇襲攻撃奇襲射撃が発動する確率5
+スパイラルピアースのクールタイム-1秒,ja,effect_phrase_cd_of_clashing_spiral_1s,canonical,100,スパイラルピアースのクールタイム1秒
+スパイラルピアースのダメージ-10%,ja,effect_phrase_spiral_clashing_spiral_skill_damage_10,canonical,100,スパイラルピアースのダメージ10
+スパイラルピアースの詠唱が不要になり、SP消費-60%,ja,effect_phrase_clashing_spiral_no_longer_requires_casting_and_sp_consumes_60,canonical,100,スパイラルピアースの詠唱が不要になりsp消費60
+スパイラルピアース使用時、追加でサイクロンブラストが発動し、200%の物理ダメージを与える,ja,effect_phrase_clashing_spiral_generates_an_additional_cyclone_explosion_that_deals_200_pdmg,canonical,100,スパイラルピアース使用時追加でサイクロンブラストが発動し200の物理ダメージを与える
+スピリチュアルリング[2],ja,item_spiritual_ring_2,canonical,100,スピリチュアルリング2
+スプリントセット,ja,effect_sprint_set,canonical,100,スプリントセット
+スローアロー、アローバルカン発動時、追加で単体600%倍率（PVP時200%倍率）の風属性物理感電攻撃を発動する。クールダウン1秒,ja,effect_phrase_upon_casing_throw_arrow_or_arrow_vulcan_you_also_unleash_electrifying_shot_dealing_600_pve_or_200_pvp_wind_pdmg_to_the_target_cooldown_1_sec,canonical,100,スローアローアローバルカン発動時追加で単体600倍率pvp時200倍率の風属性物理感電攻撃を発動するクールダウン1秒
+セット効果：,ja,set_effect_header,canonical,100,セット効果
+テュールの祝福,ja,effect_tyrs_blessing,canonical,100,テュールの祝福
+ナイルローズ[2],ja,item_nile_rose_2,canonical,100,ナイルローズ2
+ナーガスケールシールド,ja,effect_naga_scale_shield,canonical,100,ナーガスケールシールド
+ネックレス[2],ja,item_necklace_2,canonical,100,ネックレス2
+バックスタブとサプライズアタックは常にターゲットの背後から使用したものとして判定される,ja,effect_phrase_backstab_and_surprise_attack_are_now_always_considered_used_from_behind_the_target,canonical,100,バックスタブとサプライズアタックは常にターゲットの背後から使用したものとして判定される
+バックスタブダメージ+15%,ja,effect_phrase_backstab_dmg_15,canonical,100,バックスタブダメージ15
+フリッグの嘆き,ja,effect_lament_of_fensalir,canonical,100,フリッグの嘆き
+フリッグの嘆き I,ja,effect_lament_of_fensalir_i,canonical,100,フリッグの嘆きi
+フリッグの涙,ja,effect_tears_of_fensalir,canonical,100,フリッグの涙
+ブローチ[2],ja,item_brooch_2,canonical,100,ブローチ2
+ヘラ,ja,effect_hera,canonical,100,ヘラ
+ベセルアックス,ja,effect_vecer_axe,canonical,100,ベセルアックス
+ホーリーガード,ja,effect_holy_guard,canonical,100,ホーリーガード
+マインドショックの共通クールダウン0.3秒短縮（唯一効果）,ja,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,canonical,100,マインドショックの共通クールダウン03秒短縮唯一効果
+マインドショックの共通クールダウンを0.3秒短縮（唯一効果）,ja,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,alias,80,マインドショックの共通クールダウンを03秒短縮唯一効果
+マインドショックの知力ダメージ部分20%増加（唯一効果）,ja,effect_phrase_increases_the_int_based_damage_of_soul_breaker_by_20_unique,canonical,100,マインドショックの知力ダメージ部分20増加唯一効果
+マインドショックの知力ダメージ部分40%増加（唯一効果）,ja,effect_phrase_increases_the_int_based_damage_of_soul_breaker_to_40_unique,canonical,100,マインドショックの知力ダメージ部分40増加唯一効果
+マジックマッシュルーム,ja,effect_mushroom_stick,canonical,100,マジックマッシュルーム
+マーターの首輪[2],ja,item_matyrs_leash_2,canonical,100,マーターの首輪2
+マーリン,ja,effect_marlin,canonical,100,マーリン
+リング[2],ja,item_ring_2,canonical,100,リング2
+レベルが+10ごとに回復効果+1%,ja,effect_phrase_for_every_10_levels_your_healing_effect_1,canonical,100,レベルが10ごとに回復効果1
+ロキ,ja,effect_loki,canonical,100,ロキ
+ロザリオ[2],ja,item_rosary_2,canonical,100,ロザリオ2
+ヴァルキリアの盾,ja,effect_valkyrjas_shield,canonical,100,ヴァルキリアの盾
+不死属性ダメージ軽減+10%,ja,effect_phrase_dmg_reduction_vs_undead_10,canonical,100,不死属性ダメージ軽減10
+不死種族モンスターからのダメージ軽減+5%,ja,effect_phrase_dmg_reduction_vs_undead_5,canonical,100,不死種族モンスターからのダメージ軽減5
+不死種族モンスターへのダメージ+5%,ja,effect_phrase_damage_to_undead_5,canonical,100,不死種族モンスターへのダメージ5
+中毒状態のターゲットへのダメージ増加6%,ja,effect_phrase_damage_to_poisoned_enemies_6,canonical,100,中毒状態のターゲットへのダメージ増加6
+伝奇,ja,effect_legendary,canonical,100,伝奇
+体力+1,ja,effect_phrase_vit_1,canonical,100,体力1
+信仰効果が30%上昇,ja,effect_phrase_your_faith_bonuses_are_increased_by_30,canonical,100,信仰効果が30上昇
+元素領域クールタイム-5秒,ja,effect_phrase_elemental_domain_cooldown_5_sec,canonical,100,元素領域クールタイム5秒
+光のシールドが30%の確率で30%の魔法ダメージを軽減,ja,effect_phrase_defending_aura_has_a_30_chance_to_reduce_the_incoming_mdmg_by_30,canonical,100,光のシールドが30の確率で30の魔法ダメージを軽減
+光のシールドは移動速度低下効果がなくなる,ja,effect_phrase_defending_aura_no_longer_applies_mspd_reduction,canonical,100,光のシールドは移動速度低下効果がなくなる
+全体ディレイ-12%,ja,effect_phrase_global_cd_12,canonical,100,全体ディレイ12
+全体ディレイ-14%,ja,effect_phrase_global_cd_14,canonical,100,全体ディレイ14
+全体ディレイ-2%,ja,effect_phrase_global_cd_2,canonical,100,全体ディレイ2
+全体ディレイ-5%,ja,effect_phrase_global_cd_5,canonical,100,全体ディレイ5
+全快,ja,effect_recovery,canonical,100,全快
+共通クールダウン-10%,ja,effect_phrase_global_cd_10,canonical,100,共通クールダウン10
+力+1,ja,effect_phrase_str_1,alias,80,力1
+動力割裂,ja,effect_power_cutting_axe,canonical,100,動力割裂
+十字星,ja,effect_grand_cross,canonical,100,十字星
+反射シールドが追加で十字軍の最大HPの1.5%のダメージを与える,ja,effect_phrase_shield_reflect_deals_1_5_of_your_max_hp_additional_damage,canonical,100,反射シールドが追加で十字軍の最大hpの15のダメージを与える
+反射シールドによるダメージが12%増加,ja,effect_phrase_shield_reflect_dmg_12,canonical,100,反射シールドによるダメージが12増加
+受ける治療効果+12%,ja,effect_phrase_healing_taken_12,canonical,100,受ける治療効果12
+受ける治療効果+5%,ja,effect_phrase_healing_taken_5,alias,80,受ける治療効果5
+受ける治療効果+7%,ja,effect_phrase_healing_taken_7,canonical,100,受ける治療効果7
+受ける物理ダメージ軽減+3%,ja,effect_phrase_pdmg_reduction_3,alias,80,受ける物理ダメージ軽減3
+受ける物理・魔法ダメージが5%減少,ja,effect_phrase_gain_patk_matk_taken_5,canonical,100,受ける物理・魔法ダメージが5減少
+受ける魔法ダメージ軽減+3%,ja,effect_phrase_mdmg_reduction_3,canonical,100,受ける魔法ダメージ軽減3
+古代魔法,ja,effect_ancient_magic,canonical,100,古代魔法
+名射手のグローブ[2],ja,item_renown_archers_gloves_2,canonical,100,名射手のグローブ2
+「君王の意志」効果が倍増,ja,effect_phrase_double_the_effect_of_will_of_kings,canonical,100,君王の意志効果が倍増
+「君王の意志」効果が強化：物理防御、魔法防御+15%（倍増効果は物理防御、魔法防御+30%）,ja,effect_phrase_increases_the_effect_of_will_of_kings_to_pdef_mdef_15,canonical,100,君王の意志効果が強化物理防御魔法防御15倍増効果は物理防御魔法防御30
+呑神,ja,effect_tirfing,canonical,100,呑神
+呪い,ja,effect_curse,canonical,100,呪い
+器用さ+1,ja,effect_phrase_dex_1,alias,80,器用さ1
+回復効果+2%,ja,effect_phrase_healing_done_2,canonical,100,回復効果2
+回復効果+3%,ja,effect_phrase_healing_done_3,canonical,100,回復効果3
+回復効果+5%,ja,effect_phrase_healing_done_5,canonical,100,回復効果5
+回復効果+7%,ja,effect_phrase_healing_done_7,alias,80,回復効果7
+変動詠唱-4%,ja,effect_phrase_variable_ct_4,canonical,100,変動詠唱4
+大巫師,ja,effect_archwizard,canonical,100,大巫師
+天后の腕輪[1],ja,item_divine_queen_bracelet_1,canonical,100,天后の腕輪1
+天龍,ja,effect_legacy_of_dragon,canonical,100,天龍
+奇襲攻撃/奇襲射撃のダメージ倍率+80%,ja,effect_phrase_raiding_strike_raiding_shot_dmg_multiplier_80,canonical,100,奇襲攻撃奇襲射撃のダメージ倍率80
+婆蘇提婆,ja,effect_blade_of_vasu_aryadeva,canonical,100,婆蘇提婆
+対象のVit10ポイントごとに、強酸火煙瓶、強酸攻撃のダメージがさらに1.2%増加,ja,effect_phrase_pdmg_15,alias,80,対象のvit10ポイントごとに強酸火煙瓶強酸攻撃のダメージがさらに12増加
+属性ダメージ増加効果+20%,ja,effect_phrase_elemental_dmg_20,canonical,100,属性ダメージ増加効果20
+強駒,ja,effect_refined_dagger,canonical,100,強駒
+彩羽,ja,effect_colorful_feather,canonical,100,彩羽
+影牙で対象を倒すと5秒間持続する影牙効果を獲得。各層ごとに防御無視が2%増加（最大2層）,ja,effect_phrase_upon_defeating_an_enemy_with_grimtooth_you_gain_shadowtooth_effect_for_5_sec_each_stack_of_shadowtooth_increases_ignore_def_by_2_up_to_2_stacks,canonical,100,影牙で対象を倒すと5秒間持続する影牙効果を獲得各層ごとに防御無視が2増加最大2層
+影牙の最大層数が2層増加。クリティカルダメージ+5%,ja,effect_phrase_shadowtooth_s_max_stacks_2_crit_dmg_5,canonical,100,影牙の最大層数が2層増加クリティカルダメージ5
+影牙の最大層数が2層増加。影牙の詠唱距離+1,ja,effect_phrase_shadowtooth_s_max_stacks_2_and_grimtooth_s_casting_range_1,canonical,100,影牙の最大層数が2層増加影牙の詠唱距離1
+怪盗の指輪[1],ja,item_burglar_ring_1,canonical,100,怪盗の指輪1
+感電,ja,effect_inductive,canonical,100,感電
+感電攻撃が30%確率で追加2回ダメージを発動,ja,effect_phrase_electrifying_shot_gains_a_30_chance_to_attack_3_times,canonical,100,感電攻撃が30確率で追加2回ダメージを発動
+感電攻撃倍率+150%,ja,effect_phrase_volt_attack_multiplier_150,canonical,100,感電攻撃倍率150
+戦慄,ja,effect_trembling,canonical,100,戦慄
+戦略,ja,effect_strategy,canonical,100,戦略
+攻撃を受けた時,ja,cond_when_attacked,canonical,100,攻撃を受けた時
+攻撃力+1,ja,effect_phrase_grants_1_point_of_atk,alias,80,攻撃力1
+攻撃力が1ポイント加される,ja,effect_phrase_grants_1_point_of_atk,canonical,100,攻撃力が1ポイント加される
+攻撃速度+15%,ja,effect_phrase_aspd_15,canonical,100,攻撃速度15
+攻撃速度+2%,ja,effect_phrase_aspd_2,canonical,100,攻撃速度2
+攻撃速度+20%,ja,effect_phrase_aspd_20,canonical,100,攻撃速度20
+攻撃速度+3%,ja,effect_phrase_aspd_3,canonical,100,攻撃速度3
+攻撃速度+5%（持続1秒）。最大2層まで積み重ね可能。最大層数に達すると魂咬状態へ移行（魂咬：攻撃ごとに追加で魔法攻撃*400%の追加ダメージ）,ja,effect_phrase_gain_1_stack_of_spirit_witch_for_1_sec_up_to_2_stacks_when_spirit_witch_is_at_2_stacks_gain_almighty_spirit_witch_matk_10_aspd_5_almighty_your_attacks_deal_matk_400_additional_dmg,canonical,100,攻撃速度5持続1秒最大2層まで積み重ね可能最大層数に達すると魂咬状態へ移行魂咬攻撃ごとに追加で魔法攻撃400の追加ダメージ
+攻撃速度+8%,ja,effect_phrase_aspd_8,canonical,100,攻撃速度8
+攻撃速度が1%追加で増加する,ja,effect_phrase_you_gain_aspd_1,canonical,100,攻撃速度が1追加で増加する
+敏捷+1,ja,effect_phrase_agi_1,alias,80,敏捷1
+敏捷が15ポイントごとに,ja,cond_for_every_15_agi,canonical,100,敏捷が15ポイントごとに
+暗香にんにく,ja,effect_scallion,canonical,100,暗香にんにく
+暗黒騎士の執念,ja,effect_paranoid_of_dark_knight,canonical,100,暗黒騎士の執念
+暗黒騎士の執念 I,ja,effect_paranoid_of_dark_knight_i,canonical,100,暗黒騎士の執念i
+暗黒騎士の手袋[1],ja,item_dark_knight_gloves_1,canonical,100,暗黒騎士の手袋1
+暗黒騎士の決意,ja,effect_fortitude_of_dark_knight,canonical,100,暗黒騎士の決意
+暗黒騎士の決意 I,ja,effect_fortitude_of_dark_knight_i,canonical,100,暗黒騎士の決意i
+曙光のカタール,ja,item_dawn_katar,canonical,100,曙光のカタール
+曙光のハンマー,ja,item_dawn_hammer,canonical,100,曙光のハンマー
+曙光のマント,ja,item_dawn_mantle,canonical,100,曙光のマント
+曙光の刃,ja,item_dawn_blade,canonical,100,曙光の刃
+曙光の剣,ja,item_dawn_sword,canonical,100,曙光の剣
+曙光の大剣,ja,item_dawn_claymore,canonical,100,曙光の大剣
+曙光の大斧,ja,item_dawn_axe,canonical,100,曙光の大斧
+曙光の弓,ja,item_dawn_bow,canonical,100,曙光の弓
+曙光の弩刃,ja,item_dawn_crossbow_blade,canonical,100,曙光の弩刃
+曙光の拳,ja,item_dawn_fist,canonical,100,曙光の拳
+曙光の斧,ja,item_dawn_hatchet,canonical,100,曙光の斧
+曙光の書,ja,item_dawn_book,canonical,100,曙光の書
+曙光の杖,ja,item_dawn_scepter,canonical,100,曙光の杖
+曙光の楽器,ja,item_dawn_guitar,canonical,100,曙光の楽器
+曙光の槍,ja,item_dawn_spear,canonical,100,曙光の槍
+曙光の猫じゃらし,ja,item_dawn_foxtail_grass,canonical,100,曙光の猫じゃらし
+曙光の盾,ja,item_dawn_shield,canonical,100,曙光の盾
+曙光の鎌,ja,item_dawn_scythe,canonical,100,曙光の鎌
+曙光の鎧,ja,item_dawn_armor,canonical,100,曙光の鎧
+曙光の長杖,ja,item_dawn_staff,canonical,100,曙光の長杖
+曙光の靴,ja,item_dawn_boots,canonical,100,曙光の靴
+曙光の鞭,ja,item_dawn_whip,canonical,100,曙光の鞭
+最大5%まで増加する,ja,effect_phrase_mdmg_1,alias,80,最大5まで増加する
+最大HP+12%,ja,effect_phrase_max_hp_12,canonical,100,最大hp12
+最大HP+15%,ja,effect_phrase_max_hp_15,canonical,100,最大hp15
+最大HP+15%、移動速度+5%,ja,effect_phrase_max_hp_15_mspd_5,canonical,100,最大hp15移動速度5
+最大HP+200,ja,effect_phrase_max_hp_200,canonical,100,最大hp200
+最大HP+4%,ja,effect_phrase_max_hp_4,canonical,100,最大hp4
+最大HP+7%,ja,effect_phrase_max_hp_7,canonical,100,最大hp7
+最大MP+5%,ja,effect_phrase_max_sp_5,canonical,100,最大mp5
+最大MP+8%,ja,effect_phrase_wind_fire_water_earth_reduction_5,canonical,100,最大mp8
+最大で10%増加する,ja,effect_phrase_mdmg_1,canonical,100,最大で10増加する
+月辰,ja,effect_lunar_dagger,canonical,100,月辰
+月霊,ja,effect_moonlight_dagger,canonical,100,月霊
+村正,ja,effect_muramasa,canonical,100,村正
+植物,ja,effect_plant,canonical,100,植物
+武器または防具が破壊されたユニットに追加10%ダメージを与える,ja,effect_phrase_patk_12,alias,80,武器または防具が破壊されたユニットに追加10ダメージを与える
+武器・カタール,ja,item_type_weapon_katar,canonical,100,武器・カタール
+武器・ナックル,ja,item_type_weapon_knuckles,canonical,100,武器・ナックル
+武器・ボウブレード,ja,item_type_weapon_crossbow_blade,canonical,100,武器・ボウブレード
+武器・両手剣,ja,item_type_weapon_2h_sword,canonical,100,武器・両手剣
+武器・両手弓,ja,item_type_weapon_bow,canonical,100,武器・両手弓
+武器・両手斧,ja,item_type_weapon_2h_axe,canonical,100,武器・両手斧
+武器・両手杖,ja,item_type_weapon_staff,canonical,100,武器・両手杖
+武器・両手槍,ja,item_type_weapon_2h_spear,canonical,100,武器・両手槍
+武器・本,ja,item_type_weapon_book,canonical,100,武器・本
+武器・楽器,ja,item_type_weapon_musical_instrument,canonical,100,武器・楽器
+武器・片手ロッド,ja,item_type_weapon_wand,canonical,100,武器・片手ロッド
+武器・片手剣,ja,item_type_weapon_1h_sword,canonical,100,武器・片手剣
+武器・片手斧,ja,item_type_weapon_1h_axe,canonical,100,武器・片手斧
+武器・片手槍,ja,item_type_weapon_1h_spear,canonical,100,武器・片手槍
+武器・猫じゃらし,ja,item_type_weapon_foxtail_grass,canonical,100,武器・猫じゃらし
+武器・短剣,ja,item_type_weapon_dagger,canonical,100,武器・短剣
+武器・鈍器,ja,item_type_weapon_mace,canonical,100,武器・鈍器
+武器・鞭,ja,item_type_weapon_whip,canonical,100,武器・鞭
+死神の契約1層ごとの効果がクリティカル+5、攻撃速度+2%になる,ja,effect_phrase_aspd_2,alias,80,死神の契約1層ごとの効果がクリティカル5攻撃速度2になる
+毒属性スキルダメージ+3%,ja,effect_phrase_poison_damage_3,canonical,100,毒属性スキルダメージ3
+毒属性克制ダメージ+12%,ja,effect_phrase_poisons_elemental_effectiveness_12,canonical,100,毒属性克制ダメージ12
+水・風・地・火属性のダメージを5%軽減,ja,effect_phrase_max_sp_8,canonical,100,水・風・地・火属性のダメージを5軽減
+水属性ダメージ軽減+10%,ja,effect_phrase_dmg_reduction_vs_water_10,canonical,100,水属性ダメージ軽減10
+治療を受けるたびに最大HPの5%に基づいたシールドを獲得し、持続時間は5秒（共通の遅延5秒）,ja,effect_phrase_when_you_are_healed_gain_a_shield_for_5_sec_absorbing_damage_up_to_5_of_your_max_hp_global_cd_5_sec,canonical,100,治療を受けるたびに最大hpの5に基づいたシールドを獲得し持続時間は5秒共通の遅延5秒
+治療効果+7%,ja,effect_phrase_healing_done_7,canonical,100,治療効果7
+治療効果を受けると最大HPが6%上昇し、持続時間は10秒,ja,effect_phrase_when_receiving_healing_max_hp_increases_by_6_for_10s,canonical,100,治療効果を受けると最大hpが6上昇し持続時間は10秒
+深紅の斬撃が物理防御を無視する追加効果+10%,ja,effect_phrase_red_cut_additionally_ignores_10_pdef,canonical,100,深紅の斬撃が物理防御を無視する追加効果10
+深紅の斬撃スキルダメージ+5%,ja,effect_phrase_red_cut_skill_dmg_5,canonical,100,深紅の斬撃スキルダメージ5
+火属性ダメージ+14%,ja,effect_phrase_fire_skill_dmg_14,canonical,100,火属性ダメージ14
+火属性ダメージ軽減+10%,ja,effect_phrase_dmg_reduction_vs_fire_10,canonical,100,火属性ダメージ軽減10
+火属性武器,ja,effect_phrase_weapon_fire_stat,canonical,100,火属性武器
+火炎,ja,effect_fire,canonical,100,火炎
+火箭術、雷撃術、氷箭術、地震術のダメージ+5%,ja,effect_phrase_fire_bolt_lightning_bolt_cold_bolt_and_earth_spike_deal_5_more_damage,canonical,100,火箭術雷撃術氷箭術地震術のダメージ5
+火霊,ja,effect_fireblend,canonical,100,火霊
+無影,ja,effect_grimtooth,canonical,100,無影
+熱情,ja,effect_passion,canonical,100,熱情
+物理ダメージ+15%,ja,effect_phrase_pdmg_15,canonical,100,物理ダメージ15
+物理ダメージ+8%,ja,effect_phrase_pdmg_8,canonical,100,物理ダメージ8
+物理ダメージ増加+2%,ja,effect_phrase_pdmg_2,canonical,100,物理ダメージ増加2
+物理ダメージ減少+3%,ja,effect_phrase_pdmg_reduction_3,canonical,100,物理ダメージ減少3
+物理ダメージ減少+4%,ja,effect_phrase_pdmg_reduction_4,canonical,100,物理ダメージ減少4
+物理ダメージ軽減+2%,ja,effect_phrase_pdmg_reduction_2,canonical,100,物理ダメージ軽減2
+物理ダメージ軽減+7%,ja,effect_phrase_pdmg_reduction_7,canonical,100,物理ダメージ軽減7
+物理ダメージ軽減と魔法ダメージ軽減+10%,ja,effect_phrase_pdmg_and_mdmg_reduction_10,canonical,100,物理ダメージ軽減と魔法ダメージ軽減10
+物理攻撃+10%,ja,effect_phrase_patk_10,canonical,100,物理攻撃10
+物理攻撃+12%,ja,effect_phrase_patk_12,canonical,100,物理攻撃12
+物理攻撃+15,ja,effect_phrase_patk_15,canonical,100,物理攻撃15
+物理攻撃+2%,ja,effect_phrase_patk_2,canonical,100,物理攻撃2
+物理攻撃+20,ja,effect_phrase_patk_20,canonical,100,物理攻撃20
+物理攻撃+293～326,ja,effect_phrase_patk_293_326,canonical,100,物理攻撃293326
+物理攻撃+30,ja,effect_phrase_patk_30,canonical,100,物理攻撃30
+物理攻撃+311～346,ja,effect_phrase_patk_311_346,canonical,100,物理攻撃311346
+物理攻撃+330～367,ja,effect_phrase_patk_330_367,canonical,100,物理攻撃330367
+物理攻撃+348～387,ja,effect_phrase_patk_348_387,canonical,100,物理攻撃348387
+物理攻撃+367～408,ja,effect_phrase_patk_367_408,canonical,100,物理攻撃367408
+物理攻撃+39,ja,effect_phrase_patk_39,canonical,100,物理攻撃39
+物理攻撃+392〜435,ja,effect_phrase_patk_392_435,canonical,100,物理攻撃392435
+物理攻撃+4,ja,effect_phrase_patk_4,canonical,100,物理攻撃4
+物理攻撃+440～489,ja,effect_phrase_patk_440_489,canonical,100,物理攻撃440489
+物理攻撃+45,ja,effect_phrase_patk_45,canonical,100,物理攻撃45
+物理攻撃+477～530,ja,effect_phrase_patk_477_530,canonical,100,物理攻撃477530
+物理攻撃+51,ja,effect_phrase_patk_51,canonical,100,物理攻撃51
+物理攻撃+57,ja,effect_phrase_patk_57,canonical,100,物理攻撃57
+物理攻撃時,ja,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,canonical,100,物理攻撃時
+物理防御+130〜144,ja,effect_phrase_pdef_130_144,canonical,100,物理防御130144
+物理防御+389〜432,ja,effect_phrase_pdef_389_432,canonical,100,物理防御389432
+物理防御+4%,ja,effect_phrase_pdef_4,canonical,100,物理防御4
+物理防御無視+3%,ja,effect_phrase_ignore_pdef_3,canonical,100,物理防御無視3
+独奏・合奏発動時,ja,cond_when_performing_solo_duo_performance,canonical,100,独奏・合奏発動時
+猛毒,ja,effect_venom_sting,canonical,100,猛毒
+異形,ja,effect_abnormal,canonical,100,異形
+白羽セット,ja,effect_white_wing_set,canonical,100,白羽セット
+皇家長槍と同時に装備時,ja,cond_if_equipped_together_with_imperial_lance,canonical,100,皇家長槍と同時に装備時
+盾攻撃、連続盾攻撃、回転盾攻撃のスキルダメージ+15%、装備重量は200で計算,ja,effect_phrase_smite_rapid_smiting_shield_boomerang_skill_dmg_15_shield_weight_is_counted_as_200,canonical,100,盾攻撃連続盾攻撃回転盾攻撃のスキルダメージ15装備重量は200で計算
+知力+1,ja,effect_phrase_int_1,alias,80,知力1
+知力1ごとにMaxSP+14,ja,effect_phrase_every_1_points_of_int_additionally_increases_max_sp_by_14,canonical,100,知力1ごとにmaxsp14
+神聖,ja,effect_holy,canonical,100,神聖
+精錬+10で,ja,cond_refine_ge_10,alias,80,精錬10で
+精錬+10以上の時,ja,cond_refine_ge_10,canonical,100,精錬10以上の時
+精錬+10時,ja,cond_refine_ge_10,alias,80,精錬10時
+精錬+12で,ja,cond_refine_ge_12,alias,80,精錬12で
+精錬+12以上の時,ja,cond_refine_ge_12,canonical,100,精錬12以上の時
+精錬+12時,ja,cond_refine_ge_12,alias,80,精錬12時
+精錬+15で,ja,cond_refine_ge_15,alias,80,精錬15で
+精錬+15以上の時,ja,cond_refine_ge_15,alias,80,精錬15以上の時
+精錬+15時,ja,cond_refine_ge_15,canonical,100,精錬15時
+精錬+3ごとに,ja,cond_refine_ge_3,alias,80,精錬3ごとに
+精錬+3以上の時,ja,cond_refine_ge_3,canonical,100,精錬3以上の時
+精錬+5以上の時,ja,cond_refine_ge_5,canonical,100,精錬5以上の時
+精錬+6で,ja,cond_refine_ge_6,alias,80,精錬6で
+精錬+6以上の時,ja,cond_refine_ge_6,alias,80,精錬6以上の時
+精錬+6時,ja,cond_refine_ge_6,canonical,100,精錬6時
+精錬が+3ごとに攻撃速度+0.5%、最大5%増加,ja,effect_phrase_0_5_aspd_per_refine_3_up_to_5,canonical,100,精錬が3ごとに攻撃速度05最大5増加
+精錬が+3ごとに攻撃速度+1%、最大10%まで増加,ja,effect_phrase_1_aspd_per_refine_3_up_to_10,canonical,100,精錬が3ごとに攻撃速度1最大10まで増加
+精錬が+3ごとに物理ダメージ+0.25%、最大2.5%増加,ja,effect_phrase_for_every_refine_3_pdmg_0_25_up_to_2_5,canonical,100,精錬が3ごとに物理ダメージ025最大25増加
+精錬が+3ごとに物理ダメージ+0.5%、最大5%増加,ja,effect_phrase_for_every_refine_3_pdmg_0_5_up_to_5,canonical,100,精錬が3ごとに物理ダメージ05最大5増加
+精霊,ja,effect_elf,canonical,100,精霊
+肩にかける物,ja,item_type_cloak,canonical,100,肩にかける物
+腐蝕,ja,effect_corrosion,canonical,100,腐蝕
+自身が味方の元素領域内にいる場合、属性矢系スキルに200%の元素爆裂ダメージを追加,ja,effect_phrase_while_remaining_within_the_radius_of_a_friendly_elemental_domain_your_fire_bolt_cold_bolt_and_lightning_bolt_inflict_200_additional_damage,canonical,100,自身が味方の元素領域内にいる場合属性矢系スキルに200の元素爆裂ダメージを追加
+自身が味方の元素領域内にいる場合、毎秒7%魔法攻撃力を上昇（最大3重スタック）,ja,effect_phrase_while_remaining_within_the_radius_of_a_friendly_elemental_domain_you_gain_matk_7_per_sec_stacking_up_to_3_times,canonical,100,自身が味方の元素領域内にいる場合毎秒7魔法攻撃力を上昇最大3重スタック
+自身のベースレベルに基づき,ja,cond_based_on_your_base_level,canonical,100,自身のベースレベルに基づき
+虚無の矢・精神衰弱術の基本ダメージ+14%,ja,effect_phrase_void_bolt_and_weaken_mind_base_damage_increased_by_14,canonical,100,虚無の矢・精神衰弱術の基本ダメージ14
+被回復効果+5%,ja,effect_phrase_healing_taken_5,canonical,100,被回復効果5
+裂かれた月影,ja,effect_ruptured_moon_shadow,canonical,100,裂かれた月影
+裂かれた月影 I,ja,effect_ruptured_moon_shadow_i,canonical,100,裂かれた月影i
+象牙,ja,effect_ivory_lance,canonical,100,象牙
+賢者の手袋[2],ja,item_celebrants_mitten_2,canonical,100,賢者の手袋2
+超重,ja,effect_heavy,canonical,100,超重
+追加ダメージが魔法攻撃*300%上昇,ja,effect_phrase_increases_the_additional_dmg_by_matk_300,canonical,100,追加ダメージが魔法攻撃300上昇
+退魔の香袋[2],ja,item_sacred_incense_2,canonical,100,退魔の香袋2
+連刺し,ja,effect_pierce,canonical,100,連刺し
+連続刺突攻撃スキルダメージ+12%,ja,effect_phrase_12_pierce_damage,canonical,100,連続刺突攻撃スキルダメージ12
+連続刺突攻撃スキルダメージ+15%,ja,effect_phrase_15_pierce_damage,canonical,100,連続刺突攻撃スキルダメージ15
+連続刺突攻撃スキルダメージ+5%,ja,effect_phrase_5_pierce_damage,canonical,100,連続刺突攻撃スキルダメージ5
+連続刺突攻撃スキルダメージ+7%,ja,effect_phrase_7_pierce_damage,canonical,100,連続刺突攻撃スキルダメージ7
+遠距離物理ダメージ+2%,ja,effect_phrase_ranged_pdmg_2,canonical,100,遠距離物理ダメージ2
+【野蛮な斬撃】発動中、物理・魔法ダメージ軽減が30%向上,ja,effect_phrase_during_melt_down_grants_pdmg_mdmg_reduction_30,canonical,100,野蛮な斬撃発動中物理・魔法ダメージ軽減が30向上
+金の足輪[2],ja,item_golden_foot_ring_2,canonical,100,金の足輪2
+闇属性ダメージ軽減+10%,ja,effect_phrase_dmg_reduction_vs_shadow_10,canonical,100,闇属性ダメージ軽減10
+闇属性ダメージ軽減+5%,ja,effect_phrase_dmg_reduction_vs_shadow_5,canonical,100,闇属性ダメージ軽減5
+防具,ja,item_type_armor,canonical,100,防具
+電子,ja,effect_electric_guitar,canonical,100,電子
+霊巫最大スタック数+1,ja,effect_phrase_spirit_witch_stacks_1,canonical,100,霊巫最大スタック数1
+霊巫最大スタック数+2,ja,effect_phrase_spirit_witch_stacks_2,canonical,100,霊巫最大スタック数2
+靴,ja,item_type_shoes,canonical,100,靴
+風属性ダメージ+17%,ja,effect_phrase_wind_skill_dmg_17,canonical,100,風属性ダメージ17
+魂咬,ja,effect_mighty_staff,canonical,100,魂咬
+魔法ダメージ+8%,ja,effect_phrase_mdmg_8,canonical,100,魔法ダメージ8
+魔法ダメージ増加+2%,ja,effect_phrase_mdmg_2,canonical,100,魔法ダメージ増加2
+魔法ダメージ減少+4%,ja,effect_phrase_mdmg_reduction_4,canonical,100,魔法ダメージ減少4
+魔法ダメージ軽減+10%,ja,effect_phrase_mdmg_reduction_10,canonical,100,魔法ダメージ軽減10
+魔法攻撃+1%,ja,effect_phrase_matk_1,canonical,100,魔法攻撃1
+魔法攻撃+12%,ja,effect_phrase_matk_12,canonical,100,魔法攻撃12
+魔法攻撃+120,ja,effect_phrase_matk_120,canonical,100,魔法攻撃120
+魔法攻撃+15,ja,effect_phrase_matk_15,canonical,100,魔法攻撃15
+魔法攻撃+2%,ja,effect_phrase_matk_2,canonical,100,魔法攻撃2
+魔法攻撃+250〜278,ja,effect_phrase_matk_250_278,canonical,100,魔法攻撃250278
+魔法攻撃+283～315,ja,effect_phrase_matk_283_315,canonical,100,魔法攻撃283315
+魔法攻撃+30,ja,effect_phrase_matk_30,canonical,100,魔法攻撃30
+魔法攻撃+300〜333,ja,effect_phrase_matk_300_333,canonical,100,魔法攻撃300333
+魔法攻撃+39,ja,effect_phrase_matk_39,canonical,100,魔法攻撃39
+魔法攻撃+45,ja,effect_phrase_matk_45,canonical,100,魔法攻撃45
+魔法攻撃+50,ja,effect_phrase_matk_50,canonical,100,魔法攻撃50
+魔法攻撃+51,ja,effect_phrase_matk_51,canonical,100,魔法攻撃51
+魔法攻撃+57,ja,effect_phrase_matk_57,canonical,100,魔法攻撃57
+魔法攻撃+60,ja,effect_phrase_matk_60,canonical,100,魔法攻撃60
+魔法攻撃力+30,ja,effect_phrase_matk_30_unique,canonical,100,魔法攻撃力30
+魔法攻撃力+60,ja,effect_phrase_matk_60,alias,80,魔法攻撃力60
+魔法防御+12,ja,effect_phrase_mdef_12,canonical,100,魔法防御12
+魔法防御+2,ja,effect_phrase_mdef_2,canonical,100,魔法防御2
+魔源,ja,effect_netherforce,canonical,100,魔源
+黛雅,ja,effect_dea_staff,canonical,100,黛雅
+2件套效果,zh,set_two_piece,canonical,100,2件套效果
+3件套效果,zh,set_three_piece,canonical,100,3件套效果
+P.T.D,zh,effect_p_t_d_mechanical_core,canonical,100,ptd
+不知火,zh,effect_muramasa,canonical,100,不知火
+伊登的蘋果治療效果+30%,zh,cond_refine_ge_6,alias,80,伊登的蘋果治療效果30
+伊登的蘋果治療效果+40%,zh,cond_refine_ge_10,alias,80,伊登的蘋果治療效果40
+伊登的蘋果生效時，會額外提升7%傷害減免，持續3秒,zh,cond_refine_ge_15,alias,80,伊登的蘋果生效時會額外提升7傷害減免持續3秒
+使用流氓背刺和襲擊均視為從目標背後進行攻擊,zh,effect_phrase_backstab_and_surprise_attack_are_now_always_considered_used_from_behind_the_target,canonical,100,使用流氓背刺和襲擊均視為從目標背後進行攻擊
+使用舔毛會對目標增加最大生命值10%的護盾，持續15秒,zh,cond_refine_ge_6,alias,80,使用舔毛會對目標增加最大生命值10的護盾持續15秒
+信任效果提升30%,zh,effect_phrase_your_faith_bonuses_are_increased_by_30,canonical,100,信任效果提升30
+傳奇,zh,effect_legendary,canonical,100,傳奇
+元素屬性增傷效果增強20%,zh,effect_phrase_elemental_dmg_20,canonical,100,元素屬性增傷效果增強20
+元素領域冷卻時間-5s,zh,effect_phrase_elemental_domain_cooldown_5_sec,canonical,100,元素領域冷卻時間5s
+先鋒追擊技能傷害提升+20%,zh,cond_refine_ge_15,alias,80,先鋒追擊技能傷害提升20
+光之盾30%機率減免30%魔法傷害,zh,effect_phrase_defending_aura_has_a_30_chance_to_reduce_the_incoming_mdmg_by_30,canonical,100,光之盾30機率減免30魔法傷害
+光之盾不再有移動速度降低效果,zh,effect_phrase_defending_aura_no_longer_applies_mspd_reduction,canonical,100,光之盾不再有移動速度降低效果
+克羅諾斯,zh,effect_kronos,canonical,100,克羅諾斯
+免疫者,zh,effect_immune_shield,canonical,100,免疫者
+共同冷卻時間-10%,zh,effect_phrase_global_cd_10,canonical,100,共同冷卻時間10
+副手,zh,item_type_off_hand,canonical,100,副手
+割裂的月影,zh,effect_ruptured_moon_shadow,canonical,100,割裂的月影
+割裂的月影 I,zh,effect_ruptured_moon_shadow_i,canonical,100,割裂的月影i
+劇毒,zh,effect_venom_sting,canonical,100,劇毒
+劍旗魚,zh,effect_marlin,canonical,100,劍旗魚
+力量+1,zh,effect_phrase_str_1,canonical,100,力量1
+力量+12,zh,effect_phrase_str_12,canonical,100,力量12
+力量+2,zh,effect_phrase_str_2,canonical,100,力量2
+力量+3,zh,effect_phrase_str_3,canonical,100,力量3
+力量+4,zh,effect_phrase_str_4,canonical,100,力量4
+力量+5,zh,effect_phrase_str_5,canonical,100,力量5
+力量戒指[2],zh,item_ring_2,canonical,100,力量戒指2
+動力割裂,zh,effect_power_cutting_axe,canonical,100,動力割裂
+十字,zh,effect_cross_shield,canonical,100,十字
+十字星,zh,effect_grand_cross,canonical,100,十字星
+反射盾造成的傷害提升12%,zh,effect_phrase_shield_reflect_dmg_12,canonical,100,反射盾造成的傷害提升12
+反射盾額外造成十字軍生命值上限1.5%的傷害,zh,effect_phrase_shield_reflect_deals_1_5_of_your_max_hp_additional_damage,canonical,100,反射盾額外造成十字軍生命值上限15的傷害
+受到不死屬性傷害減免+10%,zh,effect_phrase_dmg_reduction_vs_undead_10,canonical,100,受到不死屬性傷害減免10
+受到不死種族傷害減免+5%,zh,effect_phrase_dmg_reduction_vs_undead_5,canonical,100,受到不死種族傷害減免5
+受到攻擊時,zh,cond_when_attacked,canonical,100,受到攻擊時
+受到攻擊時30%機率獲得君王的意志：物理防禦、魔法防禦+10%,zh,cond_when_attacked,alias,80,受到攻擊時30機率獲得君王的意志物理防禦魔法防禦10
+受到水屬性傷害減免+10%,zh,effect_phrase_dmg_reduction_vs_water_10,canonical,100,受到水屬性傷害減免10
+受到水、風、地、火屬性傷害減免+5%,zh,effect_phrase_max_sp_8,canonical,100,受到水風地火屬性傷害減免5
+受到治療效果時，生命值上限提升6%，持續10秒,zh,effect_phrase_when_receiving_healing_max_hp_increases_by_6_for_10s,canonical,100,受到治療效果時生命值上限提升6持續10秒
+受到火屬性傷害減免+10%,zh,effect_phrase_dmg_reduction_vs_fire_10,canonical,100,受到火屬性傷害減免10
+受到物理傷害減免+3%,zh,effect_phrase_pdmg_reduction_3,alias,80,受到物理傷害減免3
+受到物理傷害減免+7%,zh,effect_phrase_pdmg_reduction_7,canonical,100,受到物理傷害減免7
+受到物理、魔法攻擊降低5%,zh,effect_phrase_gain_patk_matk_taken_5,canonical,100,受到物理魔法攻擊降低5
+受到闇屬性傷害減免+10%,zh,effect_phrase_dmg_reduction_vs_shadow_10,canonical,100,受到闇屬性傷害減免10
+受到魔法傷害減免+3%,zh,effect_phrase_mdmg_reduction_3,canonical,100,受到魔法傷害減免3
+受地獄植物傷害的目標降低15%物理防禦和魔法防禦，持續2秒,zh,cond_refine_ge_10,alias,80,受地獄植物傷害的目標降低15物理防禦和魔法防禦持續2秒
+受尖叫效果影響的目標額外降低15%移動速度,zh,cond_refine_ge_12,alias,80,受尖叫效果影響的目標額外降低15移動速度
+受治療效果+12%,zh,effect_phrase_healing_taken_12,canonical,100,受治療效果12
+受治療效果+5%,zh,effect_phrase_healing_taken_5,canonical,100,受治療效果5
+受治療效果+7%,zh,effect_phrase_healing_taken_7,canonical,100,受治療效果7
+可變詠唱-4%,zh,effect_phrase_variable_ct_4,canonical,100,可變詠唱4
+君王的威嚴效果提升至：物理攻擊、魔法攻擊+15%（翻倍效果為物理攻擊、魔法攻擊+30%）,zh,cond_refine_ge_15,alias,80,君王的威嚴效果提升至物理攻擊魔法攻擊15翻倍效果為物理攻擊魔法攻擊30
+君王的意志效果提升至：物理防禦、魔法防禦+15%（翻倍效果為物理防禦、魔法防禦+30%）,zh,effect_phrase_increases_the_effect_of_will_of_kings_to_pdef_mdef_15,canonical,100,君王的意志效果提升至物理防禦魔法防禦15翻倍效果為物理防禦魔法防禦30
+君王的意志效果翻倍,zh,effect_phrase_double_the_effect_of_will_of_kings,canonical,100,君王的意志效果翻倍
+吞神,zh,effect_tirfing,canonical,100,吞神
+哥夫內套裝,zh,effect_goibnes_set,canonical,100,哥夫內套裝
+基於自身的base等級,zh,cond_based_on_your_base_level,canonical,100,基於自身的base等級
+大巫師,zh,effect_archwizard,canonical,100,大巫師
+天使指環[2],zh,item_angelic_ring_2,canonical,100,天使指環2
+天后的手環[1],zh,item_divine_queen_bracelet_1,canonical,100,天后的手環1
+天龍,zh,effect_legacy_of_dragon,canonical,100,天龍
+奔跑套裝,zh,effect_sprint_set,canonical,100,奔跑套裝
+套裝效果：,zh,set_effect_header,canonical,100,套裝效果
+奧爾里昂的手套[2],zh,item_orleans_glove_2,canonical,100,奧爾里昂的手套2
+娜迦,zh,effect_naga_scale_shield,canonical,100,娜迦
+婆蘇提婆,zh,effect_blade_of_vasu_aryadeva,canonical,100,婆蘇提婆
+學習強奪技能後，普通攻擊觸發巧取攻擊/私掠射擊的機率增加5%,zh,effect_phrase_snatcher_increases_the_chance_for_your_normal_attacks_to_trigger_raiding_strike_raiding_shot_by_5,canonical,100,學習強奪技能後普通攻擊觸發巧取攻擊私掠射擊的機率增加5
+射手的手套[2],zh,item_renown_archers_gloves_2,canonical,100,射手的手套2
+對不死種族魔物傷害+5%,zh,effect_phrase_damage_to_undead_5,canonical,100,對不死種族魔物傷害5
+對中毒目標傷害提升6%,zh,effect_phrase_damage_to_poisoned_enemies_6,canonical,100,對中毒目標傷害提升6
+對其他所有種族魔物傷害+10%,zh,cond_refine_ge_6,alias,80,對其他所有種族魔物傷害10
+尼羅玫瑰[2],zh,item_nile_rose_2,canonical,100,尼羅玫瑰2
+巧取攻擊/私掠射擊倍率提升80%,zh,effect_phrase_raiding_strike_raiding_shot_dmg_multiplier_80,canonical,100,巧取攻擊私掠射擊倍率提升80
+巴基力亞,zh,effect_valkyrjas_shield,canonical,100,巴基力亞
+希芙,zh,effect_sif,canonical,100,希芙
+幸運+2,zh,effect_phrase_luk_2,canonical,100,幸運2
+幸運+3,zh,effect_phrase_luk_3,canonical,100,幸運3
+幸運+7,zh,effect_phrase_luk_7,canonical,100,幸運7
+幸運珠鍊[2],zh,item_rosary_2,canonical,100,幸運珠鍊2
+強化指環[2],zh,item_expert_ring_2,canonical,100,強化指環2
+強駒,zh,effect_refined_dagger,canonical,100,強駒
+彩羽,zh,effect_colorful_feather,canonical,100,彩羽
+影牙層數上限增加2層，暴擊傷害+5%,zh,effect_phrase_shadowtooth_s_max_stacks_2_crit_dmg_5,canonical,100,影牙層數上限增加2層暴擊傷害5
+影牙層數上限增加2層，無影之牙施法距離+1,zh,effect_phrase_shadowtooth_s_max_stacks_2_and_grimtooth_s_casting_range_1,canonical,100,影牙層數上限增加2層無影之牙施法距離1
+心靈震波共同冷卻時間減少0.3秒（唯一效果）,zh,effect_phrase_soul_breaker_global_cd_is_reduced_by_0_3s_unique,canonical,100,心靈震波共同冷卻時間減少03秒唯一效果
+心靈震波智力部分傷害提升20%（唯一效果）,zh,effect_phrase_increases_the_int_based_damage_of_soul_breaker_by_20_unique,canonical,100,心靈震波智力部分傷害提升20唯一效果
+心靈震波智力部分傷害提升至40%（唯一效果）,zh,effect_phrase_increases_the_int_based_damage_of_soul_breaker_to_40_unique,canonical,100,心靈震波智力部分傷害提升至40唯一效果
+忽視物理防禦+3%,zh,effect_phrase_ignore_pdef_3,canonical,100,忽視物理防禦3
+怪盜戒指[1],zh,item_burglar_ring_1,canonical,100,怪盜戒指1
+感電,zh,effect_inductive,canonical,100,感電
+戰慄,zh,effect_trembling,canonical,100,戰慄
+手推車負重上限提升2000,zh,cond_refine_ge_10,alias,80,手推車負重上限提升2000
+手推車負重額外傷害提升至負重*60%,zh,cond_refine_ge_15,alias,80,手推車負重額外傷害提升至負重60
+技能共同冷卻時間-12%,zh,effect_phrase_global_cd_12,canonical,100,技能共同冷卻時間12
+技能共同冷卻時間-14%,zh,effect_phrase_global_cd_14,canonical,100,技能共同冷卻時間14
+技能共同冷卻時間-2%,zh,effect_phrase_global_cd_2,canonical,100,技能共同冷卻時間2
+技能共同冷卻時間-5%,zh,effect_phrase_global_cd_5,canonical,100,技能共同冷卻時間5
+披風,zh,item_type_cloak,canonical,100,披風
+持續5秒,zh,effect_phrase_you_have_a_30_chance_to_grant_1_stack_of_pact_of_reaper_for_5_sec,canonical,100,持續5秒
+持續時間內，捨命攻擊不再有攻擊次數限制,zh,cond_refine_ge_12,alias,80,持續時間內捨命攻擊不再有攻擊次數限制
+捨命攻擊扣除的自身生命值再減30%,zh,cond_refine_ge_15,alias,80,捨命攻擊扣除的自身生命值再減30
+捨命攻擊次數+2,zh,cond_refine_ge_6,alias,80,捨命攻擊次數2
+提爾的祝福,zh,effect_tyrs_blessing,canonical,100,提爾的祝福
+攻擊速度+1%,zh,effect_phrase_increases_aspd_by_1,canonical,100,攻擊速度1
+攻擊速度+10%,zh,cond_refine_ge_10,alias,80,攻擊速度10
+攻擊速度+15%,zh,effect_phrase_aspd_15,alias,80,攻擊速度15
+攻擊速度+2%,zh,effect_phrase_aspd_2,canonical,100,攻擊速度2
+攻擊速度+20%,zh,effect_phrase_aspd_20,canonical,100,攻擊速度20
+攻擊速度+3%,zh,effect_phrase_aspd_3,canonical,100,攻擊速度3
+攻擊速度-5%,zh,cond_refine_ge_3,alias,80,攻擊速度5
+攻速+6%,zh,cond_refine_ge_15,alias,80,攻速6
+敏捷+1,zh,effect_phrase_agi_1,canonical,100,敏捷1
+敏捷+2,zh,effect_phrase_agi_2,canonical,100,敏捷2
+敏捷+3,zh,effect_phrase_agi_3,canonical,100,敏捷3
+敏捷別針[2],zh,item_brooch_2,canonical,100,敏捷別針2
+智力+1,zh,effect_phrase_int_1,canonical,100,智力1
+智力+2,zh,effect_phrase_int_2,canonical,100,智力2
+智力+3,zh,effect_phrase_int_3,canonical,100,智力3
+智力+4,zh,effect_phrase_int_4,canonical,100,智力4
+智力+6,zh,effect_phrase_int_6,canonical,100,智力6
+智力+8,zh,effect_phrase_int_8,canonical,100,智力8
+智力耳環[2],zh,item_earring_2,canonical,100,智力耳環2
+智慧手套[2],zh,item_celebrants_mitten_2,canonical,100,智慧手套2
+智慧石碑,zh,effect_intellect_tablet,canonical,100,智慧石碑
+暗屬性傷害減免+5%,zh,effect_phrase_dmg_reduction_vs_shadow_5,canonical,100,暗屬性傷害減免5
+暗香蒜頭,zh,effect_scallion,canonical,100,暗香蒜頭
+暴傷防護+6%,zh,effect_phrase_crit_dmg_res_6,canonical,100,暴傷防護6
+暴擊+10點,zh,effect_phrase_crit_10,canonical,100,暴擊10點
+暴擊+15,zh,effect_phrase_crit_15,canonical,100,暴擊15
+暴擊+3,zh,effect_phrase_crit_3,canonical,100,暴擊3
+暴擊+5,zh,effect_phrase_crit_5,canonical,100,暴擊5
+暴擊+6,zh,effect_phrase_crit_6,canonical,100,暴擊6
+暴擊+8,zh,effect_phrase_crit_8,canonical,100,暴擊8
+暴擊傷害+1%,zh,effect_phrase_crit_dmg_1,canonical,100,暴擊傷害1
+暴擊傷害+2%,zh,effect_phrase_crit_dmg_2,canonical,100,暴擊傷害2
+暴擊傷害+3%,zh,effect_phrase_crit_dmg_3,canonical,100,暴擊傷害3
+暴擊傷害+5%,zh,effect_phrase_crit_dmg_5,canonical,100,暴擊傷害5
+暴擊傷害+6%,zh,effect_phrase_crit_dmg_6,canonical,100,暴擊傷害6
+暴擊率等同於人物暴擊的75%,zh,cond_refine_ge_6,alias,80,暴擊率等同於人物暴擊的75
+暴擊防護+5,zh,effect_phrase_crit_res_5,canonical,100,暴擊防護5
+暴擊防護+6,zh,effect_phrase_crit_res_6,canonical,100,暴擊防護6
+暴擊防護+8，暴傷防護+8%,zh,effect_phrase_crit_res_8_crit_dmg_res_8,canonical,100,暴擊防護8暴傷防護8
+曙光之刃,zh,item_dawn_blade,canonical,100,曙光之刃
+曙光之劍,zh,item_dawn_sword,canonical,100,曙光之劍
+曙光之巨劍,zh,item_dawn_claymore,canonical,100,曙光之巨劍
+曙光之巨斧,zh,item_dawn_axe,canonical,100,曙光之巨斧
+曙光之弓,zh,item_dawn_bow,canonical,100,曙光之弓
+曙光之弩刃,zh,item_dawn_crossbow_blade,canonical,100,曙光之弩刃
+曙光之披風,zh,item_dawn_mantle,canonical,100,曙光之披風
+曙光之拳,zh,item_dawn_fist,canonical,100,曙光之拳
+曙光之拳刃,zh,item_dawn_katar,canonical,100,曙光之拳刃
+曙光之斧,zh,item_dawn_hatchet,canonical,100,曙光之斧
+曙光之杖,zh,item_dawn_scepter,canonical,100,曙光之杖
+曙光之槍,zh,item_dawn_spear,canonical,100,曙光之槍
+曙光之樂,zh,item_dawn_guitar,canonical,100,曙光之樂
+曙光之權杖,zh,item_dawn_staff,canonical,100,曙光之權杖
+曙光之狐尾草,zh,item_dawn_foxtail_grass,canonical,100,曙光之狐尾草
+曙光之盾,zh,item_dawn_shield,canonical,100,曙光之盾
+曙光之章,zh,item_dawn_book,canonical,100,曙光之章
+曙光之錘,zh,item_dawn_hammer,canonical,100,曙光之錘
+曙光之鎧,zh,item_dawn_armor,canonical,100,曙光之鎧
+曙光之鐮,zh,item_dawn_scythe,canonical,100,曙光之鐮
+曙光之靴,zh,item_dawn_boots,canonical,100,曙光之靴
+曙光之鞭,zh,item_dawn_whip,canonical,100,曙光之鞭
+最多增加10%,zh,effect_phrase_mdmg_1,alias,80,最多增加10
+最多增加5%,zh,effect_phrase_mdmg_1,canonical,100,最多增加5
+最多疊加2層,zh,cond_refine_ge_6,alias,80,最多疊加2層
+最大魔法值+5%,zh,effect_phrase_max_sp_5,canonical,100,最大魔法值5
+月辰,zh,effect_lunar_dagger,canonical,100,月辰
+月靈,zh,effect_moonlight_dagger,canonical,100,月靈
+有10%機率自動念咒火箭術Lv.6,zh,effect_phrase_there_is_a_10_chance_to_auto_cast_firebolt_lv_6,canonical,100,有10機率自動念咒火箭術lv6
+有5%機率自動念咒天使之障壁Lv.5,zh,effect_phrase_you_have_a_5_chance_to_auto_cast_lv_5_angelus,canonical,100,有5機率自動念咒天使之障壁lv5
+植物,zh,effect_plant,canonical,100,植物
+武器・單手劍,zh,item_type_weapon_1h_sword,canonical,100,武器・單手劍
+武器・單手斧,zh,item_type_weapon_1h_axe,canonical,100,武器・單手斧
+武器・單手杖,zh,item_type_weapon_wand,canonical,100,武器・單手杖
+武器・單手矛,zh,item_type_weapon_1h_spear,canonical,100,武器・單手矛
+武器・弩刃,zh,item_type_weapon_crossbow_blade,canonical,100,武器・弩刃
+武器・拳刃,zh,item_type_weapon_katar,canonical,100,武器・拳刃
+武器・拳套,zh,item_type_weapon_knuckles,canonical,100,武器・拳套
+武器・書,zh,item_type_weapon_book,canonical,100,武器・書
+武器・樂器,zh,item_type_weapon_musical_instrument,canonical,100,武器・樂器
+武器・狐尾草,zh,item_type_weapon_foxtail_grass,canonical,100,武器・狐尾草
+武器・短劍,zh,item_type_weapon_dagger,canonical,100,武器・短劍
+武器・鈍器,zh,item_type_weapon_mace,canonical,100,武器・鈍器
+武器・雙手劍,zh,item_type_weapon_2h_sword,canonical,100,武器・雙手劍
+武器・雙手弓,zh,item_type_weapon_bow,canonical,100,武器・雙手弓
+武器・雙手斧,zh,item_type_weapon_2h_axe,canonical,100,武器・雙手斧
+武器・雙手杖,zh,item_type_weapon_staff,canonical,100,武器・雙手杖
+武器・雙手矛,zh,item_type_weapon_2h_spear,canonical,100,武器・雙手矛
+武器・鞭子,zh,item_type_weapon_whip,canonical,100,武器・鞭子
+武器火屬性,zh,effect_phrase_weapon_fire_stat,canonical,100,武器火屬性
+死神,zh,effect_crescent_scythe,canonical,100,死神
+每10點力量,zh,cond_for_every_10_points_of_str,canonical,100,每10點力量
+每10點幸運,zh,cond_for_every_10_points_of_luk,canonical,100,每10點幸運
+每10點敏捷,zh,cond_for_every_10_points_of_agi,canonical,100,每10點敏捷
+每10點智力,zh,cond_for_every_10_points_of_int,canonical,100,每10點智力
+每10點靈巧,zh,cond_for_every_10_points_of_dex,canonical,100,每10點靈巧
+每10點體質,zh,cond_for_every_10_points_of_vit,canonical,100,每10點體質
+每15點敏捷,zh,cond_for_every_15_agi,canonical,100,每15點敏捷
+每1點力量,zh,cond_each_point_of_str,canonical,100,每1點力量
+每1點智力額外提升14點魔法值上限,zh,effect_phrase_every_1_points_of_int_additionally_increases_max_sp_by_14,canonical,100,每1點智力額外提升14點魔法值上限
+每200點魔法值上限增加1%魔法傷害（最高計算5.5萬魔法值上限）,zh,effect_phrase_every_200_points_of_max_sp_increases_mdmg_by_1_calculated_up_to_a_maximum_of_55_000_max_sp,canonical,100,每200點魔法值上限增加1魔法傷害最高計算55萬魔法值上限
+每20點敏捷,zh,cond_every_20_points_of_agi,canonical,100,每20點敏捷
+每層靈巫提升魔法攻擊加成10%，攻速5%，持續1秒，最多2層，達到最大層數進入魂咬狀態（魂咬：每次攻擊額外附加魔法攻擊*400%的傷害）,zh,effect_phrase_gain_1_stack_of_spirit_witch_for_1_sec_up_to_2_stacks_when_spirit_witch_is_at_2_stacks_gain_almighty_spirit_witch_matk_10_aspd_5_almighty_your_attacks_deal_matk_400_additional_dmg,canonical,100,每層靈巫提升魔法攻擊加成10攻速5持續1秒最多2層達到最大層數進入魂咬狀態魂咬每次攻擊額外附加魔法攻擊400的傷害
+每次受到治療，都會獲得根據最大生命值5%的護盾，持續5秒（共同冷卻時間5秒）,zh,effect_phrase_when_you_are_healed_gain_a_shield_for_5_sec_absorbing_damage_up_to_5_of_your_max_hp_global_cd_5_sec,canonical,100,每次受到治療都會獲得根據最大生命值5的護盾持續5秒共同冷卻時間5秒
+每次釋放技能獲得一層靈巫效果,zh,cond_when_you_use_a_skill,canonical,100,每次釋放技能獲得一層靈巫效果
+每點力量額外加1點物理攻擊,zh,cond_refine_ge_10,alias,80,每點力量額外加1點物理攻擊
+毒屬性克制傷害+12%,zh,effect_phrase_poisons_elemental_effectiveness_12,canonical,100,毒屬性克制傷害12
+毒屬性技能傷害+3%,zh,effect_phrase_poison_damage_3,canonical,100,毒屬性技能傷害3
+氣旋,zh,effect_cyclone_glaive,canonical,100,氣旋
+氣旋爆炸傷害增加100%,zh,effect_phrase_damage_of_cyclone_explosion_100,canonical,100,氣旋爆炸傷害增加100
+永恆,zh,effect_gungnir,canonical,100,永恆
+沙拉的香包[2],zh,item_sarahs_incense_bag_2,canonical,100,沙拉的香包2
+治療效果+2%,zh,effect_phrase_healing_done_2,canonical,100,治療效果2
+治療效果+3%,zh,effect_phrase_healing_done_3,canonical,100,治療效果3
+治療效果+5%,zh,effect_phrase_healing_done_5,canonical,100,治療效果5
+治療效果+7%,zh,effect_phrase_healing_done_7,canonical,100,治療效果7
+治療術效果不降低，範圍治療效果提升至治療術的70%,zh,cond_refine_ge_10,alias,80,治療術效果不降低範圍治療效果提升至治療術的70
+治療術會對目標周圍3米內角色造成30%治療術的效果,zh,cond_refine_ge_6,alias,80,治療術會對目標周圍3米內角色造成30治療術的效果
+洛奇,zh,effect_loki,canonical,100,洛奇
+深紅切割技能傷害+5%,zh,effect_phrase_red_cut_skill_dmg_5,canonical,100,深紅切割技能傷害5
+深紅切割額外忽視物理防禦+10%,zh,effect_phrase_red_cut_additionally_ignores_10_pdef,canonical,100,深紅切割額外忽視物理防禦10
+源泉,zh,effect_element_fountain_magic_book,canonical,100,源泉
+潛能戒指[2],zh,item_critical_ring_2,canonical,100,潛能戒指2
+火屬性技能傷害+14%,zh,effect_phrase_fire_skill_dmg_14,canonical,100,火屬性技能傷害14
+火焰,zh,effect_fire,canonical,100,火焰
+火箭術、雷擊術、冰箭術、地震術傷害提升5%,zh,effect_phrase_fire_bolt_lightning_bolt_cold_bolt_and_earth_spike_deal_5_more_damage,canonical,100,火箭術雷擊術冰箭術地震術傷害提升5
+火靈,zh,effect_fireblend,canonical,100,火靈
+為你服務治療效果+30%,zh,effect_phrase_gypsys_kiss_healing_effect_30,canonical,100,為你服務治療效果30
+為你服務治療效果+40%,zh,effect_phrase_gypsys_kiss_healing_effect_40,canonical,100,為你服務治療效果40
+為你服務生效時，會額外提升7%傷害減免，持續3秒,zh,effect_phrase_dmg_reduction_7_for_3_sec_while_gypsys_kiss_is_actice,canonical,100,為你服務生效時會額外提升7傷害減免持續3秒
+無影,zh,effect_grimtooth,canonical,100,無影
+無影之牙擊殺目標可獲得持續5秒的影牙效果，每層影牙增加2%忽視防禦，最多2層,zh,effect_phrase_upon_defeating_an_enemy_with_grimtooth_you_gain_shadowtooth_effect_for_5_sec_each_stack_of_shadowtooth_increases_ignore_def_by_2_up_to_2_stacks,canonical,100,無影之牙擊殺目標可獲得持續5秒的影牙效果每層影牙增加2忽視防禦最多2層
+熱情,zh,effect_passion,canonical,100,熱情
+物理傷害+1.2%,zh,cond_refine_ge_3,alias,80,物理傷害12
+物理傷害+15%,zh,effect_phrase_pdmg_15,canonical,100,物理傷害15
+物理傷害+2%,zh,effect_phrase_pdmg_2,canonical,100,物理傷害2
+物理傷害+8%,zh,effect_phrase_pdmg_8,canonical,100,物理傷害8
+物理傷害減免+2%,zh,effect_phrase_pdmg_reduction_2,canonical,100,物理傷害減免2
+物理傷害減免+3%,zh,effect_phrase_pdmg_reduction_3,canonical,100,物理傷害減免3
+物理傷害減免+4%,zh,effect_phrase_pdmg_reduction_4,canonical,100,物理傷害減免4
+物理傷害減免和魔法傷害減免+10%,zh,effect_phrase_pdmg_and_mdmg_reduction_10,canonical,100,物理傷害減免和魔法傷害減免10
+物理攻擊+15,zh,effect_phrase_patk_15,canonical,100,物理攻擊15
+物理攻擊+2%,zh,effect_phrase_patk_2,canonical,100,物理攻擊2
+物理攻擊+20,zh,effect_phrase_patk_20,canonical,100,物理攻擊20
+物理攻擊+25,zh,cond_refine_ge_10,alias,80,物理攻擊25
+物理攻擊+293~326,zh,effect_phrase_patk_293_326,canonical,100,物理攻擊293326
+物理攻擊+30,zh,effect_phrase_patk_30,canonical,100,物理攻擊30
+物理攻擊+311~346,zh,effect_phrase_patk_311_346,canonical,100,物理攻擊311346
+物理攻擊+330~367,zh,effect_phrase_patk_330_367,canonical,100,物理攻擊330367
+物理攻擊+348~387,zh,effect_phrase_patk_348_387,canonical,100,物理攻擊348387
+物理攻擊+367~408,zh,effect_phrase_patk_367_408,canonical,100,物理攻擊367408
+物理攻擊+39,zh,effect_phrase_patk_39,canonical,100,物理攻擊39
+物理攻擊+ 392~435,zh,effect_phrase_patk_392_435,canonical,100,物理攻擊392435
+物理攻擊+4,zh,effect_phrase_patk_4,canonical,100,物理攻擊4
+物理攻擊+440~489,zh,effect_phrase_patk_440_489,canonical,100,物理攻擊440489
+物理攻擊+45,zh,effect_phrase_patk_45,canonical,100,物理攻擊45
+物理攻擊+477~530,zh,effect_phrase_patk_477_530,canonical,100,物理攻擊477530
+物理攻擊+51,zh,effect_phrase_patk_51,canonical,100,物理攻擊51
+物理攻擊+57,zh,effect_phrase_patk_57,canonical,100,物理攻擊57
+物理攻擊時,zh,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias,80,物理攻擊時
+物理攻擊時有30%機率獲得一層死神契約,zh,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,canonical,100,物理攻擊時有30機率獲得一層死神契約
+物理防禦+130~144,zh,effect_phrase_pdef_130_144,canonical,100,物理防禦130144
+物理防禦+389~432,zh,effect_phrase_pdef_389_432,canonical,100,物理防禦389432
+物理防禦+4%,zh,effect_phrase_pdef_4,canonical,100,物理防禦4
+狂擊有30%機率自動念咒先鋒追擊,zh,cond_refine_ge_6,alias,80,狂擊有30機率自動念咒先鋒追擊
+生命上限+10%,zh,effect_phrase_max_hp_10,canonical,100,生命上限10
+生命上限+150,zh,effect_phrase_max_hp_150,canonical,100,生命上限150
+生命上限+2%,zh,effect_phrase_max_hp_2,canonical,100,生命上限2
+生命上限+200,zh,effect_phrase_max_hp_200,alias,80,生命上限200
+生命上限+300,zh,effect_phrase_max_hp_300,canonical,100,生命上限300
+生命上限+50,zh,effect_phrase_max_hp_50,canonical,100,生命上限50
+生命上限+800,zh,effect_phrase_max_hp_800,canonical,100,生命上限800
+生命值+1020~1200,zh,effect_phrase_hp_1_020_1_200,canonical,100,生命值10201200
+生命值+1530~1800,zh,effect_phrase_hp_1_530_1_800,canonical,100,生命值15301800
+生命值+2040~2400,zh,effect_phrase_hp_2_040_2_400,canonical,100,生命值20402400
+生命值上限+12%,zh,effect_phrase_max_hp_12,canonical,100,生命值上限12
+生命值上限+15%,zh,effect_phrase_max_hp_15,canonical,100,生命值上限15
+生命值上限+15%，移動速度+5%,zh,effect_phrase_max_hp_15_mspd_5,canonical,100,生命值上限15移動速度5
+生命值上限+200,zh,effect_phrase_max_hp_200,canonical,100,生命值上限200
+生命值上限+4%,zh,effect_phrase_max_hp_4,canonical,100,生命值上限4
+生命值上限+7%,zh,effect_phrase_max_hp_7,canonical,100,生命值上限7
+生命值上限+8%,zh,cond_refine_ge_15,alias,80,生命值上限8
+生命恢復+10%,zh,effect_phrase_hp_recovery_10,canonical,100,生命恢復10
+異形,zh,effect_abnormal,canonical,100,異形
+痊癒,zh,effect_recovery,canonical,100,痊癒
+發動獨奏、合奏時,zh,cond_when_performing_solo_duo_performance,canonical,100,發動獨奏合奏時
+白羽套裝,zh,effect_white_wing_set,canonical,100,白羽套裝
+皇家,zh,effect_imperial,canonical,100,皇家
+盔甲,zh,item_type_armor,canonical,100,盔甲
+目標每10點體質，額外提升強酸火煙瓶，強酸攻擊1.2%傷害,zh,effect_phrase_patk_12,alias,80,目標每10點體質額外提升強酸火煙瓶強酸攻擊12傷害
+盾擊、連續盾擊、迴旋盾擊技能傷害+15%，裝備重量依照200結算,zh,effect_phrase_smite_rapid_smiting_shield_boomerang_skill_dmg_15_shield_weight_is_counted_as_200,canonical,100,盾擊連續盾擊迴旋盾擊技能傷害15裝備重量依照200結算
+石中劍,zh,effect_excalibur,canonical,100,石中劍
+神殿中殘存的噩兆糾纏不休、潛滋暗長，致使神域武裝的屬性不斷波動，啟動神域屬性，可解放神域武裝的威能,zh,effect_phrase_bad_omen_lingers_causing_the_stats_being_unstable_activate_the_divine_traits_to_unleash_the_true_power_of_divine_armament,canonical,100,神殿中殘存的噩兆糾纏不休潛滋暗長致使神域武裝的屬性不斷波動啟動神域屬性可解放神域武裝的威能
+神殿中殘存的噩兆糾纏不休、潛滋暗長，致使神域武裝的屬性不斷波動，啟用神域屬性，可解放神域武裝的威能,zh,effect_phrase_bad_omen_lingers_causing_the_stats_being_unstable_activate_the_divine_attributes_to_unleash_the_true_power_of_divine_armament,canonical,100,神殿中殘存的噩兆糾纏不休潛滋暗長致使神域武裝的屬性不斷波動啟用神域屬性可解放神域武裝的威能
+神聖,zh,effect_holy,canonical,100,神聖
+穿透的月影,zh,effect_pierced_moon_shadow,canonical,100,穿透的月影
+穿透的月影 I,zh,effect_pierced_moon_shadow_i,canonical,100,穿透的月影i
+等級每+10，治療效果+1%,zh,effect_phrase_for_every_10_levels_your_healing_effect_1,canonical,100,等級每10治療效果1
+策略,zh,effect_strategy,canonical,100,策略
+範圍治療效果提升至治療術的60%,zh,cond_refine_ge_15,alias,80,範圍治療效果提升至治療術的60
+精煉+10,zh,cond_refine_ge_10,alias,80,精煉10
+精煉+10時每層死神契約的效果提升至：暴擊+5,zh,cond_refine_ge_10,alias,80,精煉10時每層死神契約的效果提升至暴擊5
+精煉+10時螺旋擊刺技能產生額外的氣旋爆炸,zh,cond_refine_ge_10,alias,80,精煉10時螺旋擊刺技能產生額外的氣旋爆炸
+精煉+12時,zh,cond_refine_ge_12,canonical,100,精煉12時
+精煉+15,zh,cond_refine_ge_15,alias,80,精煉15
+精煉+3時,zh,cond_refine_ge_3,canonical,100,精煉3時
+精煉+5時,zh,cond_refine_ge_5,canonical,100,精煉5時
+精煉+6,zh,cond_refine_ge_6,alias,80,精煉6
+精煉每+1,zh,effect_phrase_int_1,alias,80,精煉每1
+精煉每+3攻擊速度+0.5%，最多增加5%,zh,effect_phrase_0_5_aspd_per_refine_3_up_to_5,canonical,100,精煉每3攻擊速度05最多增加5
+精煉每+3攻擊速度+1%，最多增加10%,zh,effect_phrase_1_aspd_per_refine_3_up_to_10,canonical,100,精煉每3攻擊速度1最多增加10
+精煉每+3，物理傷害+0.25%，最多增加2.5%,zh,effect_phrase_for_every_refine_3_pdmg_0_25_up_to_2_5,canonical,100,精煉每3物理傷害025最多增加25
+精煉每+3，物理傷害+0.5%，最多增加5%,zh,effect_phrase_for_every_refine_3_pdmg_0_5_up_to_5,canonical,100,精煉每3物理傷害05最多增加5
+精靈,zh,effect_elf,canonical,100,精靈
+精靈戒指[2],zh,item_spiritual_ring_2,canonical,100,精靈戒指2
+紅雲,zh,effect_krasnaya,canonical,100,紅雲
+考爾德,zh,effect_calder,canonical,100,考爾德
+聖屬性技能傷害+10%,zh,cond_refine_ge_10,alias,80,聖屬性技能傷害10
+聖耀,zh,effect_holy_guard,canonical,100,聖耀
+背刺傷害提升15%,zh,effect_phrase_backstab_dmg_15,canonical,100,背刺傷害提升15
+腐蝕,zh,effect_corrosion,canonical,100,腐蝕
+自動念咒先鋒追擊傷害增加50%,zh,cond_refine_ge_10,alias,80,自動念咒先鋒追擊傷害增加50
+自身生命值上限提高15%，暴傷防護提高10%,zh,effect_phrase_max_hp_15_crit_dmg_res_10,canonical,100,自身生命值上限提高15暴傷防護提高10
+自身處於友方元素領域中，你的屬性箭類技能會附加200%的元素爆裂傷害,zh,effect_phrase_while_remaining_within_the_radius_of_a_friendly_elemental_domain_your_fire_bolt_cold_bolt_and_lightning_bolt_inflict_200_additional_damage,canonical,100,自身處於友方元素領域中你的屬性箭類技能會附加200的元素爆裂傷害
+自身處於友方元素領域中，每秒提升7%魔法攻擊力，最多疊加3層,zh,effect_phrase_while_remaining_within_the_radius_of_a_friendly_elemental_domain_you_gain_matk_7_per_sec_stacking_up_to_3_times,canonical,100,自身處於友方元素領域中每秒提升7魔法攻擊力最多疊加3層
+與皇家長矛同時裝備,zh,cond_if_equipped_together_with_imperial_lance,canonical,100,與皇家長矛同時裝備
+芬撒里爾的嘆息,zh,effect_lament_of_fensalir,canonical,100,芬撒里爾的嘆息
+芬撒里爾的嘆息 I,zh,effect_lament_of_fensalir_i,canonical,100,芬撒里爾的嘆息i
+芬撒里爾的淚痕,zh,effect_tears_of_fensalir,canonical,100,芬撒里爾的淚痕
+虛無之箭、精神耗弱術基礎傷害提升14%,zh,effect_phrase_void_bolt_and_weaken_mind_base_damage_increased_by_14,canonical,100,虛無之箭精神耗弱術基礎傷害提升14
+蝦群效果翻倍,zh,cond_refine_ge_10,alias,80,蝦群效果翻倍
+螺旋擊刺技能不再需要詠唱，同時SP消耗-60%,zh,effect_phrase_clashing_spiral_no_longer_requires_casting_and_sp_consumes_60,canonical,100,螺旋擊刺技能不再需要詠唱同時sp消耗60
+螺旋擊刺技能傷害-10%,zh,effect_phrase_spiral_clashing_spiral_skill_damage_10,canonical,100,螺旋擊刺技能傷害10
+螺旋擊刺技能自冷卻時間-1秒,zh,effect_phrase_cd_of_clashing_spiral_1s,canonical,100,螺旋擊刺技能自冷卻時間1秒
+觸發魔攻增加效果提升至40%,zh,cond_refine_ge_15,alias,80,觸發魔攻增加效果提升至40
+詛咒,zh,effect_curse,canonical,100,詛咒
+象牙,zh,effect_ivory_lance,canonical,100,象牙
+貝克,zh,effect_vecer_axe,canonical,100,貝克
+赫拉,zh,effect_hera,canonical,100,赫拉
+超重,zh,effect_heavy,canonical,100,超重
+辟邪香包[2],zh,item_sacred_incense_2,canonical,100,辟邪香包2
+造成190%無屬性物理傷害並標記目標，自身對目標造成的傷害增加6%，持續6秒,zh,cond_you_have_a_20_chance_to_auto_cast_spear_stab_lv_3,alias,80,造成190無屬性物理傷害並標記目標自身對目標造成的傷害增加6持續6秒
+造成200%物理傷害,zh,effect_phrase_clashing_spiral_generates_an_additional_cyclone_explosion_that_deals_200_pdmg,canonical,100,造成200物理傷害
+連刺,zh,effect_pierce,canonical,100,連刺
+連刺攻擊、凝神刺擊技能倍率提升50%,zh,cond_refine_ge_10,alias,80,連刺攻擊凝神刺擊技能倍率提升50
+連刺攻擊技能傷害+12%,zh,effect_phrase_12_pierce_damage,canonical,100,連刺攻擊技能傷害12
+連刺攻擊技能傷害+15%,zh,effect_phrase_15_pierce_damage,canonical,100,連刺攻擊技能傷害15
+連刺攻擊技能傷害+5%,zh,effect_phrase_5_pierce_damage,canonical,100,連刺攻擊技能傷害5
+連刺攻擊技能傷害+7%,zh,effect_phrase_7_pierce_damage,canonical,100,連刺攻擊技能傷害7
+遠古,zh,effect_ancient_magic,canonical,100,遠古
+遠程物理傷害+2%,zh,effect_phrase_ranged_pdmg_2,canonical,100,遠程物理傷害2
+釋放纏箭投擲、奧義箭亂舞會額外觸發一次單體600%倍率（PVP200%倍率）的風屬性物理感電攻擊，冷卻時間1秒,zh,effect_phrase_upon_casing_throw_arrow_or_arrow_vulcan_you_also_unleash_electrifying_shot_dealing_600_pve_or_200_pvp_wind_pdmg_to_the_target_cooldown_1_sec,canonical,100,釋放纏箭投擲奧義箭亂舞會額外觸發一次單體600倍率pvp200倍率的風屬性物理感電攻擊冷卻時間1秒
+【野蠻凶砍】期間，物理、魔法傷害減免提高30%,zh,effect_phrase_during_melt_down_grants_pdmg_mdmg_reduction_30,canonical,100,野蠻凶砍期間物理魔法傷害減免提高30
+金足戒指[2],zh,item_golden_foot_ring_2,canonical,100,金足戒指2
+長矛刺擊傷害提升100%,zh,cond_refine_ge_10,alias,80,長矛刺擊傷害提升100
+長矛刺擊造成的易傷效果額外提升10%,zh,cond_refine_ge_15,alias,80,長矛刺擊造成的易傷效果額外提升10
+防禦手套[2],zh,item_glove_2,canonical,100,防禦手套2
+附帶傷害提升至力量*物理攻擊/150,zh,cond_refine_ge_6,alias,80,附帶傷害提升至力量物理攻擊150
+陰影,zh,effect_shadow_claws,canonical,100,陰影
+電子,zh,effect_electric_guitar,canonical,100,電子
+靈巧+1,zh,effect_phrase_dex_1,canonical,100,靈巧1
+靈巧+2,zh,effect_phrase_dex_2,canonical,100,靈巧2
+靈巧+3,zh,effect_phrase_dex_3,canonical,100,靈巧3
+靈巧+4,zh,effect_phrase_dex_4,canonical,100,靈巧4
+靈巧-5,zh,effect_phrase_dex_5,canonical,100,靈巧5
+靈巧+6,zh,effect_phrase_dex_6,canonical,100,靈巧6
+靈巧+7,zh,effect_phrase_dex_7,canonical,100,靈巧7
+靈巫最大層數+1,zh,effect_phrase_spirit_witch_stacks_1,canonical,100,靈巫最大層數1
+靈巫最大層數+2,zh,effect_phrase_spirit_witch_stacks_2,canonical,100,靈巫最大層數2
+鞋子,zh,item_type_shoes,canonical,100,鞋子
+音速投擲技能傷害倍率+100%,zh,cond_refine_ge_15,alias,80,音速投擲技能傷害倍率100
+額外傷害提升魔法攻擊*300%,zh,effect_phrase_increases_the_additional_dmg_by_matk_300,canonical,100,額外傷害提升魔法攻擊300
+額外增加1%攻擊速度,zh,effect_phrase_you_gain_aspd_1,canonical,100,額外增加1攻擊速度
+額外增加1點攻擊力,zh,effect_phrase_grants_1_point_of_atk,canonical,100,額外增加1點攻擊力
+額外提升目標10%物理傷害減免和魔法傷害減免,zh,cond_refine_ge_6,alias,80,額外提升目標10物理傷害減免和魔法傷害減免
+額外攻速提升15%,zh,effect_phrase_aspd_15,canonical,100,額外攻速提升15
+風屬性技能傷害+17%,zh,effect_phrase_wind_skill_dmg_17,canonical,100,風屬性技能傷害17
+飾品,zh,item_type_accessory,canonical,100,飾品
+體力項鍊[2],zh,item_necklace_2,canonical,100,體力項鍊2
+體質+1,zh,effect_phrase_vit_1,canonical,100,體質1
+體質+10,zh,effect_phrase_vit_10,canonical,100,體質10
+體質+2,zh,effect_phrase_vit_2,canonical,100,體質2
+體質+3,zh,effect_phrase_vit_3,canonical,100,體質3
+體質+4,zh,effect_phrase_vit_4,canonical,100,體質4
+體質+6,zh,effect_phrase_vit_6,canonical,100,體質6
+魂咬,zh,effect_mighty_staff,canonical,100,魂咬
+魔力菇,zh,effect_mushroom_stick,canonical,100,魔力菇
+魔法上限+150,zh,effect_phrase_max_sp_150,canonical,100,魔法上限150
+魔法上限+50,zh,effect_phrase_max_sp_50,canonical,100,魔法上限50
+魔法上限+8%,zh,effect_phrase_wind_fire_water_earth_reduction_5,alias,80,魔法上限8
+魔法值+8%,zh,effect_phrase_wind_fire_water_earth_reduction_5,canonical,100,魔法值8
+魔法值上限+5%,zh,effect_phrase_max_sp_5,alias,80,魔法值上限5
+魔法值消耗+10%,zh,effect_phrase_sp_consumption_10,canonical,100,魔法值消耗10
+魔法傷害+2%,zh,effect_phrase_mdmg_2,canonical,100,魔法傷害2
+魔法傷害+8%,zh,effect_phrase_mdmg_8,canonical,100,魔法傷害8
+魔法傷害減免+10%,zh,effect_phrase_mdmg_reduction_10,canonical,100,魔法傷害減免10
+魔法傷害減免+4%,zh,effect_phrase_mdmg_reduction_4,canonical,100,魔法傷害減免4
+魔法攻擊+1%,zh,effect_phrase_matk_1,alias,80,魔法攻擊1
+魔法攻擊+11%,zh,cond_refine_ge_15,alias,80,魔法攻擊11
+魔法攻擊+12%,zh,effect_phrase_matk_12,canonical,100,魔法攻擊12
+魔法攻擊+120,zh,effect_phrase_matk_120,canonical,100,魔法攻擊120
+魔法攻擊+15,zh,effect_phrase_matk_15,canonical,100,魔法攻擊15
+魔法攻擊+2%,zh,effect_phrase_matk_2,canonical,100,魔法攻擊2
+魔法攻擊+ 250~278,zh,effect_phrase_matk_250_278,canonical,100,魔法攻擊250278
+魔法攻擊+283~315,zh,effect_phrase_matk_283_315,canonical,100,魔法攻擊283315
+魔法攻擊+ 300~333,zh,effect_phrase_matk_300_333,canonical,100,魔法攻擊300333
+魔法攻擊+39,zh,effect_phrase_matk_39,canonical,100,魔法攻擊39
+魔法攻擊+45,zh,effect_phrase_matk_45,canonical,100,魔法攻擊45
+魔法攻擊+50,zh,effect_phrase_matk_50,canonical,100,魔法攻擊50
+魔法攻擊+51,zh,effect_phrase_matk_51,canonical,100,魔法攻擊51
+魔法攻擊+57,zh,effect_phrase_matk_57,canonical,100,魔法攻擊57
+魔法攻擊+60,zh,effect_phrase_matk_60,canonical,100,魔法攻擊60
+魔法攻擊增加1%,zh,effect_phrase_matk_1,canonical,100,魔法攻擊增加1
+魔法防禦+12,zh,effect_phrase_mdef_12,canonical,100,魔法防禦12
+魔法防禦+2,zh,effect_phrase_mdef_2,canonical,100,魔法防禦2
+魔源,zh,effect_netherforce,canonical,100,魔源
+黑暗騎士手套[1],zh,item_dark_knight_gloves_1,canonical,100,黑暗騎士手套1
+黑暗騎士的執念,zh,effect_paranoid_of_dark_knight,canonical,100,黑暗騎士的執念
+黑暗騎士的執念 I,zh,effect_paranoid_of_dark_knight_i,canonical,100,黑暗騎士的執念i
+黑暗騎士的堅決,zh,effect_fortitude_of_dark_knight,canonical,100,黑暗騎士的堅決
+黑暗騎士的堅決 I,zh,effect_fortitude_of_dark_knight_i,canonical,100,黑暗騎士的堅決i
+黑狐項鍊[2],zh,item_matyrs_leash_2,canonical,100,黑狐項鍊2
+黛雅,zh,effect_dea_staff,canonical,100,黛雅

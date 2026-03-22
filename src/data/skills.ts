@@ -24,7 +24,7 @@ export type SkillItem = {
   jobTier: JobTier;
   name: string;
   icon?: string;
-  maxLevel: number;
+  maxLevel: number | null;
   sortOrder: number;
   tags: string[];
   levelVariants: {
